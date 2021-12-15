@@ -58,7 +58,10 @@ body {
     right: 0;
     height: 100vh;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75vw; }
   .header__container-menuToggle {
     position: absolute; }
 
@@ -97,12 +100,11 @@ body {
       color: #c7ffcb;
       font-weight: 600;
       text-decoration: none;
-      padding: 2.5rem 3rem;
+      margin: 0 auto 4rem;
       text-align: center; }
     .header__container__navbar .btn {
       display: inline-block;
       border: 3px solid #56b648;
-      padding: 1.5rem 4rem;
       border-radius: 3px; }
     .header__container__navbar-icons--btn {
       padding-right: 1rem; }

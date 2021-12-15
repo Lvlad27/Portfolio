@@ -35,9 +35,7 @@
 	////////////////////////////////////////
 	// NAVBAR
 	&__navbar {
-		// background-image: linear-gradient(to right bottom, $color-1-dark, $color-dark);
 		background-image: linear-gradient(to bottom, $color-1, $color-1-dark);
-		// background-image: linear-gradient(to right bottom, $color-1, $color-1-dark);
 		clip-path: circle(0px at top right);
 		transition: clip-path ease-out 0.35s;
 		overflow-y: auto;
@@ -62,14 +60,14 @@
 			color: $color-3-light;
 			font-weight: 600;
 			text-decoration: none;
-			padding: 2.5rem 3rem;
+			margin: 0 auto 4rem;
 			text-align: center;
 		}
 
 		.btn {
 			display: inline-block;
 			border: 3px solid $color-2-dark;
-			padding: 1.5rem 4rem;
+			// padding: 1.5rem 4rem;
 			border-radius: 3px;
 		}
 
