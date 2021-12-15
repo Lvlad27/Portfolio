@@ -24,6 +24,8 @@ body {
   0% {
     opacity: 0;
     transform: translateX(100%); }
+  75% {
+    opacity: 0.2; }
   100% {
     opacity: 1;
     transform: translateX(0%); } }
@@ -66,9 +68,9 @@ body {
   .header__container-navbar {
     background-image: linear-gradient(to bottom, #1d2121, #0e1311);
     clip-path: circle(0px at top right);
-    transition: clip-path ease-in-out 700ms; }
+    transition: clip-path ease-out 700ms; }
     .header__container-navbar .navbar-links--open {
-      animation: fadeIn linear 0.4s forwards; }
+      animation: fadeIn cubic-bezier(0.3, -0.01, 0.49, 1) 0.4s forwards; }
     .header__container-navbar .navbar-links:link,
     .header__container-navbar .navbar-links:visited {
       font-size: 1.6rem;

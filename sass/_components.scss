@@ -31,10 +31,10 @@
 	&-navbar {
 		background-image: linear-gradient(to bottom, $color-1-dark, $color-dark);
 		clip-path: circle(0px at top right);
-		transition: clip-path ease-in-out 700ms;
+		transition: clip-path ease-out 700ms;
 
 		.navbar-links--open {
-			animation: fadeIn linear 0.4s forwards;
+			animation: fadeIn $bezier 0.4s forwards;
 		}
 
 		.navbar-links:link,

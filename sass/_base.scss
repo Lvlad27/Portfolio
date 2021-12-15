@@ -26,6 +26,9 @@ $bp-large: 62.5em; // 1000px
 $bp-medium: 50em; // 800px;
 $bp-small: 37.5em; // 600px;
 
+// ANIMATIONS
+$bezier: cubic-bezier(0.3, -0.01, 0.49, 1);
+
 *,
 *::before,
 *::after {
