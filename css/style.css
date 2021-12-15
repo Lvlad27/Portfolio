@@ -30,6 +30,16 @@ body {
     opacity: 1;
     transform: translateX(0%); } }
 
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0%); }
+  75% {
+    opacity: 0; }
+  100% {
+    opacity: 0;
+    transform: translateX(100%); } }
+
 .header__container {
   width: 100%;
   max-width: 100rem;
@@ -42,10 +52,11 @@ body {
     display: block; }
   .header__container-logo {
     float: left; }
-  .header__container-navbar {
+  .header__container__navbar {
     position: absolute;
     top: 100%;
     right: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column; }
   .header__container-menuToggle {
@@ -65,25 +76,29 @@ body {
   .header__container-logo .logo__span {
     font-weight: 600;
     color: #56b648; }
-  .header__container-navbar {
+  .header__container__navbar {
     background-image: linear-gradient(to bottom, #1d2121, #0e1311);
     clip-path: circle(0px at top right);
     transition: clip-path ease-out 700ms; }
-    .header__container-navbar .navbar-links--open {
+    .header__container__navbar--open {
+      clip-path: circle(250% at top right); }
+    .header__container__navbar-icons {
+      font-size: 2rem;
+      color: #56b648; }
+    .header__container__navbar-links--open {
       animation: fadeIn cubic-bezier(0.3, -0.01, 0.49, 1) 0.4s forwards; }
-    .header__container-navbar .navbar-links:link,
-    .header__container-navbar .navbar-links:visited {
+    .header__container__navbar-links--closed {
+      animation: fadeOut cubic-bezier(0.3, -0.01, 0.49, 1) 0.4s forwards; }
+    .header__container__navbar-button {
+      padding: 2rem 2rem;
+      border: 3px solid #56b648; }
+    .header__container__navbar-links:link, .header__container__navbar-links:visited {
       font-size: 1.6rem;
       color: #ffffff;
       font-weight: 600;
       text-decoration: none;
-      padding: 3rem 6rem;
+      padding: 2rem 8rem;
       text-align: center; }
-    .header__container-navbar .navbar-icons {
-      font-size: 2rem;
-      color: #56b648; }
-    .header__container-navbar--open {
-      clip-path: circle(250% at top right); }
   .header__container-menuToggle {
     padding: 1rem;
     right: 1rem;

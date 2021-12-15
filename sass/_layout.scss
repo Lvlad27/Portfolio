@@ -17,10 +17,11 @@
 			float: left;
 		}
 
-		&-navbar {
+		&__navbar {
 			position: absolute;
 			top: 100%;
 			right: 0;
+			height: 100vh;
 			display: flex;
 			flex-direction: column;
 		}

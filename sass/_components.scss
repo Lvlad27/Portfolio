@@ -28,32 +28,41 @@
 
 	////////////////////////////////////////
 	// NAVBAR
-	&-navbar {
+	&__navbar {
 		background-image: linear-gradient(to bottom, $color-1-dark, $color-dark);
 		clip-path: circle(0px at top right);
 		transition: clip-path ease-out 700ms;
 
-		.navbar-links--open {
-			animation: fadeIn $bezier 0.4s forwards;
+		&--open {
+			clip-path: circle(250% at top right);
 		}
 
-		.navbar-links:link,
-		.navbar-links:visited {
-			font-size: $default-font-size;
-			color: $color-3-light;
-			font-weight: 600;
-			text-decoration: none;
-			padding: 3rem 6rem;
-			text-align: center;
-		}
-
-		.navbar-icons {
+		&-icons {
 			font-size: 2rem;
 			color: $color-2-dark;
 		}
 
-		&--open {
-			clip-path: circle(250% at top right);
+		&-links--open {
+			animation: fadeIn $bezier 0.4s forwards;
+		}
+
+		&-links--closed {
+			animation: fadeOut $bezier 0.4s forwards;
+		}
+
+		&-button {
+			padding: 2rem 2rem;
+			border: 3px solid $color-2-dark;
+		}
+
+		&-links:link,
+		&-links:visited {
+			font-size: $default-font-size;
+			color: $color-3-light;
+			font-weight: 600;
+			text-decoration: none;
+			padding: 2rem 8rem;
+			text-align: center;
 		}
 	}
 
