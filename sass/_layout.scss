@@ -1,0 +1,28 @@
+.header {
+	&__container {
+		width: 100%;
+		max-width: 100rem;
+		margin: 0 auto;
+
+		padding: 1em 0;
+		position: relative;
+
+		&::after {
+			content: '';
+			clear: both;
+			display: block;
+		}
+
+		&-logo {
+			float: left;
+		}
+
+		&-navbar {
+			position: absolute;
+			top: 100%;
+			right: 0;
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}

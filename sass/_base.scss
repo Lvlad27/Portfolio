@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+// COLOR VARIABLES
+$color-1: #1a2a21;
+$color-1-light: #9edc8e;
+$color-1-dark: #1d2121;
+
+$color-2: #97c670;
+$color-2-light: #9feaa4;
+$color-2-dark: #56b648;
+
+$color-3: #3c4649;
+$color-3-light: #ffffff;
+$color-3-dark: #1b2920;
+
+$color-light: #6d5d4b;
+$color-dark: #0e1311;
+
+// FONT VARIABLES
+$font-primary: 'IBM Plex Mono', monospace, sans-serif;
+$default-font-size: 1.6rem;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px;
+$bp-small: 37.5em; // 600px;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+body {
+	font-family: $font-primary;
+	font-size: $default-font-size;
+	color: $color-1-light;
+	line-height: 1.5;
+	background-image: linear-gradient(to right bottom, $color-1, $color-1-dark);
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	min-height: 100vh;
+}

@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "IBM Plex Mono", monospace, sans-serif;
+  font-size: 1.6rem;
+  color: #9edc8e;
+  line-height: 1.5;
+  background-image: linear-gradient(to right bottom, #1a2a21, #1d2121);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh; }
+
+.header__container {
+  width: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 1em 0;
+  position: relative; }
+  .header__container::after {
+    content: '';
+    clear: both;
+    display: block; }
+  .header__container-logo {
+    float: left; }
+  .header__container-navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: flex;
+    flex-direction: column; }
+
+.header__container {
+  background-image: linear-gradient(to top, #1d2121, #0e1311); }
+  .header__container-logo:link, .header__container-logo:visited {
+    font-size: 1.6rem;
+    color: #ffffff;
+    display: inline-block;
+    text-decoration: none;
+    padding: 3px;
+    transition: all 0.2s; }
+  .header__container-logo:hover, .header__container-logo:focus {
+    background-color: #3c4649; }
+  .header__container-logo .logo__span {
+    font-weight: 600;
+    color: #56b648; }
+  .header__container-navbar {
+    background-image: linear-gradient(to bottom, #1d2121, #0e1311); }
+    .header__container-navbar .navbar-links:link,
+    .header__container-navbar .navbar-links:visited {
+      font-size: 1.6rem;
+      color: #ffffff;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 3rem 6rem;
+      text-align: center; }
+    .header__container-navbar .navbar-icons {
+      font-size: 2rem;
+      color: #56b648; }

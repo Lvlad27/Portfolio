@@ -1,0 +1,49 @@
+////////////////////////////////////////
+// LOGO
+.header__container {
+	background-image: linear-gradient(to top, $color-1-dark, $color-dark);
+	// background-color: $color-dark;
+	&-logo {
+		&:link,
+		&:visited {
+			font-size: $default-font-size;
+			color: $color-3-light;
+			display: inline-block;
+			text-decoration: none;
+			padding: 3px;
+			transition: all 0.2s;
+		}
+
+		&:hover,
+		&:focus {
+			background-color: $color-3;
+			// color: $color-3-light;
+		}
+
+		.logo__span {
+			font-weight: 600;
+			color: $color-2-dark;
+		}
+	}
+
+	////////////////////////////////////////
+	// NAVBAR
+	&-navbar {
+		background-image: linear-gradient(to bottom, $color-1-dark, $color-dark);
+
+		.navbar-links:link,
+		.navbar-links:visited {
+			font-size: $default-font-size;
+			color: $color-3-light;
+			font-weight: 600;
+			text-decoration: none;
+			padding: 3rem 6rem;
+			text-align: center;
+		}
+
+		.navbar-icons {
+			font-size: 2rem;
+			color: $color-2-dark;
+		}
+	}
+}

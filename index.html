@@ -24,7 +24,7 @@
 		<meta property="og:image:alt" content="My portfolio page. It contains information about me and my work." />
 
 		<!-- DESIGN -->
-		<link rel="stylesheet" href=".02 css/style.css" />
+		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 		<!-- <meta name="theme color" content="" /> TODO -->
 		<meta name="apple-mobile-web-app-title" content="Vlad L. | Portfolio" />
@@ -50,35 +50,57 @@
 
 	<body>
 		<!-- +++++ Navbar +++++ -->
-		<nav class="navbar">
-			<a class="navbar__link" href="#home" title="">HOME</a>
-			<a class="navbar__link" href="#about" title="">ABOUT</a>
-			<a class="navbar__link" href="#work" title="">WORK</a>
-			<a class="navbar__link" href="#contact" title="">CONTACT</a>
-		</nav>
+		<header class="header">
+			<div class="header__container">
+				<a class="header__container-logo" href="#home" title="TODO"><span class="logo__span">vlad</span>Leontescu</a>
 
-		<!-- +++++ Welcome Section +++++ -->
-		<div id="ww">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-8 col-lg-offset-2 centered">
-						<img src="assets/img/user.png" alt="Stanley" />
-						<h1>Vlad Leontescu.</h1>
-						<h3>Entry level web developer from Bucharest, RO</h3>
+				<nav class="header__container-navbar">
+					<a class="navbar-links" href="#home" title="TODO">
+						<i class="navbar-icons fas fa-home"></i>
+						<p>HOME</p>
+					</a>
+					<a class="navbar-links" href="#about" title="TODO">
+						<i class="navbar-icons fas fa-user"></i>
+						<p>ABOUT</p>
+					</a>
+					<a class="navbar-links" href="#work" title="TODO">
+						<i class="navbar-icons fas fa-eye"></i>
+						<p>WORK</p>
+					</a>
+					<a class="navbar-links" href="#contact" title="TODO">
+						<i class="navbar-icons fas fa-envelope"></i>
+						<p>CONTACT</p>
+					</a>
+				</nav>
 
-						<!-- <p>
-							Hello everybody. I'm Vlad Leontescu, an entry level web developer. I am currently going through the freeCodeCamp curriculum and supplemental
-							resources like Udemy and programming books.
-						</p> -->
-
-						<!-- <p>
-							I have about 7 years of structural engineering experience, but the passion for programming has made me decide to transition fulltime into this
-							industry.
-						</p> -->
-					</div>
+				<div class="header__container-menuToggle">
+					<div class="hamburger"></div>
 				</div>
 			</div>
-		</div>
+		</header>
+
+		<!-- +++++ Welcome Section +++++ -->
+		<section class="home">
+			<h1 class="home__title">Vlad Leontescu.</h1>
+			<h3 class="home__introMessage">Entry level web developer based in Bucharest.</h3>
+			<div class="home__socialMedia">
+				<ul class="home__socialMedia-list">
+					<li>
+						<a href="https://github.com/Lvlad27" class="home__socialMedia-list-icons" target="_blank"><i class="fab fa-github"></i></a>
+					</li>
+					<li>
+						<a href="https://www.freecodecamp.org/lvlad" class="home__socialMedia-list-icons" id="profile-link" target="_blank"
+							><i class="fab fa-free-code-camp"></i
+						></a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/vlad-leontescu-588948210/" class="home__socialMedia-list-icons" target="_blank"
+							><i class="fab fa-linkedin"></i
+						></a>
+					</li>
+				</ul>
+			</div>
+		</section>
 
 		<!-- +++++ About me +++++ -->
 
