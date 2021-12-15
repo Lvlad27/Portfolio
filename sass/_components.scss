@@ -30,6 +30,12 @@
 	// NAVBAR
 	&-navbar {
 		background-image: linear-gradient(to bottom, $color-1-dark, $color-dark);
+		clip-path: circle(0px at top right);
+		transition: clip-path ease-in-out 700ms;
+
+		.navbar-links--open {
+			animation: fadeIn linear 0.4s forwards;
+		}
 
 		.navbar-links:link,
 		.navbar-links:visited {
@@ -44,6 +50,39 @@
 		.navbar-icons {
 			font-size: 2rem;
 			color: $color-2-dark;
+		}
+
+		&--open {
+			clip-path: circle(250% at top right);
+		}
+	}
+
+	////////////////////////////////////////
+	// MENU TOGGLE
+
+	&-menuToggle {
+		padding: 1rem;
+		right: 1rem;
+		top: 2rem;
+		cursor: pointer;
+
+		.hamburger,
+		.hamburger::before,
+		.hamburger::after {
+			content: '';
+			display: block;
+			background-color: $color-3-light;
+			height: 3px;
+			width: 3rem;
+			border-radius: 3px;
+		}
+
+		.hamburger::before {
+			transform: translateY(-7px);
+		}
+
+		.hamburger::after {
+			transform: translateY(4px);
 		}
 	}
 }
