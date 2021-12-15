@@ -62,6 +62,9 @@ body {
   .header__container-menuToggle {
     position: absolute; }
 
+.noScroll {
+  overflow: hidden; }
+
 .header__container {
   background-image: linear-gradient(to top, #1a2a21, #1d2121);
   z-index: 10; }
