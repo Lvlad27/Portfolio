@@ -2,7 +2,7 @@
 
 // COLOR VARIABLES
 $color-1: #1a2a21;
-$color-1-light: #9edc8e;
+$color-1-light: #88c88d;
 $color-1-dark: #1d2121;
 
 $color-2: #97c670;
@@ -10,7 +10,7 @@ $color-2-light: #9feaa4;
 $color-2-dark: #56b648;
 
 $color-3: #3c4649;
-$color-3-light: #ffffff;
+$color-3-light: #c7ffcb;
 $color-3-dark: #1b2920;
 
 $color-light: #6d5d4b;
@@ -19,6 +19,7 @@ $color-dark: #0e1311;
 // FONT VARIABLES
 $font-primary: 'IBM Plex Mono', monospace, sans-serif;
 $default-font-size: 1.6rem;
+$small-font-size: 1rem;
 
 // RESPONSIVE BREAKPOINTS
 $bp-largest: 75em; // 1200px
@@ -45,9 +46,9 @@ html {
 body {
 	font-family: $font-primary;
 	font-size: $default-font-size;
-	color: $color-1-light;
+	color: $color-3-light;
 	line-height: 1.5;
-	background-image: linear-gradient(to right bottom, $color-1, $color-1-dark);
+	background-image: linear-gradient(to right bottom, $color-1-dark, $color-dark);
 	background-size: cover;
 	background-repeat: no-repeat;
 

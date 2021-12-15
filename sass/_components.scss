@@ -1,8 +1,8 @@
 ////////////////////////////////////////
 // LOGO
 .header__container {
-	background-image: linear-gradient(to top, $color-1-dark, $color-dark);
-	// background-color: $color-dark;
+	background-image: linear-gradient(to top, $color-1, $color-1-dark);
+	z-index: 10;
 	&-logo {
 		&:link,
 		&:visited {
@@ -20,7 +20,7 @@
 			// color: $color-3-light;
 		}
 
-		.logo__span {
+		&--span {
 			font-weight: 600;
 			color: $color-2-dark;
 		}
@@ -29,30 +29,25 @@
 	////////////////////////////////////////
 	// NAVBAR
 	&__navbar {
-		background-image: linear-gradient(to bottom, $color-1-dark, $color-dark);
+		// background-image: linear-gradient(to right bottom, $color-1-dark, $color-dark);
+		background-image: linear-gradient(to bottom, $color-1, $color-1-dark);
+		// background-image: linear-gradient(to right bottom, $color-1, $color-1-dark);
 		clip-path: circle(0px at top right);
-		transition: clip-path ease-out 700ms;
+		transition: clip-path ease-out 0.35s;
+		overflow-y: auto;
 
 		&--open {
 			clip-path: circle(250% at top right);
 		}
 
-		&-icons {
+		&-icons,
+		&-icons--btn {
 			font-size: 2rem;
 			color: $color-2-dark;
 		}
 
 		&-links--open {
-			animation: fadeIn $bezier 0.4s forwards;
-		}
-
-		&-links--closed {
-			animation: fadeOut $bezier 0.4s forwards;
-		}
-
-		&-button {
-			padding: 2rem 2rem;
-			border: 3px solid $color-2-dark;
+			animation: fadeIn $bezier 0.2s forwards;
 		}
 
 		&-links:link,
@@ -61,8 +56,19 @@
 			color: $color-3-light;
 			font-weight: 600;
 			text-decoration: none;
-			padding: 2rem 8rem;
+			padding: 2.5rem 3rem;
 			text-align: center;
+		}
+
+		.btn {
+			display: inline-block;
+			border: 3px solid $color-2-dark;
+			padding: 1.5rem 4rem;
+			border-radius: 3px;
+		}
+
+		&-icons--btn {
+			padding-right: 1rem;
 		}
 	}
 
@@ -84,6 +90,7 @@
 			height: 3px;
 			width: 3rem;
 			border-radius: 3px;
+			transition: all ease-in 0.35s;
 		}
 
 		.hamburger::before {
@@ -93,5 +100,32 @@
 		.hamburger::after {
 			transform: translateY(4px);
 		}
+
+		&--open {
+			transform: rotate(45deg);
+
+			.hamburger::before {
+				opacity: 0;
+			}
+
+			.hamburger::after {
+				transform: translateY(-3px) rotate(-90deg);
+			}
+		}
 	}
+}
+
+.header__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($color-1-dark, 0.6);
+	backdrop-filter: blur(3px);
+	z-index: 5;
+}
+
+.header__overlay--hidden {
+	display: none;
 }
