@@ -17,10 +17,10 @@
 			display: inline-block;
 			text-decoration: none;
 			padding: 3px;
+			margin-left: 1rem;
 			transition: all 0.2s;
 		}
 
-		&:hover,
 		&:focus {
 			background-color: $color-3;
 			// color: $color-3-light;
@@ -37,8 +37,7 @@
 	&__navbar {
 		background-image: linear-gradient(to bottom, $color-1, $color-1-dark);
 		clip-path: circle(0px at top right);
-		transition: clip-path ease-out 0.35s;
-		overflow-y: auto;
+		transition: clip-path ease-out 0.4s;
 
 		&--open {
 			clip-path: circle(250% at top right);
@@ -51,7 +50,7 @@
 		}
 
 		&-links--open {
-			animation: fadeIn $bezier 0.2s forwards;
+			animation: fadeIn $bezier 0.4s forwards;
 		}
 
 		&-links:link,
@@ -67,7 +66,7 @@
 		.btn {
 			display: inline-block;
 			border: 3px solid $color-2-dark;
-			// padding: 1.5rem 4rem;
+			padding: 1rem 2rem;
 			border-radius: 3px;
 		}
 

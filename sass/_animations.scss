@@ -4,28 +4,12 @@
 		transform: translateX(100%);
 	}
 
-	75% {
+	50% {
 		opacity: 0.2;
 	}
 
 	100% {
 		opacity: 1;
 		transform: translateX(0%);
-	}
-}
-
-@keyframes fadeOut {
-	0% {
-		opacity: 1;
-		transform: translateX(0%);
-	}
-
-	75% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 0;
-		transform: translateX(100%);
 	}
 }

@@ -24,21 +24,11 @@ body {
   0% {
     opacity: 0;
     transform: translateX(100%); }
-  75% {
+  50% {
     opacity: 0.2; }
   100% {
     opacity: 1;
     transform: translateX(0%); } }
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-    transform: translateX(0%); }
-  75% {
-    opacity: 0; }
-  100% {
-    opacity: 0;
-    transform: translateX(100%); } }
 
 .header__container {
   width: 100%;
@@ -61,7 +51,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 75vw; }
+    width: Min(75vw, 40rem); }
   .header__container-menuToggle {
     position: absolute; }
 
@@ -77,8 +67,9 @@ body {
     display: inline-block;
     text-decoration: none;
     padding: 3px;
+    margin-left: 1rem;
     transition: all 0.2s; }
-  .header__container-logo:hover, .header__container-logo:focus {
+  .header__container-logo:focus {
     background-color: #3c4649; }
   .header__container-logo--span {
     font-weight: 600;
@@ -86,15 +77,14 @@ body {
   .header__container__navbar {
     background-image: linear-gradient(to bottom, #1a2a21, #1d2121);
     clip-path: circle(0px at top right);
-    transition: clip-path ease-out 0.35s;
-    overflow-y: auto; }
+    transition: clip-path ease-out 0.4s; }
     .header__container__navbar--open {
       clip-path: circle(250% at top right); }
     .header__container__navbar-icons, .header__container__navbar-icons--btn {
       font-size: 2rem;
       color: #56b648; }
     .header__container__navbar-links--open {
-      animation: fadeIn cubic-bezier(0.3, -0.01, 0.49, 1) 0.2s forwards; }
+      animation: fadeIn cubic-bezier(0.3, -0.01, 0.49, 1) 0.4s forwards; }
     .header__container__navbar-links:link, .header__container__navbar-links:visited {
       font-size: 1.6rem;
       color: #c7ffcb;
@@ -105,6 +95,7 @@ body {
     .header__container__navbar .btn {
       display: inline-block;
       border: 3px solid #56b648;
+      padding: 1rem 2rem;
       border-radius: 3px; }
     .header__container__navbar-icons--btn {
       padding-right: 1rem; }
