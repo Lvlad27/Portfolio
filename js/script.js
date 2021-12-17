@@ -14,6 +14,5 @@ menuToggle.addEventListener('click', function () {
 	});
 	this.classList.toggle('header__container-menuToggle--open');
 	overlay.classList.toggle('header__overlay--hidden');
-	document.querySelector('body').classList.toggle('noScroll');
-	document.querySelector('html').classList.toggle('noScroll--1');
+	document.querySelector('body').style.overflow = 'hidden';
 });

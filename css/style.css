@@ -15,7 +15,7 @@ body {
   font-size: 1.6rem;
   color: #f4f4f4;
   line-height: 1.5;
-  background-color: #272727;
+  background-color: #202020;
   min-height: 100vh; }
 
 @keyframes fadeIn {
@@ -64,12 +64,6 @@ body {
   .home-introMessage {
     margin-top: 1.5rem; }
 
-.noScroll {
-  overflow: hidden; }
-
-.noScroll--1 {
-  overflow: auto; }
-
 .header__container-logo:link, .header__container-logo:visited {
   font-size: 1.6rem;
   color: #feda4e;
@@ -85,11 +79,12 @@ body {
   color: #f4f4f4; }
 
 .header__container__navbar {
-  background-color: #272727;
+  background-color: #202020;
   clip-path: circle(0px at top right);
   transition: clip-path ease-out 0.6s; }
   .header__container__navbar--open {
-    clip-path: circle(250% at top right); }
+    clip-path: circle(250% at top right);
+    overflow: hidden; }
   .header__container__navbar-icons, .header__container__navbar-icons--btn {
     font-size: 2rem;
     color: #feda4e; }
@@ -134,9 +129,12 @@ body {
       transform: translateY(-3px) rotate(-90deg); }
 
 .header__overlay {
-  position: absolute;
+  position: fixed;
+  overflow: hidden;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
   backdrop-filter: blur(3px);
@@ -145,10 +143,11 @@ body {
 
 @supports (-moz-appearance: none) {
   .header__overlay {
-    background-color: rgba(39, 39, 39, 0.9); } }
+    background-color: rgba(32, 32, 32, 0.9); } }
 
 .header__overlay--hidden {
-  display: none; }
+  display: none;
+  overflow: hidden; }
 
 .home {
   margin: 5rem 2rem 0; }
