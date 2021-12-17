@@ -4,6 +4,7 @@
 	&-logo {
 		&:link,
 		&:visited {
+			font-family: $font-secondary;
 			font-size: $default-font-size;
 			color: $color-2;
 			display: inline-block;
@@ -18,6 +19,7 @@
 		}
 
 		&--span {
+			font-family: $font-secondary;
 			font-weight: 600;
 			color: $color-light;
 		}
@@ -133,7 +135,7 @@
 }
 
 ////////////////////////////////////////
-// WELCOME SECTION
+// INTRO MESSAGE
 .home {
 	margin: 5rem 2rem 0;
 
@@ -155,11 +157,14 @@
 	&-introMessage {
 		font-size: $default-font-size;
 	}
-
-	&__socialMedia {
-		&-list {
-			&--icons {
-			}
-		}
-	}
 }
+
+// SECTION TITLE UTILITY
+.section-title {
+	text-transform: uppercase;
+	font-family: $font-secondary;
+	font-size: clamp($medium-font-size, 4vw, 4rem);
+}
+
+////////////////////////////////////////
+// ABOUT SECTION

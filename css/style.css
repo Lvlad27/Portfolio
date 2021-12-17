@@ -66,10 +66,27 @@ body {
   margin: 5rem 2rem 0; }
   .home-helloMessage {
     margin-bottom: 1.5rem; }
+  .home-title {
+    display: flex;
+    flex-direction: column; }
+    .home-title .lastName {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+    @media (min-width: 350px) {
+      .home-title {
+        flex-direction: row; } }
   .home-introMessage {
-    margin-top: 1.5rem; }
+    margin-top: 1.5rem;
+    margin-bottom: 10rem; }
+
+.about {
+  background-color: #272727; }
+  .about .section-title {
+    margin: 0 2rem 0; }
 
 .header__container-logo:link, .header__container-logo:visited {
+  font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
   font-size: 1.6rem;
   color: #feda4e;
   display: inline-block;
@@ -80,6 +97,7 @@ body {
   background-color: #feda4e; }
 
 .header__container-logo--span {
+  font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
   font-weight: 600;
   color: #f4f4f4; }
 
@@ -166,3 +184,8 @@ body {
       font-size: clamp(3rem, 6vw, 6rem); }
   .home-introMessage {
     font-size: 1.6rem; }
+
+.section-title {
+  text-transform: uppercase;
+  font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
+  font-size: clamp(2rem, 4vw, 4rem); }

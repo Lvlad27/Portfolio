@@ -2,6 +2,8 @@
 	overflow: hidden;
 }
 
+////////////////////////////////////////
+// lOGO & NAVBAR
 .header {
 	&__container {
 		position: relative;
@@ -47,6 +49,8 @@
 	}
 }
 
+////////////////////////////////////////
+// INTRO MESSAGE
 .home {
 	margin: 5rem 2rem 0;
 
@@ -55,16 +59,34 @@
 	}
 
 	&-title {
+		display: flex;
+		flex-direction: column;
+
+		.lastName {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+
+		@media (min-width: 350px) {
+			flex-direction: row;
+		}
 	}
 
+	@media screen {
+	}
 	&-introMessage {
 		margin-top: 1.5rem;
+		margin-bottom: 10rem;
 	}
+}
 
-	&__socialMedia {
-		&-list {
-			&--icons {
-			}
-		}
+////////////////////////////////////////
+// ABOUT SECTION
+.about {
+	background-color: $color-1;
+
+	.section-title {
+		margin: 0 2rem 0;
 	}
 }
