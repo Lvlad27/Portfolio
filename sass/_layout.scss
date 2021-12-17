@@ -1,11 +1,12 @@
 .header {
 	&__container {
+		position: relative;
 		width: 100%;
 		max-width: 100rem;
 		margin: 0 auto;
 
 		padding: 1.5rem 0;
-		position: relative;
+		z-index: 10;
 
 		&::after {
 			content: '';
@@ -15,6 +16,7 @@
 
 		&-logo {
 			float: left;
+			margin-left: 2rem;
 		}
 
 		&__navbar {
@@ -22,15 +24,40 @@
 			top: 100%;
 			right: 0;
 			height: 100vh;
+			width: Min(75vw, 40rem);
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			width: Min(75vw, 40rem);
 		}
 
 		&-menuToggle {
 			position: absolute;
+			padding: 7px;
+			right: 2rem;
+			top: 2rem;
+		}
+	}
+}
+
+.home {
+	margin: 5rem 2rem 0;
+
+	&-helloMessage {
+		margin-bottom: 1.5rem;
+	}
+
+	&-title {
+	}
+
+	&-introMessage {
+		margin-top: 1.5rem;
+	}
+
+	&__socialMedia {
+		&-list {
+			&--icons {
+			}
 		}
 	}
 }

@@ -1,24 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gugi&family=IBM+Plex+Mono:wght@100;300;400&family=Lalezar&family=Saira+Stencil+One&display=swap');
 
 // COLOR VARIABLES
-$color-1: #1a2a21;
-$color-1-light: #88c88d;
-$color-1-dark: #1d2121;
 
-$color-2: #97c670;
-$color-2-light: #9feaa4;
-$color-2-dark: #56b648;
+$color-1: #272727;
+$color-1-dark: #202020;
 
-$color-3: #3c4649;
-$color-3-light: #c7ffcb;
-$color-3-dark: #1b2920;
+$color-2: #feda4e;
 
-$color-light: #6d5d4b;
-$color-dark: #0e1311;
+$color-3: #a6a6a6;
+
+$color-dark: #241f0b;
+$color-light: #f4f4f4;
 
 // FONT VARIABLES
-$font-primary: 'IBM Plex Mono', monospace, sans-serif;
+$font-primary: 'IBM Plex Mono', cursive, calib, monospace, sans-serif;
+$font-secondary: 'Saira Stencil One', cursive, calib, monospace, sans-serif;
 $default-font-size: 1.6rem;
+$large-font-size: 4rem;
 $small-font-size: 1rem;
 
 // RESPONSIVE BREAKPOINTS
@@ -46,11 +44,8 @@ html {
 body {
 	font-family: $font-primary;
 	font-size: $default-font-size;
-	color: $color-3-light;
+	color: $color-light;
 	line-height: 1.5;
-	background-image: linear-gradient(to right bottom, $color-1-dark, $color-dark);
-	background-size: cover;
-	background-repeat: no-repeat;
-
+	background-color: $color-1;
 	min-height: 100vh;
 }
