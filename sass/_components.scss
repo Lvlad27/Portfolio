@@ -1,3 +1,11 @@
+.noScroll {
+	overflow: hidden;
+}
+
+.noScroll--1 {
+	overflow: auto;
+}
+
 ////////////////////////////////////////
 // LOGO
 .header__container {
@@ -56,7 +64,7 @@
 
 		.btn {
 			display: inline-block;
-			border: 3px solid $color-2;
+			border: 1px solid $color-2;
 			padding: 1rem 2rem;
 			border-radius: 3px;
 		}
@@ -68,7 +76,6 @@
 
 	////////////////////////////////////////
 	// MENU TOGGLE
-
 	&-menuToggle {
 		cursor: pointer;
 
@@ -106,32 +113,31 @@
 	}
 }
 
+////////////////////////////////////////
+// BACKGROUND BLUR EFFECT WHEN OPENING SIDE MENU
 .header__overlay {
 	position: absolute;
-	overflow: hidden;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba($color-1, 0.2);
-	color: transparent;
 	backdrop-filter: blur(3px);
-	-webkit-backdrop-filter: blur(3px);
+	-webkit-backdrop-filter: 0 blur(3px);
 	z-index: 5;
-
 }
 
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+@supports (-moz-appearance: none) {
 	.header__overlay {
-		-webkit-backdrop-filter: blur(3px);
-		backdrop-filter: blur(3px);
+		background-color: rgba($color-1, 0.9);
 	}
-
+}
 
 .header__overlay--hidden {
 	display: none;
 }
 
+////////////////////////////////////////
+// WELCOME SECTION
 .home {
 	margin: 5rem 2rem 0;
 

@@ -31,7 +31,6 @@ body {
 .header__container {
   position: relative;
   width: 100%;
-  max-width: 100rem;
   margin: 0 auto;
   padding: 1.5rem 0;
   z-index: 10; }
@@ -64,6 +63,12 @@ body {
     margin-bottom: 1.5rem; }
   .home-introMessage {
     margin-top: 1.5rem; }
+
+.noScroll {
+  overflow: hidden; }
+
+.noScroll--1 {
+  overflow: auto; }
 
 .header__container-logo:link, .header__container-logo:visited {
   font-size: 1.6rem;
@@ -99,7 +104,7 @@ body {
     text-align: center; }
   .header__container__navbar .btn {
     display: inline-block;
-    border: 3px solid #feda4e;
+    border: 1px solid #feda4e;
     padding: 1rem 2rem;
     border-radius: 3px; }
   .header__container__navbar-icons--btn {
@@ -130,20 +135,17 @@ body {
 
 .header__overlay {
   position: absolute;
-  overflow: hidden;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(39, 39, 39, 0.2);
-  color: transparent;
   backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: 0 blur(3px);
   z-index: 5; }
-  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    .header__overlay .header__overlay {
-      -webkit-backdrop-filter: blur(3px);
-      backdrop-filter: blur(3px); } }
+
+@supports (-moz-appearance: none) {
+  .header__overlay {
+    background-color: rgba(39, 39, 39, 0.9); } }
 
 .header__overlay--hidden {
   display: none; }
