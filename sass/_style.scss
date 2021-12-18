@@ -275,11 +275,15 @@ body {
 ////////////////////////////////////////
 // INTRO MESSAGE
 .home {
+	display: flex;
+	flex-direction: column;
 	margin: 5rem 2rem 0;
 
 	&-helloMessage {
 		margin-bottom: 1.5rem;
+
 		font-size: $default-font-size;
+		font-weight: 400;
 	}
 
 	&-title {
@@ -311,13 +315,23 @@ body {
 		margin-bottom: 5rem;
 
 		font-size: $default-font-size;
+		font-weight: 400;
 	}
 
 	&__btn {
+		color: $color-light;
+		// font-family: $font-primary;
 		display: inline-block;
-		border: 1px solid $color-2;
-		padding: 1rem 2rem;
-		border-radius: 3px;
+		text-align: center;
+		text-decoration: none;
+		margin-top: 2rem;
+		margin-bottom: 8rem;
+
+		&-span {
+			border: 1px solid $color-2;
+			border-radius: 3px;
+			padding: 1rem 1rem;
+		}
 	}
 }
 

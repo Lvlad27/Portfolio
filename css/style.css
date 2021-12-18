@@ -162,10 +162,13 @@ body {
   filter: drop-shadow(0 -1rem 20rem #202020); }
 
 .home {
+  display: flex;
+  flex-direction: column;
   margin: 5rem 2rem 0; }
   .home-helloMessage {
     margin-bottom: 1.5rem;
-    font-size: 1.6rem; }
+    font-size: 1.6rem;
+    font-weight: 400; }
   .home-title {
     display: flex;
     flex-direction: column;
@@ -185,12 +188,19 @@ body {
   .home-introMessage {
     margin-top: 1.5rem;
     margin-bottom: 5rem;
-    font-size: 1.6rem; }
+    font-size: 1.6rem;
+    font-weight: 400; }
   .home__btn {
+    color: #f4f4f4;
     display: inline-block;
-    border: 1px solid #feda4e;
-    padding: 1rem 2rem;
-    border-radius: 3px; }
+    text-align: center;
+    text-decoration: none;
+    margin-top: 2rem;
+    margin-bottom: 8rem; }
+    .home__btn-span {
+      border: 1px solid #feda4e;
+      border-radius: 3px;
+      padding: 1rem 1rem; }
 
 .about {
   background-color: #272727; }
