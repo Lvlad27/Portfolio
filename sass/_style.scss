@@ -85,8 +85,6 @@ body {
 		margin: 0 auto;
 		padding: 2.7rem 0 1rem;
 		z-index: 10;
-		backdrop-filter: blur(1rem);
-		-webkit-backdrop-filter: 0 blur(1rem);
 
 		@supports (-moz-appearance: none) {
 			& {
@@ -338,13 +336,115 @@ body {
 ////////////////////////////////////////
 // ABOUT SECTION
 .about {
+	display: flex;
+	flex-direction: column;
 	background-color: $color-1;
 
-	.section-title {
-		margin: 0 2rem 0;
+	// text-align: left;
 
-		text-transform: uppercase;
-		font-family: $font-secondary;
-		font-size: clamp($medium-font-size, 4vw, 4rem);
+	.container {
+		margin: 2rem 2rem 0;
+
+		.section-title {
+			margin-bottom: 2rem;
+			text-transform: uppercase;
+			font-family: $font-secondary;
+			font-size: clamp($medium-font-size, 4vw, 4rem);
+		}
+
+		.paragraph--1 {
+			color: $color-light;
+		}
+
+		&__image {
+			margin: 3rem 0 3rem;
+			text-align: center;
+
+			.profile-image {
+				border-radius: 50%;
+			}
+		}
+
+		&__skills {
+			margin-top: 2rem;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+
+			gap: 2rem;
+
+			&-item {
+				vertical-align: top;
+				display: inline-block;
+				text-align: center;
+				width: 120px;
+			}
+
+			.caption {
+				display: block;
+				font-size: 1.3rem;
+			}
+
+			.skills__logo {
+				width: 5rem;
+				height: auto;
+				&--p1 {
+					filter: invert(37%) sepia(89%) saturate(2459%) hue-rotate(349deg) brightness(94%) contrast(88%);
+				}
+
+				&--p2 {
+					filter: invert(35%) sepia(85%) saturate(862%) hue-rotate(173deg) brightness(89%) contrast(93%);
+				}
+
+				&--p3 {
+					filter: invert(100%) sepia(79%) saturate(5425%) hue-rotate(335deg) brightness(97%) contrast(101%);
+				}
+
+				&--p4 {
+					filter: invert(69%) sepia(6%) saturate(6600%) hue-rotate(291deg) brightness(83%) contrast(89%);
+				}
+
+				&--p5 {
+					filter: invert(36%) sepia(21%) saturate(4757%) hue-rotate(335deg) brightness(83%) contrast(91%);
+				}
+
+				&--p6 {
+					filter: invert(38%) sepia(42%) saturate(2277%) hue-rotate(340deg) brightness(98%) contrast(93%);
+				}
+
+				&--p7 {
+					filter: invert(29%) sepia(96%) saturate(2944%) hue-rotate(186deg) brightness(94%) contrast(103%);
+				}
+
+				&--p8 {
+					filter: invert(40%) sepia(60%) saturate(567%) hue-rotate(154deg) brightness(86%) contrast(93%);
+				}
+
+				&--p9 {
+					filter: invert(67%) sepia(92%) saturate(421%) hue-rotate(351deg) brightness(106%) contrast(98%);
+				}
+			}
+		}
+
+		&__socialMedia {
+			&-list {
+				display: flex;
+				flex-direction: row;
+				gap: 3rem;
+				justify-content: center;
+
+				font-size: $large-font-size;
+				list-style-type: none;
+				margin-bottom: 2rem;
+
+				&-icons {
+					color: $color-light;
+
+					&-icons:hover {
+						color: $color-2;
+					}
+				}
+			}
+		}
 	}
 }
