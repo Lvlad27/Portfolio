@@ -64,31 +64,15 @@ body {
 	min-height: 100vh;
 }
 
-.noScroll {
-	overflow: hidden;
-}
-
-.scroll-down {
-	header {
-		transform: translate3d(0, -100%, 0);
-	}
-}
-
-.scroll-up {
-	header {
-		filter: drop-shadow(0 -1rem 20rem $color-1-dark);
-	}
-}
-
 ////////////////////////////////////////
 // LOGO & NAVBAR
+
 .header {
 	&__scroll {
 		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
-		padding: 2rem 0;
 		text-align: center;
 		backdrop-filter: blur(1rem);
 		-webkit-backdrop-filter: 0 blur(1rem);
@@ -102,7 +86,14 @@ body {
 		margin: 0 auto;
 		padding: 2.7rem 0 1rem;
 		z-index: 10;
-		background-color: blue;
+		backdrop-filter: blur(1rem);
+		-webkit-backdrop-filter: 0 blur(1rem);
+
+		@supports (-moz-appearance: none) {
+			& {
+				background-color: rgba($color-1-dark, 0.9);
+			}
+		}
 
 		&::after {
 			content: '';
@@ -235,32 +226,50 @@ body {
 			}
 		}
 	}
+}
 
-	////////////////////////////////////////
-	// BACKGROUND EFFECT WHEN OPENING SIDE MENU
-	&__overlay {
-		position: fixed;
-		overflow: hidden;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		width: 100%;
-		height: 100%;
-		backdrop-filter: blur(3px);
-		-webkit-backdrop-filter: 0 blur(3px);
-		z-index: 5;
-	}
+////////////////////////////////////////
+// BACKGROUND EFFECT WHEN OPENING SIDE MENU
+.overlay {
+	position: fixed;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(3px);
+	-webkit-backdrop-filter: 0 blur(3px);
+	z-index: 5;
 
 	@supports (-moz-appearance: none) {
-		&__overlay {
+		& {
 			background-color: rgba($color-1-dark, 0.9);
 		}
 	}
 
-	&__overlay--hidden {
+	&--hidden {
 		display: none;
 		overflow: hidden;
+	}
+}
+
+////////////////////////////////////////
+// NAVBAR EFFECT WHEN SCROLLING
+.noScroll {
+	overflow: hidden;
+}
+
+.scroll-down {
+	header {
+		transform: translate3d(0, -100%, 0);
+	}
+}
+
+.scroll-up {
+	header {
+		filter: drop-shadow(0 -1rem 20rem $color-1-dark);
 	}
 }
 

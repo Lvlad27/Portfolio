@@ -5,7 +5,7 @@
 const navbar = document.querySelector('.header__container__navbar');
 const menuToggle = document.querySelector('.header__container-menuToggle');
 const navLinks = document.querySelectorAll('.header__container__navbar-links');
-const overlay = document.querySelector('.header__overlay');
+const overlay = document.querySelector('.overlay');
 const body = document.body;
 
 menuToggle.addEventListener('click', function () {
@@ -14,7 +14,7 @@ menuToggle.addEventListener('click', function () {
 		element.classList.toggle('header__container__navbar-links--open');
 	});
 	this.classList.toggle('header__container-menuToggle--open');
-	overlay.classList.toggle('header__overlay--hidden');
+	overlay.classList.toggle('overlay--hidden');
 	body.classList.toggle('noScroll');
 });
 
