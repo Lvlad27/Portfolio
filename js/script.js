@@ -8,6 +8,7 @@ const navLinks = document.querySelectorAll('.header__container__navbar-links');
 const overlay = document.querySelector('.overlay');
 const body = document.body;
 
+// BACKGROUND EFFECT WHEN OPENING SIDE MENU
 menuToggle.addEventListener('click', function () {
 	navbar.classList.toggle('header__container__navbar--open');
 	navLinks.forEach(element => {
@@ -21,6 +22,7 @@ menuToggle.addEventListener('click', function () {
 let lastScroll = 0;
 const header = document.querySelector('header');
 
+// NAVBAR EFFECT WHEN SCROLLING
 window.addEventListener('scroll', () => {
 	const currentScroll = window.pageYOffset;
 	if (currentScroll <= 0) {
