@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;300;400&family=Saira+Stencil+One&display=swap');
+
+// COLOR VARIABLES
+$color-1: #272727;
+$color-1-dark: #202020;
+$color-2: #feda4e;
+$color-3: #a6a6a6;
+$color-dark: #241f0b;
+$color-light: #f4f4f4;
+
+// FONT VARIABLES
+$font-primary: 'IBM Plex Mono', cursive, calib, monospace, sans-serif;
+$font-secondary: 'Saira Stencil One', cursive, calib, monospace, sans-serif;
+$default-font-size: 1.6rem;
+$large-font-size: 4rem;
+$medium-font-size: 2rem;
+
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px;
+$bp-small: 37.5em; // 600px;
+
+// ANIMATIONS
+$bezier: cubic-bezier(0.3, -0.01, 0.49, 1);
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+
+	75% {
+		opacity: 0.2;
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+////////////////////////////////////////
+// BASE
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+body {
+	font-family: $font-primary;
+	font-size: $default-font-size;
+	color: $color-light;
+	line-height: 1.5;
+	background-color: $color-1-dark;
+	min-height: 100vh;
+}
+
+.noScroll {
+	overflow: hidden;
+}
+
+.scroll-down {
+	header {
+		transform: translate3d(0, -100%, 0);
+	}
+}
+
+.scroll-up {
+	header {
+		filter: drop-shadow(0 -1rem 20rem $color-1-dark);
+	}
+}
+
+////////////////////////////////////////
+// LOGO & NAVBAR
+.header {
+	&__scroll {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: 2rem 0;
+		text-align: center;
+		backdrop-filter: blur(1rem);
+		-webkit-backdrop-filter: 0 blur(1rem);
+		z-index: 9999;
+		transition: all 400ms ease-in-out;
+	}
+
+	&__container {
+		position: relative;
+		width: 100%;
+		margin: 0 auto;
+		padding: 2.7rem 0 1rem;
+		z-index: 10;
+		background-color: blue;
+
+		&::after {
+			content: '';
+			clear: both;
+			display: block;
+		}
+
+		&-logo {
+			float: left;
+			margin-left: 2rem;
+
+			&:link,
+			&:visited {
+				font-family: $font-secondary;
+				font-size: $medium-font-size;
+				color: $color-2;
+				display: inline-block;
+				text-decoration: none;
+				transition: all 0.2s;
+			}
+
+			.fa-circle-up {
+				margin-left: 5px;
+			}
+
+			&:focus {
+				background-color: $color-2;
+			}
+
+			&--span {
+				font-family: $font-secondary;
+				font-weight: 600;
+				color: $color-light;
+			}
+		}
+
+		&__navbar {
+			position: absolute;
+			top: 100%;
+			right: 0;
+			height: 100vh;
+			width: Min(75vw, 40rem);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			background-color: $color-1-dark;
+			clip-path: circle(0px at top right);
+			transition: clip-path ease-out 0.6s;
+
+			&--open {
+				overflow: hidden;
+				clip-path: circle(250% at top right);
+			}
+
+			&-links:link,
+			&-links:visited {
+				margin: 0 auto 4rem;
+				text-align: center;
+
+				font-size: $default-font-size;
+				color: $color-light;
+				font-weight: 600;
+				text-decoration: none;
+			}
+
+			&-links--open {
+				animation: fadeIn $bezier 0.3s forwards;
+			}
+
+			&-icons,
+			&-icons--btn {
+				font-size: 2rem;
+				color: $color-2;
+			}
+
+			&-icons--btn {
+				padding-right: 1rem;
+			}
+
+			.btn {
+				display: inline-block;
+				border: 1px solid $color-2;
+				padding: 1rem 2rem;
+				border-radius: 3px;
+			}
+		}
+
+		////////////////////////////////////////
+		// HAMBURGER MENU ICON
+		&-menuToggle {
+			position: absolute;
+			padding: 2rem 7px;
+			right: 2rem;
+			top: 2rem;
+
+			cursor: pointer;
+
+			.hamburger,
+			.hamburger::before,
+			.hamburger::after {
+				content: '';
+				display: block;
+				background-color: $color-light;
+				height: 3px;
+				width: 3rem;
+				border-radius: 3px;
+				transition: all ease-in 0.35s;
+			}
+
+			.hamburger::before {
+				transform: translateY(-7px);
+			}
+
+			.hamburger::after {
+				transform: translateY(4px);
+			}
+
+			&--open {
+				transform: rotate(45deg);
+
+				.hamburger::before {
+					opacity: 0;
+				}
+
+				.hamburger::after {
+					transform: translateY(-3px) rotate(-90deg);
+				}
+			}
+		}
+	}
+
+	////////////////////////////////////////
+	// BACKGROUND EFFECT WHEN OPENING SIDE MENU
+	&__overlay {
+		position: fixed;
+		overflow: hidden;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		backdrop-filter: blur(3px);
+		-webkit-backdrop-filter: 0 blur(3px);
+		z-index: 5;
+	}
+
+	@supports (-moz-appearance: none) {
+		&__overlay {
+			background-color: rgba($color-1-dark, 0.9);
+		}
+	}
+
+	&__overlay--hidden {
+		display: none;
+		overflow: hidden;
+	}
+}
+
+////////////////////////////////////////
+// INTRO MESSAGE
+.home {
+	margin: 5rem 2rem 0;
+
+	&-helloMessage {
+		margin-bottom: 1.5rem;
+		font-size: $default-font-size;
+	}
+
+	&-title {
+		display: flex;
+		flex-direction: column;
+
+		font-family: $font-secondary;
+		color: $color-2;
+		font-size: clamp($large-font-size, 8vw, 8rem);
+		line-height: 1;
+
+		.fa-cog {
+			font-size: clamp(3rem, 6vw, 6rem);
+		}
+
+		.lastName {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+		}
+
+		@media (min-width: 350px) {
+			flex-direction: row;
+		}
+	}
+
+	&-introMessage {
+		margin-top: 1.5rem;
+		margin-bottom: 5rem;
+
+		font-size: $default-font-size;
+	}
+
+	&__btn {
+		display: inline-block;
+		border: 1px solid $color-2;
+		padding: 1rem 2rem;
+		border-radius: 3px;
+	}
+}
+
+////////////////////////////////////////
+// ABOUT SECTION
+.about {
+	background-color: $color-1;
+
+	.section-title {
+		margin: 0 2rem 0;
+
+		text-transform: uppercase;
+		font-family: $font-secondary;
+		font-size: clamp($medium-font-size, 4vw, 4rem);
+	}
+}

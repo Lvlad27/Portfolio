@@ -1,4 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Gugi&family=IBM+Plex+Mono:wght@100;300;400&family=Lalezar&family=Saira+Stencil+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;300;400&family=Saira+Stencil+One&display=swap");
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%); }
+  75% {
+    opacity: 0.2; }
+  100% {
+    opacity: 1;
+    transform: translateX(0%); } }
+
 *,
 *::before,
 *::after {
@@ -18,25 +28,34 @@ body {
   background-color: #202020;
   min-height: 100vh; }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateX(100%); }
-  75% {
-    opacity: 0.2; }
-  100% {
-    opacity: 1;
-    transform: translateX(0%); } }
-
 .noScroll {
   overflow: hidden; }
+
+.scroll-down header {
+  transform: translate3d(0, -100%, 0); }
+
+.scroll-up header {
+  filter: drop-shadow(0 -1rem 20rem #202020); }
+
+.header__scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: 0 blur(1rem);
+  z-index: 9999;
+  transition: all 400ms ease-in-out; }
 
 .header__container {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  padding: 1.5rem 0;
-  z-index: 10; }
+  padding: 2.7rem 0 1rem;
+  z-index: 10;
+  background-color: blue; }
   .header__container::after {
     content: '';
     clear: both;
@@ -44,6 +63,21 @@ body {
   .header__container-logo {
     float: left;
     margin-left: 2rem; }
+    .header__container-logo:link, .header__container-logo:visited {
+      font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
+      font-size: 2rem;
+      color: #feda4e;
+      display: inline-block;
+      text-decoration: none;
+      transition: all 0.2s; }
+    .header__container-logo .fa-circle-up {
+      margin-left: 5px; }
+    .header__container-logo:focus {
+      background-color: #feda4e; }
+    .header__container-logo--span {
+      font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
+      font-weight: 600;
+      color: #f4f4f4; }
   .header__container__navbar {
     position: absolute;
     top: 100%;
@@ -53,102 +87,58 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    background-color: #202020;
+    clip-path: circle(0px at top right);
+    transition: clip-path ease-out 0.6s; }
     .header__container__navbar--open {
-      overflow: hidden; }
+      overflow: hidden;
+      clip-path: circle(250% at top right); }
+    .header__container__navbar-links:link, .header__container__navbar-links:visited {
+      margin: 0 auto 4rem;
+      text-align: center;
+      font-size: 1.6rem;
+      color: #f4f4f4;
+      font-weight: 600;
+      text-decoration: none; }
+    .header__container__navbar-links--open {
+      animation: fadeIn cubic-bezier(0.3, -0.01, 0.49, 1) 0.3s forwards; }
+    .header__container__navbar-icons, .header__container__navbar-icons--btn {
+      font-size: 2rem;
+      color: #feda4e; }
+    .header__container__navbar-icons--btn {
+      padding-right: 1rem; }
+    .header__container__navbar .btn {
+      display: inline-block;
+      border: 1px solid #feda4e;
+      padding: 1rem 2rem;
+      border-radius: 3px; }
   .header__container-menuToggle {
     position: absolute;
-    padding: 7px;
+    padding: 2rem 7px;
     right: 2rem;
-    top: 2rem; }
-
-.home {
-  margin: 5rem 2rem 0; }
-  .home-helloMessage {
-    margin-bottom: 1.5rem; }
-  .home-title {
-    display: flex;
-    flex-direction: column; }
-    .home-title .lastName {
-      display: flex;
-      flex-direction: row;
-      align-items: center; }
-    @media (min-width: 350px) {
-      .home-title {
-        flex-direction: row; } }
-  .home-introMessage {
-    margin-top: 1.5rem;
-    margin-bottom: 10rem; }
-
-.about {
-  background-color: #272727; }
-  .about .section-title {
-    margin: 0 2rem 0; }
-
-.header__container-logo:link, .header__container-logo:visited {
-  font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
-  font-size: 1.6rem;
-  color: #feda4e;
-  display: inline-block;
-  text-decoration: none;
-  transition: all 0.2s; }
-
-.header__container-logo:focus {
-  background-color: #feda4e; }
-
-.header__container-logo--span {
-  font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
-  font-weight: 600;
-  color: #f4f4f4; }
-
-.header__container__navbar {
-  background-color: #202020;
-  clip-path: circle(0px at top right);
-  transition: clip-path ease-out 0.6s; }
-  .header__container__navbar--open {
-    clip-path: circle(250% at top right); }
-  .header__container__navbar-icons, .header__container__navbar-icons--btn {
-    font-size: 2rem;
-    color: #feda4e; }
-  .header__container__navbar-links--open {
-    animation: fadeIn cubic-bezier(0.3, -0.01, 0.49, 1) 0.3s forwards; }
-  .header__container__navbar-links:link, .header__container__navbar-links:visited {
-    font-size: 1.6rem;
-    color: #f4f4f4;
-    font-weight: 600;
-    text-decoration: none;
-    margin: 0 auto 4rem;
-    text-align: center; }
-  .header__container__navbar .btn {
-    display: inline-block;
-    border: 1px solid #feda4e;
-    padding: 1rem 2rem;
-    border-radius: 3px; }
-  .header__container__navbar-icons--btn {
-    padding-right: 1rem; }
-
-.header__container-menuToggle {
-  cursor: pointer; }
-  .header__container-menuToggle .hamburger,
-  .header__container-menuToggle .hamburger::before,
-  .header__container-menuToggle .hamburger::after {
-    content: '';
-    display: block;
-    background-color: #f4f4f4;
-    height: 3px;
-    width: 3rem;
-    border-radius: 3px;
-    transition: all ease-in 0.35s; }
-  .header__container-menuToggle .hamburger::before {
-    transform: translateY(-7px); }
-  .header__container-menuToggle .hamburger::after {
-    transform: translateY(4px); }
-  .header__container-menuToggle--open {
-    transform: rotate(45deg); }
-    .header__container-menuToggle--open .hamburger::before {
-      opacity: 0; }
-    .header__container-menuToggle--open .hamburger::after {
-      transform: translateY(-3px) rotate(-90deg); }
+    top: 2rem;
+    cursor: pointer; }
+    .header__container-menuToggle .hamburger,
+    .header__container-menuToggle .hamburger::before,
+    .header__container-menuToggle .hamburger::after {
+      content: '';
+      display: block;
+      background-color: #f4f4f4;
+      height: 3px;
+      width: 3rem;
+      border-radius: 3px;
+      transition: all ease-in 0.35s; }
+    .header__container-menuToggle .hamburger::before {
+      transform: translateY(-7px); }
+    .header__container-menuToggle .hamburger::after {
+      transform: translateY(4px); }
+    .header__container-menuToggle--open {
+      transform: rotate(45deg); }
+      .header__container-menuToggle--open .hamburger::before {
+        opacity: 0; }
+      .header__container-menuToggle--open .hamburger::after {
+        transform: translateY(-3px) rotate(-90deg); }
 
 .header__overlay {
   position: fixed;
@@ -174,18 +164,38 @@ body {
 .home {
   margin: 5rem 2rem 0; }
   .home-helloMessage {
+    margin-bottom: 1.5rem;
     font-size: 1.6rem; }
   .home-title {
+    display: flex;
+    flex-direction: column;
     font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
     color: #feda4e;
     font-size: clamp(4rem, 8vw, 8rem);
     line-height: 1; }
     .home-title .fa-cog {
       font-size: clamp(3rem, 6vw, 6rem); }
+    .home-title .lastName {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+    @media (min-width: 350px) {
+      .home-title {
+        flex-direction: row; } }
   .home-introMessage {
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
     font-size: 1.6rem; }
+  .home__btn {
+    display: inline-block;
+    border: 1px solid #feda4e;
+    padding: 1rem 2rem;
+    border-radius: 3px; }
 
-.section-title {
-  text-transform: uppercase;
-  font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
-  font-size: clamp(2rem, 4vw, 4rem); }
+.about {
+  background-color: #272727; }
+  .about .section-title {
+    margin: 0 2rem 0;
+    text-transform: uppercase;
+    font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
+    font-size: clamp(2rem, 4vw, 4rem); }
