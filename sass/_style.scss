@@ -82,8 +82,39 @@ body {
 }
 
 ////////////////////////////////////////
-// LOGO & NAVBAR
+// GLOBAL ITEMS
+.section-title {
+	margin-bottom: 2rem;
+	text-transform: uppercase;
+	font-family: $font-secondary;
+	font-size: clamp($large-font-size, 4vw, 4rem);
+}
 
+.btn {
+	color: $color-light;
+	// font-family: $font-primary;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	margin-top: 2rem;
+	margin-bottom: 8rem;
+
+	&-span {
+		border: 1px solid $color-2;
+		border-radius: 3px;
+		padding: 1rem 1rem;
+	}
+}
+
+.paragraph--1 {
+	color: $color-3;
+	.highlight {
+		color: $color-light;
+	}
+}
+
+////////////////////////////////////////
+// LOGO & NAVBAR
 .header {
 	&__scroll {
 		position: fixed;
@@ -333,22 +364,6 @@ body {
 		font-size: $default-font-size;
 		font-weight: 400;
 	}
-
-	&__btn {
-		color: $color-light;
-		// font-family: $font-primary;
-		display: inline-block;
-		text-align: center;
-		text-decoration: none;
-		margin-top: 2rem;
-		margin-bottom: 8rem;
-
-		&-span {
-			border: 1px solid $color-2;
-			border-radius: 3px;
-			padding: 1rem 1rem;
-		}
-	}
 }
 
 ////////////////////////////////////////
@@ -361,14 +376,7 @@ body {
 	// text-align: left;
 
 	.container {
-		margin: 2rem 2rem 0;
-
-		.section-title {
-			margin-bottom: 2rem;
-			text-transform: uppercase;
-			font-family: $font-secondary;
-			font-size: clamp($medium-font-size, 4vw, 4rem);
-		}
+		margin: 6rem 2rem 0;
 
 		&__image {
 			margin: 3rem 0 3rem;
@@ -400,27 +408,19 @@ body {
 			}
 		}
 
-		.paragraph--1 {
-			color: $color-3;
-			.highlight {
-				color: $color-light;
-			}
-		}
-
 		&__skills {
-			margin-top: 2rem;
-			margin-bottom: 2rem;
+			margin-top: 4rem;
+			margin-bottom: 6rem;
 			display: flex;
-			flex-wrap: wrap;
 			flex-direction: row;
-
-			gap: 2rem;
+			flex-wrap: wrap;
+			gap: 4rem;
+			align-items: center;
+			justify-content: space-around;
 
 			&-item {
-				vertical-align: top;
-				display: inline-block;
+				width: 7rem;
 				text-align: center;
-				width: 120px;
 			}
 
 			.caption {
@@ -431,6 +431,7 @@ body {
 			.skills__logo {
 				width: 5rem;
 				height: auto;
+
 				&--p1 {
 					filter: invert(37%) sepia(89%) saturate(2459%) hue-rotate(349deg) brightness(94%) contrast(88%);
 				}
@@ -471,6 +472,88 @@ body {
 					filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(131deg) brightness(101%) contrast(102%);
 				}
 			}
+		}
+	}
+}
+
+////////////////////////////////////////
+// HIRE SECTION
+
+.hire {
+	background-color: $color-2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	&__icon {
+		margin-top: 5rem;
+		width: 10rem;
+		// text-align: center;
+	}
+
+	.section-title {
+		margin-top: 2rem;
+
+		color: $color-dark;
+		// text-align: center;
+	}
+
+	.paragraph--1 {
+		color: $color-dark;
+		font-weight: 400;
+		// text-align: center;
+	}
+
+	.btn {
+		margin-top: 5rem;
+		margin-bottom: 6rem;
+		// color: $color-dark;
+		// font-family: $font-primary;
+		// display: inline-block;
+		// text-align: center;
+		align-self: center;
+		background-color: #fff;
+		background-image: none;
+		background-position: 0 90%;
+		background-repeat: repeat no-repeat;
+		background-size: 4px 3px;
+		border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+		border-style: solid;
+		border-width: 2px;
+		box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
+		box-sizing: border-box;
+		color: #41403e;
+		cursor: pointer;
+		display: inline-block;
+		font-family: Neucha, sans-serif;
+		font-size: 1rem;
+		line-height: 23px;
+		outline: none;
+		padding: 0.75rem;
+		text-decoration: none;
+		transition: all 235ms ease-in-out;
+		border-bottom-left-radius: 15px 255px;
+		border-bottom-right-radius: 225px 15px;
+		border-top-left-radius: 255px 15px;
+		border-top-right-radius: 15px 225px;
+		user-select: none;
+		-webkit-user-select: none;
+		touch-action: manipulation;
+
+		&:hover {
+			box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
+			transform: translate3d(0, 2px, 0);
+		}
+
+		&:focus {
+			box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+		}
+
+		&-span {
+			// border: 1px solid $color-2;
+			// border-radius: 3px;
+			// padding: 1rem 1rem;
 		}
 	}
 }

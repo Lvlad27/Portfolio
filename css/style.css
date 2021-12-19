@@ -42,6 +42,29 @@ body {
   background-color: #202020;
   min-height: 100vh; }
 
+.section-title {
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
+  font-size: clamp(4rem, 4vw, 4rem); }
+
+.btn {
+  color: #f4f4f4;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 2rem;
+  margin-bottom: 8rem; }
+  .btn-span {
+    border: 1px solid #feda4e;
+    border-radius: 3px;
+    padding: 1rem 1rem; }
+
+.paragraph--1 {
+  color: #a6a6a6; }
+  .paragraph--1 .highlight {
+    color: #f4f4f4; }
+
 .header__scroll {
   position: fixed;
   top: 0;
@@ -203,29 +226,13 @@ body {
     margin-bottom: 5rem;
     font-size: 1.6rem;
     font-weight: 400; }
-  .home__btn {
-    color: #f4f4f4;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    margin-top: 2rem;
-    margin-bottom: 8rem; }
-    .home__btn-span {
-      border: 1px solid #feda4e;
-      border-radius: 3px;
-      padding: 1rem 1rem; }
 
 .about {
   display: flex;
   flex-direction: column;
   background-color: #272727; }
   .about .container {
-    margin: 2rem 2rem 0; }
-    .about .container .section-title {
-      margin-bottom: 2rem;
-      text-transform: uppercase;
-      font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
-      font-size: clamp(2rem, 4vw, 4rem); }
+    margin: 6rem 2rem 0; }
     .about .container__image {
       margin: 3rem 0 3rem;
       text-align: center; }
@@ -243,22 +250,18 @@ body {
         color: #f4f4f4; }
         .about .container__socialMedia-list-icons-icons:hover {
           color: #feda4e; }
-    .about .container .paragraph--1 {
-      color: #a6a6a6; }
-      .about .container .paragraph--1 .highlight {
-        color: #f4f4f4; }
     .about .container__skills {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
+      margin-top: 4rem;
+      margin-bottom: 6rem;
       display: flex;
-      flex-wrap: wrap;
       flex-direction: row;
-      gap: 2rem; }
+      flex-wrap: wrap;
+      gap: 4rem;
+      align-items: center;
+      justify-content: space-around; }
       .about .container__skills-item {
-        vertical-align: top;
-        display: inline-block;
-        text-align: center;
-        width: 120px; }
+        width: 7rem;
+        text-align: center; }
       .about .container__skills .caption {
         display: block;
         font-size: 1.3rem; }
@@ -285,3 +288,55 @@ body {
           filter: invert(48%) sepia(97%) saturate(3997%) hue-rotate(351deg) brightness(96%) contrast(90%); }
         .about .container__skills .skills__logo--p10 {
           filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(131deg) brightness(101%) contrast(102%); }
+
+.hire {
+  background-color: #feda4e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+  .hire__icon {
+    margin-top: 5rem;
+    width: 10rem; }
+  .hire .section-title {
+    margin-top: 2rem;
+    color: #241f0b; }
+  .hire .paragraph--1 {
+    color: #241f0b;
+    font-weight: 400; }
+  .hire .btn {
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+    align-self: center;
+    background-color: #fff;
+    background-image: none;
+    background-position: 0 90%;
+    background-repeat: repeat no-repeat;
+    background-size: 4px 3px;
+    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
+    box-sizing: border-box;
+    color: #41403e;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Neucha, sans-serif;
+    font-size: 1rem;
+    line-height: 23px;
+    outline: none;
+    padding: 0.75rem;
+    text-decoration: none;
+    transition: all 235ms ease-in-out;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation; }
+    .hire .btn:hover {
+      box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
+      transform: translate3d(0, 2px, 0); }
+    .hire .btn:focus {
+      box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px; }
