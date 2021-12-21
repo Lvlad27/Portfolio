@@ -49,16 +49,20 @@ body {
   font-size: clamp(4rem, 4vw, 4rem); }
 
 .btn {
-  color: #f4f4f4;
-  display: inline-block;
-  text-align: center;
+  font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
+  font-size: 2rem;
+  padding: 1rem 1rem;
+  border: 2px solid #241f0b;
   text-decoration: none;
-  margin-top: 2rem;
-  margin-bottom: 8rem; }
-  .btn-span {
-    border: 1px solid #feda4e;
-    border-radius: 3px;
-    padding: 1rem 1rem; }
+  color: #241f0b;
+  background-color: #feda4e;
+  text-align: center;
+  transition: all 0.2s;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px; }
+  .btn:hover {
+    background-color: #241f0b;
+    color: #feda4e; }
 
 .paragraph--1 {
   color: #a6a6a6; }
@@ -196,43 +200,44 @@ body {
 .scroll-up header {
   filter: drop-shadow(0 -1rem 20rem #202020); }
 
-.home {
+.intro {
   display: flex;
   flex-direction: column;
-  margin: 5rem 2rem 0; }
-  .home-helloMessage {
+  margin: 3rem 2rem 0; }
+  .intro-message {
     margin-bottom: 1.5rem;
     font-size: 1.6rem;
     font-weight: 400; }
-  .home-title {
+  .intro-title {
     display: flex;
     flex-direction: column;
     font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
     color: #feda4e;
     font-size: clamp(4rem, 8vw, 8rem);
     line-height: 1; }
-    .home-title .fa-cog {
+    .intro-title .fa-cog {
       font-size: clamp(3rem, 6vw, 6rem);
       animation: spin 2s infinite linear; }
-    .home-title .lastName {
+    .intro-title .lastName {
       display: flex;
       flex-direction: row;
       align-items: center; }
     @media (min-width: 350px) {
-      .home-title {
+      .intro-title {
         flex-direction: row; } }
-  .home-introMessage {
+  .intro-description {
     margin-top: 1.5rem;
-    margin-bottom: 5rem;
     font-size: 1.6rem;
     font-weight: 400; }
+  .intro .btn {
+    margin: 6rem 2rem 8rem; }
 
 .about {
   display: flex;
   flex-direction: column;
   background-color: #272727; }
   .about .container {
-    margin: 6rem 2rem 0; }
+    margin: 5rem 2rem 0; }
     .about .container__image {
       margin: 3rem 0 3rem;
       text-align: center; }
@@ -251,8 +256,8 @@ body {
         .about .container__socialMedia-list-icons-icons:hover {
           color: #feda4e; }
     .about .container__skills {
-      margin-top: 4rem;
-      margin-bottom: 6rem;
+      margin-top: 3rem;
+      margin-bottom: 5rem;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -303,40 +308,7 @@ body {
     color: #241f0b; }
   .hire .paragraph--1 {
     color: #241f0b;
-    font-weight: 400; }
+    font-weight: 600; }
   .hire .btn {
-    margin-top: 5rem;
-    margin-bottom: 6rem;
-    align-self: center;
-    background-color: #fff;
-    background-image: none;
-    background-position: 0 90%;
-    background-repeat: repeat no-repeat;
-    background-size: 4px 3px;
-    border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
-    border-style: solid;
-    border-width: 2px;
-    box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
-    box-sizing: border-box;
-    color: #41403e;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Neucha, sans-serif;
-    font-size: 1rem;
-    line-height: 23px;
-    outline: none;
-    padding: 0.75rem;
-    text-decoration: none;
-    transition: all 235ms ease-in-out;
-    border-bottom-left-radius: 15px 255px;
-    border-bottom-right-radius: 225px 15px;
-    border-top-left-radius: 255px 15px;
-    border-top-right-radius: 15px 225px;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation; }
-    .hire .btn:hover {
-      box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
-      transform: translate3d(0, 2px, 0); }
-    .hire .btn:focus {
-      box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px; }
+    margin-top: 4rem;
+    margin-bottom: 5rem; }
