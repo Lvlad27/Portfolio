@@ -94,7 +94,7 @@ body {
 	font-family: $font-secondary;
 	font-size: $medium-font-size;
 	padding: 1rem 1rem;
-	border: 2px solid $color-dark;
+	border: 2px solid $color-1-dark;
 	text-decoration: none;
 	color: $color-dark;
 	background-color: $color-2;
@@ -104,7 +104,7 @@ body {
 	box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 
 	&:hover {
-		background-color: $color-dark;
+		background-color: $color-1-dark;
 		color: $color-2;
 	}
 }
@@ -369,6 +369,14 @@ body {
 
 	.btn {
 		margin: 6rem 2rem 8rem;
+		color: $color-2;
+		background-color: $color-1-dark;
+		border: 2px solid $color-2;
+
+		&:hover {
+			background-color: $color-2;
+			color: $color-1-dark;
+		}
 	}
 }
 
@@ -416,12 +424,13 @@ body {
 		&__skills {
 			margin-top: 3rem;
 			margin-bottom: 5rem;
-			display: flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			gap: 4rem;
-			align-items: center;
-			justify-content: space-around;
+
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+			grid-gap: 1rem;
+			justify-items: center;
+			column-gap: 4rem;
+			row-gap: 2rem;
 
 			&-item {
 				width: 7rem;
@@ -511,5 +520,31 @@ body {
 	.btn {
 		margin-top: 4rem;
 		margin-bottom: 5rem;
+	}
+}
+
+////////////////////////////////////////
+// PROJECTS SECTION
+
+.projects {
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+
+	.filter-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		list-style-type: none;
+		gap: 1rem;
+	}
+
+	.grid-container {
+		margin-top: 2rem;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+		grid-gap: 1rem;
+		justify-items: center;
+		column-gap: 4rem;
+		row-gap: 2rem;
 	}
 }

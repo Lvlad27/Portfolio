@@ -52,7 +52,7 @@ body {
   font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
   font-size: 2rem;
   padding: 1rem 1rem;
-  border: 2px solid #241f0b;
+  border: 2px solid #202020;
   text-decoration: none;
   color: #241f0b;
   background-color: #feda4e;
@@ -61,7 +61,7 @@ body {
   border-radius: 3px;
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px; }
   .btn:hover {
-    background-color: #241f0b;
+    background-color: #202020;
     color: #feda4e; }
 
 .paragraph--1 {
@@ -230,7 +230,13 @@ body {
     font-size: 1.6rem;
     font-weight: 400; }
   .intro .btn {
-    margin: 6rem 2rem 8rem; }
+    margin: 6rem 2rem 8rem;
+    color: #feda4e;
+    background-color: #202020;
+    border: 2px solid #feda4e; }
+    .intro .btn:hover {
+      background-color: #feda4e;
+      color: #202020; }
 
 .about {
   display: flex;
@@ -258,12 +264,12 @@ body {
     .about .container__skills {
       margin-top: 3rem;
       margin-bottom: 5rem;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 4rem;
-      align-items: center;
-      justify-content: space-around; }
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+      grid-gap: 1rem;
+      justify-items: center;
+      column-gap: 4rem;
+      row-gap: 2rem; }
       .about .container__skills-item {
         width: 7rem;
         text-align: center; }
@@ -312,3 +318,21 @@ body {
   .hire .btn {
     margin-top: 4rem;
     margin-bottom: 5rem; }
+
+.projects {
+  margin-top: 4rem;
+  margin-bottom: 4rem; }
+  .projects .filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    gap: 1rem; }
+  .projects .grid-container {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    grid-gap: 1rem;
+    justify-items: center;
+    column-gap: 4rem;
+    row-gap: 2rem; }
