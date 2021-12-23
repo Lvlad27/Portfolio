@@ -320,16 +320,14 @@ body {
     margin-bottom: 5rem; }
 
 .projects {
-  margin-top: 4rem;
-  margin-bottom: 4rem; }
-  .projects .filter-list {
+  margin: 4rem 2rem 4rem; }
+  .projects .filter-menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     list-style-type: none;
     gap: 1rem; }
-  .projects .grid-container {
-    margin-top: 2rem;
+  .projects .filter-items {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
     grid-gap: 1rem;
