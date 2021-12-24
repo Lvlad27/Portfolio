@@ -526,10 +526,12 @@ body {
 ////////////////////////////////////////
 // PROJECTS SECTION
 
-.projects {
+.portfolio {
 	margin: 4rem 2rem 4rem;
 
-	.filter-menu {
+	&__filter-menu {
+		margin-bottom: 2rem;
+
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -537,19 +539,25 @@ body {
 		gap: 1rem;
 	}
 
-	.filter-items {
+	&__filter-items {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
 		grid-gap: 1rem;
 		justify-items: center;
 		column-gap: 4rem;
 		row-gap: 2rem;
+		text-align: center;
 	}
 
-	// .item {
-	// 	display: none;
-	// 	padding: 2rem;
-	// 	text-align: center;
-	// 	background-color: white;
-	// }
+	&__item {
+		&__item::before {
+			display: block;
+			background-image: url('/img/logo.png');
+		}
+
+		// display: none;
+		// padding: 2rem;
+		// text-align: center;
+		// background-color: white;
+	}
 }

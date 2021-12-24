@@ -319,18 +319,23 @@ body {
     margin-top: 4rem;
     margin-bottom: 5rem; }
 
-.projects {
+.portfolio {
   margin: 4rem 2rem 4rem; }
-  .projects .filter-menu {
+  .portfolio__filter-menu {
+    margin-bottom: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     list-style-type: none;
     gap: 1rem; }
-  .projects .filter-items {
+  .portfolio__filter-items {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
     grid-gap: 1rem;
     justify-items: center;
     column-gap: 4rem;
-    row-gap: 2rem; }
+    row-gap: 2rem;
+    text-align: center; }
+  .portfolio__item__item::before {
+    display: block;
+    background-image: url("/img/logo.png"); }
