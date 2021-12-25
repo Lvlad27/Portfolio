@@ -41,3 +41,26 @@ window.addEventListener('scroll', () => {
 	}
 	lastScroll = currentScroll;
 });
+
+const category = document.querySelector('.portfolio__category');
+const project = document.querySelectorAll('.project');
+
+// FILTERING THE PORTFOLIO ITEMS BY CATEGORY
+category.addEventListener('click', function (e) {
+	if (e.target.classList.contains('btn')) {
+		category.querySelector('.btn--active').classList.remove('btn--active');
+		e.target.classList.add('btn--active');
+
+		const categoryValue = e.target.getAttribute('data-filter');
+
+		project.forEach(item => {
+			if (item.classList.contains(categoryValue) || categoryValue === 'all') {
+				item.classList.remove('project--hide');
+				item.classList.add('project--show');
+			} else {
+				item.classList.remove('project--show');
+				item.classList.add('project--hide');
+			}
+		});
+	}
+});

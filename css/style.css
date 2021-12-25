@@ -342,14 +342,18 @@ body {
   transition: all 0.2s;
   border-radius: 3px;
   box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px; }
-  .portfolio .btn:hover {
+  .portfolio .btn-active, .portfolio .btn:hover {
     background-color: #feda4e;
     color: #202020; }
 
-.portfolio .items-list {
+.portfolio .projects-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-  gap: 2rem;
+  gap: 6vw;
   align-items: stretch; }
-  .portfolio .items-list .single-item img {
+  .portfolio .projects-list .project img {
     max-width: 100%; }
+  .portfolio .projects-list .project--hide {
+    display: none; }
+  .portfolio .projects-list .project--show {
+    animation: fadeIn 0.5s ease-in-out; }

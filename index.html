@@ -52,7 +52,7 @@
 				></a>
 
 				<nav class="header__container__navbar">
-					<a class="header__container__navbar-links" href="#home" title="TODO">
+					<a class="header__container__navbar-links" href="#intro" title="TODO">
 						<i class="header__container__navbar-icons fas fa-home"></i>
 						<p>HOME</p>
 					</a>
@@ -60,7 +60,7 @@
 						<i class="header__container__navbar-icons fas fa-user"></i>
 						<p>ABOUT</p>
 					</a>
-					<a class="header__container__navbar-links" href="#work" title="TODO">
+					<a class="header__container__navbar-links" href="#portfolio" title="TODO">
 						<i class="header__container__navbar-icons fas fa-eye"></i>
 						<p>WORK</p>
 					</a>
@@ -80,7 +80,7 @@
 		</header>
 
 		<!-- +++++ INTRO +++++ -->
-		<section class="intro">
+		<section class="intro" id="intro">
 			<h3 class="intro-message">Hi, my name is</h3>
 			<h1 class="intro-title">
 				Vlad&nbsp;<span class="lastName">Le<i class="fas fa-cog"></i>ntescu.</span>
@@ -189,30 +189,33 @@
 		</section>
 
 		<!-- +++++ PROJECTS SECTION +++++ -->
-		<section class="portfolio">
+		<section class="portfolio" id="portfolio">
 			<div class="container">
 				<h2 class="section-title">Portfolio</h2>
 
 				<div class="portfolio__category">
-					<button class="btn btn-active">All</button>
-					<button class="btn">Projects</button>
-					<button class="btn">codingChallenges</button>
+					<button class="btn btn--active" data-filter="all">All</button>
+					<button class="btn" data-filter="projects">Projects</button>
+					<button class="btn" data-filter="codingChallenges">codingChallenges</button>
 				</div>
 
-				<div class="items-list">
-					<div class="single-item" data-att="projects"><img src="img/logo.png" alt="Project Natours" /></div>
-					<div class="single-item" data-att="projects"><img src="img/logo.png" alt="" /></div>
-					<div class="single-item" data-att="projects"><img src="img/logo.png" alt="" /></div>
-					<div class="single-item" data-att="projects"><img src="img/logo.png" alt="" /></div>
-					<div class="single-item" data-att="codingChallenges"><img src="img/logo.png" alt="" /></div>
-					<div class="single-item" data-att="codingChallenges"><img src="img/logo.png" alt="" /></div>
-					<div class="single-item" data-att="codingChallenges"><img src="img/logo.png" alt="" /></div>
-					<div class="single-item" data-att="codingChallenges"><img src="img/logo.png" alt="" /></div>
-					<div class="single-item" data-att="codingChallenges"><img src="img/logo.png" alt="" /></div>
-					<div class="single-item" data-att="codingChallenges"><img src="img/logo.png" alt="" /></div>
+				<div class="projects-list">
+					<div class="project projects"><img src="img/logo.png" alt="Project Natours" /></div>
+					<div class="project projects"><img src="img/logo.png" alt="" /></div>
+					<div class="project projects"><img src="img/logo.png" alt="" /></div>
+					<div class="project projects"><img src="img/logo.png" alt="" /></div>
+					<div class="project codingChallenges"><img src="img/logo.png" alt="" /></div>
+					<div class="project codingChallenges"><img src="img/logo.png" alt="" /></div>
+					<div class="project codingChallenges"><img src="img/logo.png" alt="" /></div>
+					<div class="project codingChallenges"><img src="img/logo.png" alt="" /></div>
+					<div class="project codingChallenges"><img src="img/logo.png" alt="" /></div>
+					<div class="project codingChallenges"><img src="img/logo.png" alt="" /></div>
 				</div>
 			</div>
 		</section>
+
+		<!-- +++++ CONTACT SECTION +++++ -->
+		<section class="contact"></section>
 
 		<!-- +++++ FOOTER SECTION +++++ -->
 		<section class="footer"></section>

@@ -554,25 +554,32 @@ body {
 		border-radius: 3px;
 		box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 
+		&-active,
 		&:hover {
 			background-color: $color-2;
 			color: $color-1-dark;
 		}
 	}
 
-	.items-list {
+	.projects-list {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-		gap: 2rem;
+		gap: 6vw;
+		// gap: 2vw;
 		align-items: stretch;
 
-		.single-item {
+		.project {
 			img {
 				max-width: 100%;
 			}
-		}
-	}
 
-	&__single-item {
+			&--hide {
+				display: none;
+			}
+
+			&--show {
+				animation: fadeIn 0.5s ease-in-out;
+			}
+		}
 	}
 }
