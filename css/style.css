@@ -357,3 +357,26 @@ body {
     display: none; }
   .portfolio .projects-list .project--show {
     animation: fadeIn 0.5s ease-in-out; }
+
+.portfolio .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10; }
+  .portfolio .modal--hidden {
+    display: none; }
+  .portfolio .modal-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 2rem;
+    font-size: 5rem;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none; }
