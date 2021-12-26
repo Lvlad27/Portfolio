@@ -365,11 +365,8 @@ body {
   margin: 0;
   top: 0;
   left: 0;
-  background-color: white;
-  color: #202020;
-  padding: 6rem;
-  border-radius: 5px;
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  background-color: #272727;
+  color: #f4f4f4;
   z-index: 9999;
   opacity: 1;
   overflow-y: scroll; }
@@ -377,12 +374,14 @@ body {
     opacity: 0;
     z-index: -9999;
     overflow-y: hidden; }
-  .portfolio .modal-close {
-    position: absolute;
-    top: 1.2rem;
-    right: 2rem;
-    font-size: 5rem;
-    color: #333;
-    cursor: pointer;
-    border: none;
-    background: none; }
+  .portfolio .modal__container {
+    margin: 2rem; }
+    .portfolio .modal__container-close {
+      position: fixed;
+      top: 1.2rem;
+      right: 2rem;
+      font-size: 5rem;
+      color: #f4f4f4;
+      cursor: pointer;
+      border: none;
+      background: none; }

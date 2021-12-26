@@ -590,14 +590,9 @@ body {
 		margin: 0;
 		top: 0;
 		left: 0;
-		// overflow-y: hidden;
-		// transform: translate(-50%, -80%);
 
-		background-color: white;
-		color: $color-1-dark;
-		padding: 6rem;
-		border-radius: 5px;
-		box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+		background-color: $color-1;
+		color: $color-light;
 		z-index: 9999;
 		opacity: 1;
 		overflow-y: scroll;
@@ -608,15 +603,19 @@ body {
 			overflow-y: hidden;
 		}
 
-		&-close {
-			position: absolute;
-			top: 1.2rem;
-			right: 2rem;
-			font-size: 5rem;
-			color: #333;
-			cursor: pointer;
-			border: none;
-			background: none;
+		&__container {
+			margin: 2rem;
+
+			&-close {
+				position: fixed;
+				top: 1.2rem;
+				right: 2rem;
+				font-size: 5rem;
+				color: $color-light;
+				cursor: pointer;
+				border: none;
+				background: none;
+			}
 		}
 	}
 }

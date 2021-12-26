@@ -67,16 +67,18 @@ category.addEventListener('click', function (e) {
 
 // PORTFOLIO MODAL
 const modal = document.querySelector('.modal');
-const btnCloseModal = document.querySelector('.modal-close');
-const btnsOpenModal = document.querySelectorAll('.modal-open');
+const btnCloseModal = document.querySelector('.modal__container-close');
+const btnsOpenModal = document.querySelectorAll('.modal__container-open');
 console.log(btnsOpenModal);
 
 const openModal = function () {
 	modal.classList.remove('modal--hidden');
+	body.style.overflow = 'hidden';
 };
 
 const closeModal = function () {
 	modal.classList.add('modal--hidden');
+	body.style.overflow = '';
 };
 
 btnsOpenModal.forEach(item => item.addEventListener('click', openModal));
