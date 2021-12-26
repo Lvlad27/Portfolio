@@ -617,5 +617,62 @@ body {
 				background: none;
 			}
 		}
+
+		.carousel {
+			// position: relative;
+			height: 60rem;
+			width: 80%;
+			margin: 0 auto;
+
+			&__image {
+				width: 100%;
+				object-fit: cover;
+			}
+
+			&__track-container {
+				// position: relative;
+
+				.carousel__track {
+					padding: 0;
+					margin: 0;
+					list-style: none;
+				}
+
+				.carousel__slide {
+					// position: absolute;
+					top: 0;
+					bottom: 0;
+					width: 100%;
+				}
+			}
+
+			.carousel__button {
+				// position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				background: transparent;
+				border: 0;
+
+				&--left {
+					left: -4rem;
+				}
+
+				&--right {
+					right: 4rem;
+				}
+			}
+
+			&__nav {
+				background: red;
+
+				.carousel__indicator {
+					border: 0;
+					border-radius: 50%;
+					width: 2rem;
+					height: 2rem;
+					background-color: black;
+				}
+			}
+		}
 	}
 }
