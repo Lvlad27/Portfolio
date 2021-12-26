@@ -67,8 +67,8 @@ category.addEventListener('click', function (e) {
 
 // PORTFOLIO MODAL
 const modal = document.querySelector('.modal');
-const btnCloseModal = document.querySelector('.close-modal');
-const btnsOpenModal = document.querySelectorAll('.open-modal');
+const btnCloseModal = document.querySelector('.modal-close');
+const btnsOpenModal = document.querySelectorAll('.modal-open');
 console.log(btnsOpenModal);
 
 const openModal = function () {
@@ -79,10 +79,8 @@ const closeModal = function () {
 	modal.classList.add('modal--hidden');
 };
 
-for (let i = 0; i < btnsOpenModal.length; i++) btnsOpenModal[i].addEventListener('click', openModal);
-
+btnsOpenModal.forEach(item => item.addEventListener('click', openModal));
 btnCloseModal.addEventListener('click', closeModal);
-overlay.addEventListener('click', closeModal);
 
 document.addEventListener('keydown', function (e) {
 	console.log(e.key);
