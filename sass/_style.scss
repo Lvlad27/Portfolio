@@ -592,7 +592,6 @@ body {
 		left: 0;
 
 		background-color: $color-1;
-		color: $color-light;
 		z-index: 9999;
 		opacity: 1;
 		overflow-y: scroll;
@@ -604,7 +603,9 @@ body {
 		}
 
 		&__container {
-			margin: 2rem;
+			margin: 2rem 2rem 4rem;
+			// align-items: center;
+			// justify-content: center;
 
 			&-close {
 				position: fixed;
@@ -616,62 +617,83 @@ body {
 				border: none;
 				background: none;
 			}
-		}
 
-		.carousel {
-			// position: relative;
-			height: 60rem;
-			width: 80%;
-			margin: 0 auto;
-
-			&__image {
-				width: 100%;
-				object-fit: cover;
-			}
-
-			&__track-container {
+			.carousel {
+				display: flex;
+				flex-direction: column;
 				// position: relative;
+				height: 35rem;
+				// width: 90%;
+				margin: 8rem auto 2rem;
 
-				.carousel__track {
-					padding: 0;
-					margin: 0;
-					list-style: none;
-				}
-
-				.carousel__slide {
+				.carousel__button {
 					// position: absolute;
-					top: 0;
-					bottom: 0;
-					width: 100%;
+					// top: 30%;
+					// transform: translateY(-50%);
+					// background: transparent;
+					// color: $color-2;
+					// border: 0;
+
+					&--left {
+						display: none;
+						// left: -4rem;
+					}
+
+					&--right {
+						display: none;
+						// right: -4rem;
+					}
+				}
+
+				&__track-container {
+					position: relative;
+					height: 90%;
+
+					.carousel__track {
+						padding: 0;
+						margin: 0;
+						list-style: none;
+
+						.carousel__slide {
+							position: absolute;
+							top: 0;
+							bottom: 0;
+							width: 100%;
+
+							.carousel__image {
+								width: 100%;
+								object-fit: cover;
+							}
+						}
+					}
+				}
+
+				&__nav {
+					position: relative;
+					display: flex;
+					justify-content: center;
+
+					.carousel__indicator {
+						border: 0;
+						border-radius: 50%;
+						width: 1.5rem;
+						height: 1.5rem;
+						background-color: $color-light;
+						margin: 0 1.2rem;
+
+						&.current-slide {
+							background-color: $color-2;
+						}
+					}
 				}
 			}
 
-			.carousel__button {
-				// position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
-				background: transparent;
-				border: 0;
-
-				&--left {
-					left: -4rem;
-				}
-
-				&--right {
-					right: 4rem;
-				}
+			.section-title {
+				color: $color-2;
 			}
 
-			&__nav {
-				background: red;
-
-				.carousel__indicator {
-					border: 0;
-					border-radius: 50%;
-					width: 2rem;
-					height: 2rem;
-					background-color: black;
-				}
+			.paragraph--1 {
+				color: $color-light;
 			}
 		}
 	}

@@ -366,7 +366,6 @@ body {
   top: 0;
   left: 0;
   background-color: #272727;
-  color: #f4f4f4;
   z-index: 9999;
   opacity: 1;
   overflow-y: scroll; }
@@ -375,7 +374,7 @@ body {
     z-index: -9999;
     overflow-y: hidden; }
   .portfolio .modal__container {
-    margin: 2rem; }
+    margin: 2rem 2rem 4rem; }
     .portfolio .modal__container-close {
       position: fixed;
       top: 1.2rem;
@@ -385,35 +384,44 @@ body {
       cursor: pointer;
       border: none;
       background: none; }
-  .portfolio .modal .carousel {
-    height: 60rem;
-    width: 80%;
-    margin: 0 auto; }
-    .portfolio .modal .carousel__image {
-      width: 100%;
-      object-fit: cover; }
-    .portfolio .modal .carousel__track-container .carousel__track {
-      padding: 0;
-      margin: 0;
-      list-style: none; }
-    .portfolio .modal .carousel__track-container .carousel__slide {
-      top: 0;
-      bottom: 0;
-      width: 100%; }
-    .portfolio .modal .carousel .carousel__button {
-      top: 50%;
-      transform: translateY(-50%);
-      background: transparent;
-      border: 0; }
-      .portfolio .modal .carousel .carousel__button--left {
-        left: -4rem; }
-      .portfolio .modal .carousel .carousel__button--right {
-        right: 4rem; }
-    .portfolio .modal .carousel__nav {
-      background: red; }
-      .portfolio .modal .carousel__nav .carousel__indicator {
-        border: 0;
-        border-radius: 50%;
-        width: 2rem;
-        height: 2rem;
-        background-color: black; }
+    .portfolio .modal__container .carousel {
+      display: flex;
+      flex-direction: column;
+      height: 35rem;
+      margin: 8rem auto 2rem; }
+      .portfolio .modal__container .carousel .carousel__button--left {
+        display: none; }
+      .portfolio .modal__container .carousel .carousel__button--right {
+        display: none; }
+      .portfolio .modal__container .carousel__track-container {
+        position: relative;
+        height: 90%; }
+        .portfolio .modal__container .carousel__track-container .carousel__track {
+          padding: 0;
+          margin: 0;
+          list-style: none; }
+          .portfolio .modal__container .carousel__track-container .carousel__track .carousel__slide {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%; }
+            .portfolio .modal__container .carousel__track-container .carousel__track .carousel__slide .carousel__image {
+              width: 100%;
+              object-fit: cover; }
+      .portfolio .modal__container .carousel__nav {
+        position: relative;
+        display: flex;
+        justify-content: center; }
+        .portfolio .modal__container .carousel__nav .carousel__indicator {
+          border: 0;
+          border-radius: 50%;
+          width: 1.5rem;
+          height: 1.5rem;
+          background-color: #f4f4f4;
+          margin: 0 1.2rem; }
+          .portfolio .modal__container .carousel__nav .carousel__indicator.current-slide {
+            background-color: #feda4e; }
+    .portfolio .modal__container .section-title {
+      color: #feda4e; }
+    .portfolio .modal__container .paragraph--1 {
+      color: #f4f4f4; }
