@@ -690,6 +690,7 @@ body {
 							width: 1rem;
 							height: 1rem;
 							background-color: $color-light;
+							cursor: pointer;
 
 							&.current-slide {
 								background-color: $color-2;

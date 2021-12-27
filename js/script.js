@@ -99,7 +99,7 @@ const track = document.querySelector('.carousel__track');
 const slides = Array.from(track.children);
 const nextButton = document.querySelector('.carousel__button--right');
 const prevButton = document.querySelector('.carousel__button--left');
-const dotsNav = document.querySelector('.carousel__nav');
+const dotsNav = document.querySelector('.carousel__nav-indicator');
 const dots = Array.from(dotsNav.children);
 
 const slideWidth = slides[0].getBoundingClientRect().width;
@@ -139,5 +139,12 @@ dotsNav.addEventListener('click', e => {
 	// what indicator was clicked on
 	const targetDot = e.target.closest('button');
 
-	console.log(targetDot);
+	if (!targetDot) return;
+
+	const currentSlide = track.querySelector('.current-slide');
+	const currentDot = dotsNav.querySelector('.current-slide');
+	const targetIndex = dots.findIndex(dot => dot === targetDot);
+	const targetSlide = slides[targetIndex];
+
+	moveToSlide(track, currentSlide, targetSlide);
 });
