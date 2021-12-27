@@ -66,8 +66,16 @@ body {
 
 .paragraph--1 {
   color: #a6a6a6; }
-  .paragraph--1 .highlight {
-    color: #f4f4f4; }
+
+.highlight--1 {
+  color: #f4f4f4; }
+
+.paragraph--2 {
+  color: #f4f4f4; }
+
+.highlight--2 {
+  font-weight: bold;
+  color: #f4f4f4; }
 
 .header__scroll {
   position: fixed;
@@ -389,10 +397,6 @@ body {
       flex-direction: column;
       height: 35rem;
       margin: 8rem auto 2rem; }
-      .portfolio .modal__container .carousel .carousel__button--left {
-        display: none; }
-      .portfolio .modal__container .carousel .carousel__button--right {
-        display: none; }
       .portfolio .modal__container .carousel__track-container {
         position: relative;
         height: 90%; }
@@ -411,17 +415,49 @@ body {
       .portfolio .modal__container .carousel__nav {
         position: relative;
         display: flex;
-        justify-content: center; }
+        justify-content: space-between;
+        align-items: center; }
+        .portfolio .modal__container .carousel__nav .carousel__button {
+          background: transparent;
+          color: #feda4e;
+          border: 0; }
         .portfolio .modal__container .carousel__nav .carousel__indicator {
           border: 0;
           border-radius: 50%;
-          width: 1.5rem;
-          height: 1.5rem;
-          background-color: #f4f4f4;
-          margin: 0 1.2rem; }
+          width: 1.2rem;
+          height: 1.2rem;
+          background-color: #f4f4f4; }
           .portfolio .modal__container .carousel__nav .carousel__indicator.current-slide {
             background-color: #feda4e; }
     .portfolio .modal__container .section-title {
       color: #feda4e; }
-    .portfolio .modal__container .paragraph--1 {
-      color: #f4f4f4; }
+    .portfolio .modal__container .paragraph--2 {
+      margin-bottom: 3rem; }
+    .portfolio .modal__container .content-info {
+      padding: 0;
+      margin: 0;
+      list-style: none; }
+      .portfolio .modal__container .content-info__single .paragraph--2 {
+        margin-bottom: 1rem; }
+        .portfolio .modal__container .content-info__single .paragraph--2 .highlight--2 {
+          color: #feda4e; }
+    .portfolio .modal__container-links {
+      display: flex;
+      flex-direction: row;
+      gap: 5rem;
+      justify-content: left;
+      align-items: center;
+      margin-top: 2rem;
+      text-decoration: none; }
+      .portfolio .modal__container-links .btn {
+        background-color: #272727; }
+        .portfolio .modal__container-links .btn:hover {
+          background-color: #feda4e;
+          color: #202020; }
+      .portfolio .modal__container-links .icon {
+        color: #f4f4f4;
+        font-size: 4rem; }
+        .portfolio .modal__container-links .icon:hover {
+          color: #feda4e;
+          transform: scale(1.2);
+          transition: ease-in-out 0.1s; }

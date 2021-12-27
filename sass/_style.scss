@@ -111,9 +111,19 @@ body {
 
 .paragraph--1 {
 	color: $color-3;
-	.highlight {
-		color: $color-light;
-	}
+}
+
+.highlight--1 {
+	color: $color-light;
+}
+
+.paragraph--2 {
+	color: $color-light;
+}
+
+.highlight--2 {
+	font-weight: bold;
+	color: $color-light;
 }
 
 ////////////////////////////////////////
@@ -626,25 +636,6 @@ body {
 				// width: 90%;
 				margin: 8rem auto 2rem;
 
-				.carousel__button {
-					// position: absolute;
-					// top: 30%;
-					// transform: translateY(-50%);
-					// background: transparent;
-					// color: $color-2;
-					// border: 0;
-
-					&--left {
-						display: none;
-						// left: -4rem;
-					}
-
-					&--right {
-						display: none;
-						// right: -4rem;
-					}
-				}
-
 				&__track-container {
 					position: relative;
 					height: 90%;
@@ -671,15 +662,27 @@ body {
 				&__nav {
 					position: relative;
 					display: flex;
-					justify-content: center;
+					justify-content: space-between;
+					align-items: center;
+
+					.carousel__button {
+						background: transparent;
+						color: $color-2;
+						border: 0;
+
+						&--left {
+						}
+
+						&--right {
+						}
+					}
 
 					.carousel__indicator {
 						border: 0;
 						border-radius: 50%;
-						width: 1.5rem;
-						height: 1.5rem;
+						width: 1.2rem;
+						height: 1.2rem;
 						background-color: $color-light;
-						margin: 0 1.2rem;
 
 						&.current-slide {
 							background-color: $color-2;
@@ -692,8 +695,56 @@ body {
 				color: $color-2;
 			}
 
-			.paragraph--1 {
-				color: $color-light;
+			.paragraph--2 {
+				margin-bottom: 3rem;
+			}
+
+			.content-info {
+				padding: 0;
+				margin: 0;
+				list-style: none;
+
+				&__single {
+					.paragraph--2 {
+						margin-bottom: 1rem;
+
+						.highlight--2 {
+							color: $color-2;
+						}
+					}
+				}
+			}
+
+			&-links {
+				display: flex;
+				flex-direction: row;
+				gap: 5rem;
+				justify-content: left;
+				align-items: center;
+				margin-top: 2rem;
+
+				text-decoration: none;
+
+				.btn {
+					background-color: $color-1;
+
+					&:hover {
+						background-color: $color-2;
+						color: $color-1-dark;
+					}
+				}
+
+				.icon {
+					// display: block;
+					color: $color-light;
+					font-size: $large-font-size;
+
+					&:hover {
+						color: $color-2;
+						transform: scale(1.2);
+						transition: ease-in-out 0.1s;
+					}
+				}
 			}
 		}
 	}
