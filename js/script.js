@@ -45,6 +45,9 @@ window.addEventListener('scroll', () => {
 const category = document.querySelector('.portfolio__category');
 const project = document.querySelectorAll('.project');
 
+////////////////////////////
+// PORTFOLIO
+
 // FILTERING THE PORTFOLIO ITEMS BY CATEGORY
 category.addEventListener('click', function (e) {
 	if (e.target.classList.contains('btn')) {
@@ -69,7 +72,6 @@ category.addEventListener('click', function (e) {
 const modal = document.querySelector('.modal');
 const btnCloseModal = document.querySelector('.modal__container-close');
 const btnsOpenModal = document.querySelectorAll('.modal__container-open');
-console.log(btnsOpenModal);
 
 const openModal = function () {
 	modal.classList.remove('modal--hidden');
@@ -91,3 +93,30 @@ document.addEventListener('keydown', function (e) {
 		closeModal();
 	}
 });
+
+// // CAROUSEL IN MODAL
+// const track = document.querySelector('.carousel__track');
+// const slides = Array.from(track.children);
+// const nextButton = document.querySelector('.carousel__button--right');
+// const prevButton = document.querySelector('.carousel__button--left');
+// const dotsNav = document.querySelector('.carousel__nav');
+// const dots = Array.from(dotsNav.children);
+
+// const slideWidth = slides[0].getBoundingClientRect().width;
+
+// const setSlidePosition = (slide, index) => {
+// 	slide.style.left = slideWidth * index + 'px';
+// };
+
+// // arrange the slides next to each other
+// slides.forEach(setSlidePosition);
+
+// // when i click left, move slides to the left
+// // when i click right, move slides to the right
+// nextButton.addEventListener('click', e => {
+// 	const currentSlide = track.querySelector('.current-slide');
+// 	console.log(currentSlide);
+// 	// move the slide
+// });
+
+// when i click the nav indicators, move to that slide
