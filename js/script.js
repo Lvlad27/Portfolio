@@ -94,29 +94,50 @@ document.addEventListener('keydown', function (e) {
 	}
 });
 
-// // CAROUSEL IN MODAL
-// const track = document.querySelector('.carousel__track');
-// const slides = Array.from(track.children);
-// const nextButton = document.querySelector('.carousel__button--right');
-// const prevButton = document.querySelector('.carousel__button--left');
-// const dotsNav = document.querySelector('.carousel__nav');
-// const dots = Array.from(dotsNav.children);
+// CAROUSEL IN MODAL
+const track = document.querySelector('.carousel__track');
+const slides = Array.from(track.children);
+const nextButton = document.querySelector('.carousel__button--right');
+const prevButton = document.querySelector('.carousel__button--left');
+const dotsNav = document.querySelector('.carousel__nav');
+const dots = Array.from(dotsNav.children);
 
-// const slideWidth = slides[0].getBoundingClientRect().width;
+const slideWidth = slides[0].getBoundingClientRect().width;
 
-// const setSlidePosition = (slide, index) => {
-// 	slide.style.left = slideWidth * index + 'px';
-// };
+const setSlidePosition = (slide, index) => {
+	slide.style.left = slideWidth * index + 'px';
+};
 
-// // arrange the slides next to each other
-// slides.forEach(setSlidePosition);
+// arrange the slides next to each other
+slides.forEach(setSlidePosition);
 
-// // when i click left, move slides to the left
-// // when i click right, move slides to the right
-// nextButton.addEventListener('click', e => {
-// 	const currentSlide = track.querySelector('.current-slide');
-// 	console.log(currentSlide);
-// 	// move the slide
-// });
+const moveToSlide = (track, currentSlide, targetSlide) => {
+	track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+	currentSlide.classList.remove('current-slide');
+	targetSlide.classList.add('current-slide');
+};
+
+// when i click left, move slides to the left
+prevButton.addEventListener('click', e => {
+	const currentSlide = track.querySelector('.current-slide');
+	const prevSlide = currentSlide.previousElementSibling;
+
+	moveToSlide(track, currentSlide, prevSlide);
+});
+
+// when i click right, move slides to the right
+nextButton.addEventListener('click', e => {
+	const currentSlide = track.querySelector('.current-slide');
+	const nextSlide = currentSlide.nextElementSibling;
+
+	moveToSlide(track, currentSlide, nextSlide);
+});
 
 // when i click the nav indicators, move to that slide
+
+dotsNav.addEventListener('click', e => {
+	// what indicator was clicked on
+	const targetDot = e.target.closest('button');
+
+	console.log(targetDot);
+});
