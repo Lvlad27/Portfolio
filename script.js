@@ -98,6 +98,7 @@ document.addEventListener('keydown', function (e) {
 
 const track = document.getElementById('carousel__track');
 const allSlides = document.querySelectorAll('.carousel__slide');
+console.log(allSlides);
 const slideWidth = allSlides[0].offsetWidth;
 
 let index = 0;
@@ -114,11 +115,11 @@ const lastSlide = allSlides[allSlides.length - 1];
 const cloneFirstSlide = firstSlide.cloneNode(true);
 const cloneLastSlide = lastSlide.cloneNode(true);
 
-const dotsNav = document.querySelector('.carousel__nav-indicator');
-const dots = Array.from(dotsNav.children);
-
 track.appendChild(cloneFirstSlide);
 track.insertBefore(cloneLastSlide, firstSlide);
+
+// const dotsNav = document.querySelector('.carousel__nav-indicator');
+// const dots = Array.from(dotsNav.children);
 
 prev.addEventListener('click', () => switchSlide('prev'));
 next.addEventListener('click', () => switchSlide('next'));
@@ -171,6 +172,11 @@ function dragEnd() {
 	document.onmousemove = null;
 }
 
+// const updateDots = (currentDot, targetDot) => {
+// 	currentDot.classList.remove('current-slide');
+// 	targetDot.classList.add('current-slide');
+// };
+
 function switchSlide(arg, arg2) {
 	track.classList.add('carousel__track--transition');
 
@@ -181,9 +187,15 @@ function switchSlide(arg, arg2) {
 		if (arg == 'next') {
 			track.style.left = `${initialPosition - slideWidth}px`;
 			index++;
+			// const currentDot = dotsNav.querySelector('.current-slide');
+			// const nextDot = currentDot.nextElementSibling;
+			// updateDots(currentDot, nextDot);
 		} else {
 			track.style.left = `${initialPosition + slideWidth}px`;
 			index--;
+			// const currentDot = dotsNav.querySelector('.current-slide');
+			// const prevDot = currentDot.previousElementSibling;
+			// updateDots(currentDot, prevDot);
 		}
 	}
 
@@ -192,11 +204,13 @@ function switchSlide(arg, arg2) {
 
 function checkIndex() {
 	track.classList.remove('carousel__track--transition');
+	// dots[0].classList.remove('current-slide');
 	if (index == -1) {
 		track.style.left = `-${allSlides.length * slideWidth}px`;
 		index = allSlides.length - 1;
 	} else if (index == allSlides.length) {
 		track.style.left = `-${1 * slideWidth}px`;
+		// dots[0].classList.add('current-slide');
 		index = 0;
 	}
 
