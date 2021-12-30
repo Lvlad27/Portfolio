@@ -424,7 +424,7 @@ body {
           background: transparent;
           color: #feda4e;
           border: 0;
-          cursor: pointer; }
+          font-size: 3rem; }
           .portfolio .modal__container .carousel__nav .carousel__button:active {
             color: #a6a6a6; }
         .portfolio .modal__container .carousel__nav-indicator {
@@ -436,8 +436,7 @@ body {
             border-radius: 50%;
             width: 1rem;
             height: 1rem;
-            background-color: #f4f4f4;
-            cursor: pointer; }
+            background-color: #f4f4f4; }
             .portfolio .modal__container .carousel__nav-indicator .carousel__indicator.current-slide {
               background-color: #feda4e; }
     .portfolio .modal__container .modal__content {
