@@ -401,12 +401,14 @@ body {
       .portfolio .modal__container .carousel__track-container {
         position: relative;
         height: 90%;
-        overflow: hidden; }
+        overflow: hidden;
+        cursor: grab; }
         .portfolio .modal__container .carousel__track-container .carousel__track {
           padding: 0;
           margin: 0;
           list-style: none;
-          transition: transform 0.25s ease-in-out; }
+          transition: transform 0.25s ease-in-out;
+          touch-action: none; }
           .portfolio .modal__container .carousel__track-container .carousel__track .carousel__slide {
             position: absolute;
             top: 0;
@@ -423,7 +425,8 @@ body {
         .portfolio .modal__container .carousel__nav .carousel__button {
           background: transparent;
           color: #feda4e;
-          border: 0; }
+          border: 0;
+          cursor: pointer; }
         .portfolio .modal__container .carousel__nav-indicator {
           display: flex;
           flex-direction: row;
