@@ -673,7 +673,7 @@ body {
 						background: transparent;
 						color: $color-2;
 						border: 0;
-						cursor: pointer;
+						font-size: 3rem;
 
 						&:active {
 							color: $color-3;
@@ -691,7 +691,6 @@ body {
 							width: 1rem;
 							height: 1rem;
 							background-color: $color-light;
-							cursor: pointer;
 
 							&.current-slide {
 								background-color: $color-2;
