@@ -394,31 +394,29 @@ body {
       border: none;
       background: none; }
     .portfolio .modal__container .carousel {
-      display: flex;
-      flex-direction: column;
-      height: 35rem;
-      margin: 8rem auto 2rem; }
-      .portfolio .modal__container .carousel__track-container {
-        position: relative;
-        height: 90%;
+      position: relative;
+      height: 30rem;
+      margin: 8rem auto 2rem;
+      overflow: hidden; }
+      .portfolio .modal__container .carousel__track {
         overflow: hidden;
-        cursor: grab; }
-        .portfolio .modal__container .carousel__track-container .carousel__track {
-          padding: 0;
-          margin: 0;
-          list-style: none;
-          transition: transform 0.25s ease-in-out;
-          touch-action: none; }
-          .portfolio .modal__container .carousel__track-container .carousel__track .carousel__slide {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 100%; }
-            .portfolio .modal__container .carousel__track-container .carousel__track .carousel__slide .carousel__image {
-              width: 100%;
-              object-fit: cover; }
+        width: 1000rem;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: -30rem; }
+        .portfolio .modal__container .carousel__track--transition {
+          transition: all 0.3s ease-in-out; }
+        .portfolio .modal__container .carousel__track .carousel__slide {
+          width: 30rem;
+          height: 30rem; }
+          .portfolio .modal__container .carousel__track .carousel__slide .carousel__image {
+            height: auto;
+            width: 100%;
+            object-fit: cover; }
       .portfolio .modal__container .carousel__nav {
         position: relative;
+        top: 70%;
         display: flex;
         justify-content: space-between;
         align-items: center; }
@@ -427,6 +425,8 @@ body {
           color: #feda4e;
           border: 0;
           cursor: pointer; }
+          .portfolio .modal__container .carousel__nav .carousel__button:active {
+            color: #a6a6a6; }
         .portfolio .modal__container .carousel__nav-indicator {
           display: flex;
           flex-direction: row;
@@ -440,35 +440,38 @@ body {
             cursor: pointer; }
             .portfolio .modal__container .carousel__nav-indicator .carousel__indicator.current-slide {
               background-color: #feda4e; }
-    .portfolio .modal__container .section-title {
-      color: #feda4e; }
-    .portfolio .modal__container .paragraph--2 {
-      margin-bottom: 3rem; }
-    .portfolio .modal__container .content-info {
-      padding: 0;
-      margin: 0;
-      list-style: none; }
-      .portfolio .modal__container .content-info__single .paragraph--2 {
-        margin-bottom: 1rem; }
-        .portfolio .modal__container .content-info__single .paragraph--2 .highlight--2 {
+      .portfolio .modal__container .carousel .modal__content {
+        display: flex;
+        flex-direction: column; }
+        .portfolio .modal__container .carousel .modal__content .section-title {
           color: #feda4e; }
-    .portfolio .modal__container-links {
-      display: flex;
-      flex-direction: row;
-      gap: 5rem;
-      justify-content: left;
-      align-items: center;
-      margin-top: 2rem;
-      text-decoration: none; }
-      .portfolio .modal__container-links .btn {
-        background-color: #272727; }
-        .portfolio .modal__container-links .btn:hover {
-          background-color: #feda4e;
-          color: #202020; }
-      .portfolio .modal__container-links .icon {
-        color: #f4f4f4;
-        font-size: 4rem; }
-        .portfolio .modal__container-links .icon:hover {
-          color: #feda4e;
-          transform: scale(1.2);
-          transition: ease-in-out 0.1s; }
+        .portfolio .modal__container .carousel .modal__content .paragraph--2 {
+          margin-bottom: 3rem; }
+        .portfolio .modal__container .carousel .modal__content .content-info {
+          padding: 0;
+          margin: 0;
+          list-style: none; }
+          .portfolio .modal__container .carousel .modal__content .content-info__single .paragraph--2 {
+            margin-bottom: 1rem; }
+            .portfolio .modal__container .carousel .modal__content .content-info__single .paragraph--2 .highlight--2 {
+              color: #feda4e; }
+        .portfolio .modal__container .carousel .modal__content-links {
+          display: flex;
+          flex-direction: row;
+          gap: 5rem;
+          justify-content: left;
+          align-items: center;
+          margin-top: 2rem;
+          text-decoration: none; }
+          .portfolio .modal__container .carousel .modal__content-links .btn {
+            background-color: #272727; }
+            .portfolio .modal__container .carousel .modal__content-links .btn:hover {
+              background-color: #feda4e;
+              color: #202020; }
+          .portfolio .modal__container .carousel .modal__content-links .icon {
+            color: #f4f4f4;
+            font-size: 4rem; }
+            .portfolio .modal__container .carousel .modal__content-links .icon:hover {
+              color: #feda4e;
+              transform: scale(1.2);
+              transition: ease-in-out 0.1s; }
