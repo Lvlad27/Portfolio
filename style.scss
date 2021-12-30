@@ -634,7 +634,7 @@ body {
 				height: 30rem;
 				// width: 90%;
 				// width: 90%;
-				margin: 8rem auto 2rem;
+				margin: 8rem auto 0;
 				overflow: hidden;
 
 				&__track {
@@ -652,7 +652,7 @@ body {
 
 					.carousel__slide {
 						width: 30rem;
-						height: 30rem;
+						height: auto;
 
 						.carousel__image {
 							height: auto;
@@ -699,64 +699,64 @@ body {
 						}
 					}
 				}
+			}
 
-				.modal__content {
-					// margin-top: 10rem;
-					display: flex;
-					flex-direction: column;
+			.modal__content {
+				// margin-top: 10rem;
+				display: flex;
+				flex-direction: column;
 
-					.section-title {
-						color: $color-2;
-					}
+				.section-title {
+					color: $color-2;
+				}
 
-					.paragraph--2 {
-						margin-bottom: 3rem;
-					}
+				.paragraph--2 {
+					margin-bottom: 3rem;
+				}
 
-					.content-info {
-						padding: 0;
-						margin: 0;
-						list-style: none;
+				&-info {
+					padding: 0;
+					margin: 0;
+					list-style: none;
 
-						&__single {
-							.paragraph--2 {
-								margin-bottom: 1rem;
+					&__single {
+						.paragraph--2 {
+							margin-bottom: 1rem;
 
-								.highlight--2 {
-									color: $color-2;
-								}
-							}
-						}
-					}
-
-					&-links {
-						display: flex;
-						flex-direction: row;
-						gap: 5rem;
-						justify-content: left;
-						align-items: center;
-						margin-top: 2rem;
-
-						text-decoration: none;
-
-						.btn {
-							background-color: $color-1;
-
-							&:hover {
-								background-color: $color-2;
-								color: $color-1-dark;
-							}
-						}
-
-						.icon {
-							color: $color-light;
-							font-size: $large-font-size;
-
-							&:hover {
+							.highlight--2 {
 								color: $color-2;
-								transform: scale(1.2);
-								transition: ease-in-out 0.1s;
 							}
+						}
+					}
+				}
+
+				&-links {
+					display: flex;
+					flex-direction: row;
+					gap: 5rem;
+					justify-content: left;
+					align-items: center;
+					margin-top: 2rem;
+
+					text-decoration: none;
+
+					&.btn {
+						background-color: $color-1;
+
+						&:hover {
+							background-color: $color-2;
+							color: $color-1-dark;
+						}
+					}
+
+					&.icon {
+						color: $color-light;
+						font-size: $large-font-size;
+
+						&:hover {
+							color: $color-2;
+							transform: scale(1.2);
+							transition: ease-in-out 0.1s;
 						}
 					}
 				}

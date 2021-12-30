@@ -396,7 +396,7 @@ body {
     .portfolio .modal__container .carousel {
       position: relative;
       height: 30rem;
-      margin: 8rem auto 2rem;
+      margin: 8rem auto 0;
       overflow: hidden; }
       .portfolio .modal__container .carousel__track {
         overflow: hidden;
@@ -409,7 +409,7 @@ body {
           transition: all 0.3s ease-in-out; }
         .portfolio .modal__container .carousel__track .carousel__slide {
           width: 30rem;
-          height: 30rem; }
+          height: auto; }
           .portfolio .modal__container .carousel__track .carousel__slide .carousel__image {
             height: auto;
             width: 100%;
@@ -440,38 +440,38 @@ body {
             cursor: pointer; }
             .portfolio .modal__container .carousel__nav-indicator .carousel__indicator.current-slide {
               background-color: #feda4e; }
-      .portfolio .modal__container .carousel .modal__content {
+    .portfolio .modal__container .modal__content {
+      display: flex;
+      flex-direction: column; }
+      .portfolio .modal__container .modal__content .section-title {
+        color: #feda4e; }
+      .portfolio .modal__container .modal__content .paragraph--2 {
+        margin-bottom: 3rem; }
+      .portfolio .modal__container .modal__content-info {
+        padding: 0;
+        margin: 0;
+        list-style: none; }
+        .portfolio .modal__container .modal__content-info__single .paragraph--2 {
+          margin-bottom: 1rem; }
+          .portfolio .modal__container .modal__content-info__single .paragraph--2 .highlight--2 {
+            color: #feda4e; }
+      .portfolio .modal__container .modal__content-links {
         display: flex;
-        flex-direction: column; }
-        .portfolio .modal__container .carousel .modal__content .section-title {
-          color: #feda4e; }
-        .portfolio .modal__container .carousel .modal__content .paragraph--2 {
-          margin-bottom: 3rem; }
-        .portfolio .modal__container .carousel .modal__content .content-info {
-          padding: 0;
-          margin: 0;
-          list-style: none; }
-          .portfolio .modal__container .carousel .modal__content .content-info__single .paragraph--2 {
-            margin-bottom: 1rem; }
-            .portfolio .modal__container .carousel .modal__content .content-info__single .paragraph--2 .highlight--2 {
-              color: #feda4e; }
-        .portfolio .modal__container .carousel .modal__content-links {
-          display: flex;
-          flex-direction: row;
-          gap: 5rem;
-          justify-content: left;
-          align-items: center;
-          margin-top: 2rem;
-          text-decoration: none; }
-          .portfolio .modal__container .carousel .modal__content-links .btn {
-            background-color: #272727; }
-            .portfolio .modal__container .carousel .modal__content-links .btn:hover {
-              background-color: #feda4e;
-              color: #202020; }
-          .portfolio .modal__container .carousel .modal__content-links .icon {
-            color: #f4f4f4;
-            font-size: 4rem; }
-            .portfolio .modal__container .carousel .modal__content-links .icon:hover {
-              color: #feda4e;
-              transform: scale(1.2);
-              transition: ease-in-out 0.1s; }
+        flex-direction: row;
+        gap: 5rem;
+        justify-content: left;
+        align-items: center;
+        margin-top: 2rem;
+        text-decoration: none; }
+        .portfolio .modal__container .modal__content-links.btn {
+          background-color: #272727; }
+          .portfolio .modal__container .modal__content-links.btn:hover {
+            background-color: #feda4e;
+            color: #202020; }
+        .portfolio .modal__container .modal__content-links.icon {
+          color: #f4f4f4;
+          font-size: 4rem; }
+          .portfolio .modal__container .modal__content-links.icon:hover {
+            color: #feda4e;
+            transform: scale(1.2);
+            transition: ease-in-out 0.1s; }

@@ -114,6 +114,9 @@ const lastSlide = allSlides[allSlides.length - 1];
 const cloneFirstSlide = firstSlide.cloneNode(true);
 const cloneLastSlide = lastSlide.cloneNode(true);
 
+const dotsNav = document.querySelector('.carousel__nav-indicator');
+const dots = Array.from(dotsNav.children);
+
 track.appendChild(cloneFirstSlide);
 track.insertBefore(cloneLastSlide, firstSlide);
 
@@ -156,9 +159,9 @@ function dragMove(e) {
 
 function dragEnd() {
 	finalPosition = track.offsetLeft;
-	if (finalPosition - initialPosition < slideWidth / 2) {
+	if (finalPosition - initialPosition < slideWidth / 4) {
 		switchSlide('next', 'dragging');
-	} else if (finalPosition - initialPosition > slideWidth / 2) {
+	} else if (finalPosition - initialPosition > slideWidth / 4) {
 		switchSlide('prev', 'dragging');
 	} else {
 		track.style.left = `${initialPosition}px`;

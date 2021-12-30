@@ -4,7 +4,7 @@
 	"description": "Portfolio v1",
 	"main": "index.js",
 	"scripts": {
-		"compile:sass": "node-sass sass/main.scss css/style.css -w"
+		"compile:sass": "node-sass style.scss style.css -w"
 	},
 	"repository": {
 		"type": "git",
