@@ -68,35 +68,6 @@ category.addEventListener('click', function (e) {
 	}
 });
 
-// PORTFOLIO OPENMODAL
-
-/*
-const modal = document.querySelector('.modal');
-const btnCloseModal = document.querySelector('.modal__container-close');
-const btnsOpenModal = document.querySelectorAll('.modal__container-open');
-
-const openModal = function () {
-	modal.classList.remove('modal--hidden');
-	body.style.overflow = 'hidden';
-};
-
-const closeModal = function () {
-	modal.classList.add('modal--hidden');
-	body.style.overflow = '';
-};
-
-btnsOpenModal.forEach(item => item.addEventListener('click', openModal));
-btnCloseModal.addEventListener('click', closeModal);
-
-document.addEventListener('keydown', function (e) {
-	console.log(e.key);
-
-	if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-		closeModal();
-	}
-});
-*/
-
 // CAROUSEL IN MODAL
 const slider = document.querySelector('.carousel__track'),
 	slides = Array.from(document.querySelectorAll('.carousel__slide')),
@@ -135,4 +106,21 @@ function showSlides(n) {
 	}
 	slides[slideIndex - 1].style.display = 'flex';
 	dots[slideIndex - 1].className += ' active';
+}
+
+// OPEN MODALS
+const triggers = document.getElementsByClassName('modal-trigger'),
+	triggerArr = Array.from(triggers).entries(),
+	modals = document.getElementsByClassName('modal'),
+	btnCloseModal = document.getElementsByClassName('modal__container-close');
+
+//  Then use `for...of`-loop with the index of each item in `triggerArr` for listening to a click event which toggles each modal to open and close
+for (let [index, trigger] of triggerArr) {
+	const toggleModal = () => {
+		modals[index].classList.toggle('modal--hidden');
+	};
+	trigger.addEventListener('click', toggleModal);
+	if (typeof btnCloseModal[index] !== 'undefined') {
+		btnCloseModal[index].addEventListener('click', toggleModal);
+	}
 }
