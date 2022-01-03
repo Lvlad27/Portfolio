@@ -69,6 +69,8 @@ category.addEventListener('click', function (e) {
 });
 
 // PORTFOLIO OPENMODAL
+
+/*
 const modal = document.querySelector('.modal');
 const btnCloseModal = document.querySelector('.modal__container-close');
 const btnsOpenModal = document.querySelectorAll('.modal__container-open');
@@ -93,6 +95,7 @@ document.addEventListener('keydown', function (e) {
 		closeModal();
 	}
 });
+*/
 
 // CAROUSEL IN MODAL
 const slider = document.querySelector('.carousel__track'),
