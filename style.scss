@@ -358,7 +358,7 @@ body {
 			font-size: clamp(3rem, 6vw, 6rem);
 			animation: spin 2s infinite linear;
 			position: relative;
-			top: 2px;
+			top: 1px;
 		}
 
 		.lastName {
@@ -642,11 +642,10 @@ body {
 
 					.carousel__slide {
 						max-height: 100vh;
-						// width: 100vw;
+						width: 100vw;
 						display: flex;
 						align-items: center;
 						justify-content: center;
-						padding: 1rem;
 
 						.carousel__image {
 							max-width: 100%;
