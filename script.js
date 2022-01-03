@@ -95,238 +95,41 @@ document.addEventListener('keydown', function (e) {
 });
 
 // CAROUSEL IN MODAL
+const slider = document.querySelector('.carousel__track'),
+	slides = Array.from(document.querySelectorAll('.carousel__slide')),
+	dots = Array.from(document.querySelectorAll('.carousel__dot')),
+	next = document.getElementById('next'),
+	prev = document.getElementById('prev');
 
-const track = document.getElementById('carousel__track');
-const allSlides = document.querySelectorAll('.carousel__slide');
-console.log(allSlides);
-const slideWidth = allSlides[0].offsetWidth;
+let slideIndex = 1;
 
-let index = 0;
-let posX1, posX2, initialPosition, finalPosition;
+showSlides(slideIndex);
 
-let okToSlide = true;
+next.addEventListener('click', () => plusSlides(1));
+prev.addEventListener('click', () => plusSlides(-1));
 
-const prev = document.getElementById('prev');
-const next = document.getElementById('next');
-
-const firstSlide = allSlides[0];
-const lastSlide = allSlides[allSlides.length - 1];
-
-const cloneFirstSlide = firstSlide.cloneNode(true);
-const cloneLastSlide = lastSlide.cloneNode(true);
-
-track.appendChild(cloneFirstSlide);
-track.insertBefore(cloneLastSlide, firstSlide);
-
-// const dotsNav = document.querySelector('.carousel__nav-indicator');
-// const dots = Array.from(dotsNav.children);
-
-prev.addEventListener('click', () => switchSlide('prev'));
-next.addEventListener('click', () => switchSlide('next'));
-
-track.addEventListener('transitionend', checkIndex);
-
-track.addEventListener('mousedown', dragStart);
-
-track.addEventListener('touchstart', dragStart);
-track.addEventListener('touchmove', dragMove);
-track.addEventListener('touchend', dragEnd);
-
-function dragStart(e) {
-	e.preventDefault();
-	initialPosition = track.offsetLeft;
-
-	if (e.type == 'touchstart') {
-		posX1 = e.touches[0].clientX;
-	} else {
-		posX1 = e.clientX;
-
-		document.onmouseup = dragEnd;
-		document.onmousemove = dragMove;
-	}
+function plusSlides(n) {
+	showSlides((slideIndex += n));
 }
 
-function dragMove(e) {
-	if (e.type == 'touchmove') {
-		posX2 = posX1 - e.touches[0].clientX;
-		posX1 = e.touches[0].clientX;
-	} else {
-		posX2 = posX1 - e.clientX;
-		posX1 = e.clientX;
-	}
-
-	track.style.left = `${track.offsetLeft - posX2}px`;
+function currentSlide(n) {
+	showSlides((slideIndex = n));
 }
 
-function dragEnd() {
-	finalPosition = track.offsetLeft;
-	if (finalPosition - initialPosition < slideWidth / 4) {
-		switchSlide('next', 'dragging');
-	} else if (finalPosition - initialPosition > slideWidth / 4) {
-		switchSlide('prev', 'dragging');
-	} else {
-		track.style.left = `${initialPosition}px`;
+function showSlides(n) {
+	let i;
+	if (n > slides.length) {
+		slideIndex = 1;
 	}
-
-	document.onmouseup = null;
-	document.onmousemove = null;
+	if (n < 1) {
+		slideIndex = slides.length;
+	}
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = 'none';
+	}
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(' active', '');
+	}
+	slides[slideIndex - 1].style.display = 'flex';
+	dots[slideIndex - 1].className += ' active';
 }
-
-// const updateDots = (currentDot, targetDot) => {
-// 	currentDot.classList.remove('current-slide');
-// 	targetDot.classList.add('current-slide');
-// };
-
-function switchSlide(arg, arg2) {
-	track.classList.add('carousel__track--transition');
-
-	if (okToSlide) {
-		if (!arg2) {
-			initialPosition = track.offsetLeft;
-		}
-		if (arg == 'next') {
-			track.style.left = `${initialPosition - slideWidth}px`;
-			index++;
-			// const currentDot = dotsNav.querySelector('.current-slide');
-			// const nextDot = currentDot.nextElementSibling;
-			// updateDots(currentDot, nextDot);
-		} else {
-			track.style.left = `${initialPosition + slideWidth}px`;
-			index--;
-			// const currentDot = dotsNav.querySelector('.current-slide');
-			// const prevDot = currentDot.previousElementSibling;
-			// updateDots(currentDot, prevDot);
-		}
-	}
-
-	okToSlide = false;
-}
-
-function checkIndex() {
-	track.classList.remove('carousel__track--transition');
-	// dots[0].classList.remove('current-slide');
-	if (index == -1) {
-		track.style.left = `-${allSlides.length * slideWidth}px`;
-		index = allSlides.length - 1;
-	} else if (index == allSlides.length) {
-		track.style.left = `-${1 * slideWidth}px`;
-		// dots[0].classList.add('current-slide');
-		index = 0;
-	}
-
-	okToSlide = true;
-}
-
-/*
-const track = document.querySelector('.carousel__track');
-const slides = Array.from(track.children);
-const nextButton = document.querySelector('.carousel__button--right');
-const prevButton = document.querySelector('.carousel__button--left');
-const dotsNav = document.querySelector('.carousel__nav-indicator');
-const dots = Array.from(dotsNav.children);
-
-const slideWidth = slides[0].getBoundingClientRect().width;
-
-const setSlidePosition = (slide, index) => {
-	slide.style.left = `${slideWidth * index}px`;
-};
-
-// arrange the slides next to each other
-slides.forEach(setSlidePosition);
-
-const moveToSlide = (track, currentSlide, targetSlide) => {
-	track.style.transform = `translateX(-${targetSlide.style.left})`;
-	currentSlide.classList.remove('current-slide');
-	targetSlide.classList.add('current-slide');
-};
-
-const updateDots = (currentDot, targetDot) => {
-	currentDot.classList.remove('current-slide');
-	targetDot.classList.add('current-slide');
-};
-
-// when i click left, move slides to the left
-prevButton.addEventListener('click', e => {
-	const currentSlide = track.querySelector('.current-slide');
-	const prevSlide = currentSlide.previousElementSibling;
-	const currentDot = dotsNav.querySelector('.current-slide');
-	const prevDot = currentDot.previousElementSibling;
-
-	moveToSlide(track, currentSlide, prevSlide);
-	updateDots(currentDot, prevDot);
-});
-
-// when i click right, move slides to the right
-nextButton.addEventListener('click' || 'mousemove', e => {
-	const currentSlide = track.querySelector('.current-slide');
-	const nextSlide = currentSlide.nextElementSibling;
-	const currentDot = dotsNav.querySelector('.current-slide');
-	const nextDot = currentDot.nextElementSibling;
-
-	moveToSlide(track, currentSlide, nextSlide);
-	updateDots(currentDot, nextDot);
-});
-
-// when i click the nav indicators, move to that slide
-dotsNav.addEventListener('click', e => {
-	// what indicator was clicked on
-	const targetDot = e.target.closest('button');
-
-	if (!targetDot) return;
-
-	const currentSlide = track.querySelector('.current-slide');
-	const currentDot = dotsNav.querySelector('.current-slide');
-	const targetIndex = dots.findIndex(dot => dot === targetDot);
-	const targetSlide = slides[targetIndex];
-
-	moveToSlide(track, currentSlide, targetSlide);
-	updateDots(currentDot, targetDot);
-});
-
-// Mouse drag and touch slide functionality
-let initialPosition = null;
-let moving = false;
-let transform = 0;
-
-const gestureStart = e => {
-	initialPosition = e.pageX;
-	moving = true;
-	const transformMatrix = window.getComputedStyle(track).getPropertyValue('transform');
-	if (transformMatrix !== 'none') {
-		transform = parseInt(transformMatrix.split(',')[4].trim());
-	}
-};
-
-const gestureMove = e => {
-	if (moving) {
-		const currentPosition = e.pageX;
-		const diff = currentPosition - initialPosition;
-		if (diff > 0) {
-			track.style.transform = `translateX(${transform + slideWidth}px)`;
-			if (transform === 0 && diff > 0) return;
-		} else {
-			// if (transform > 0) return;
-			track.style.transform = `translateX(${transform - slideWidth}px)`;
-		}
-
-		// currentPosition = 0;
-
-		console.log(initialPosition, currentPosition, diff);
-		console.log(transform);
-	}
-};
-
-const gestureEnd = e => {
-	moving = false;
-};
-
-if (window.PointerEvent) {
-	window.addEventListener('pointerdown', gestureStart);
-	window.addEventListener('pointermove', gestureMove);
-	window.addEventListener('pointerup', gestureEnd);
-} else {
-	window.addEventListener('touchdown', gestureStart);
-	window.addEventListener('touchmove', gestureMove);
-	window.addEventListener('touchup', gestureEnd);
-}
-*/

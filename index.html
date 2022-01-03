@@ -235,7 +235,7 @@
 						<button class="modal__container-close">&times;</button>
 
 						<div class="carousel">
-							<div class="carousel__track" id="carousel__track">
+							<div class="carousel__track">
 								<span class="carousel__slide">
 									<img class="carousel__image" src="img/project--1/nat-1-large.jpg" height="300" alt="TODO" />
 								</span>
@@ -248,12 +248,6 @@
 								<span class="carousel__slide">
 									<img class="carousel__image" src="img/project--1/nat-4.jpg" height="300" alt="TODO" />
 								</span>
-								<span class="carousel__slide">
-									<img class="carousel__image" src="img/project--1/nat-5.jpg" height="300" alt="TODO" />
-								</span>
-								<span class="carousel__slide">
-									<img class="carousel__image" src="img/project--1/nat-6.jpg" height="300" alt="TODO" />
-								</span>
 							</div>
 
 							<div class="carousel__nav">
@@ -261,13 +255,11 @@
 									<i class="fas fa-chevron-left"></i>
 								</button>
 
-								<div class="carousel__nav-indicator">
-									<button class="carousel__indicator current-slide"></button>
-									<button class="carousel__indicator"></button>
-									<button class="carousel__indicator"></button>
-									<button class="carousel__indicator"></button>
-									<button class="carousel__indicator"></button>
-									<button class="carousel__indicator"></button>
+								<div class="carousel__nav-dots">
+									<button class="carousel__dot" onclick="currentSlide(1)"></button>
+									<button class="carousel__dot" onclick="currentSlide(2)"></button>
+									<button class="carousel__dot" onclick="currentSlide(3)"></button>
+									<button class="carousel__dot" onclick="currentSlide(4)"></button>
 								</div>
 
 								<button class="carousel__button carousel__button--next" id="next">
