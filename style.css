@@ -366,6 +366,8 @@ body {
   font-size: clamp(3rem, 6vw, 6rem);
   -webkit-animation: spin 2s infinite linear;
           animation: spin 2s infinite linear;
+  position: relative;
+  top: 2px;
 }
 
 .intro-title .lastName {

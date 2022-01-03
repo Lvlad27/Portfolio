@@ -357,6 +357,8 @@ body {
 		.fa-cog {
 			font-size: clamp(3rem, 6vw, 6rem);
 			animation: spin 2s infinite linear;
+			position: relative;
+			top: 2px;
 		}
 
 		.lastName {
