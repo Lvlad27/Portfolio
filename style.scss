@@ -657,16 +657,17 @@ body {
 				}
 
 				&__nav {
+					margin-top: 2rem;
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					gap: 5rem;
+					gap: 4rem;
 
 					.carousel__button {
 						background: transparent;
 						color: $color-2;
 						border: 0;
-						font-size: 3rem;
+						font-size: 4rem;
 						cursor: pointer;
 
 						&:active {
@@ -677,13 +678,13 @@ body {
 					&-dots {
 						display: flex;
 						flex-direction: row;
-						gap: 2rem;
+						gap: 3rem;
 
 						.carousel__dot {
 							border: 0;
 							border-radius: 50%;
-							width: 1rem;
-							height: 1rem;
+							width: 1.5rem;
+							height: 1.5rem;
 							background-color: $color-light;
 							cursor: pointer;
 
@@ -696,7 +697,7 @@ body {
 			}
 
 			.modal__content {
-				// margin-top: 10rem;
+				margin-top: 4rem;
 				display: flex;
 				flex-direction: column;
 

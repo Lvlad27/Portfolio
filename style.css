@@ -709,6 +709,7 @@ body {
 }
 
 .portfolio .modal__container .carousel__nav {
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -718,14 +719,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 5rem;
+  gap: 4rem;
 }
 
 .portfolio .modal__container .carousel__nav .carousel__button {
   background: transparent;
   color: #feda4e;
   border: 0;
-  font-size: 3rem;
+  font-size: 4rem;
   cursor: pointer;
 }
 
@@ -741,14 +742,14 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .portfolio .modal__container .carousel__nav-dots .carousel__dot {
   border: 0;
   border-radius: 50%;
-  width: 1rem;
-  height: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
   background-color: #f4f4f4;
   cursor: pointer;
 }
@@ -758,6 +759,7 @@ body {
 }
 
 .portfolio .modal__container .modal__content {
+  margin-top: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
