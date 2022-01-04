@@ -626,6 +626,9 @@ body {
 
 .portfolio .projects-list .project img {
   max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .portfolio .projects-list .project--hide {
@@ -700,13 +703,6 @@ body {
 
 .portfolio .modal__container .carousel__track .carousel__slide .carousel__image {
   max-width: 100%;
-  max-height: 100%;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .portfolio .modal__container .carousel__nav {
