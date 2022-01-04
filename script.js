@@ -2,11 +2,11 @@
 
 ////////////////////////////
 // MOBILE NAVBAR
-const navbar = document.querySelector('.header__container__navbar');
-const menuToggle = document.querySelector('.header__container-menuToggle');
-const navLinks = document.querySelectorAll('.header__container__navbar-links');
-const overlay = document.querySelector('.overlay');
-const body = document.body;
+const navbar = document.querySelector('.header__container__navbar'),
+	menuToggle = document.querySelector('.header__container-menuToggle'),
+	navLinks = document.querySelectorAll('.header__container__navbar-links'),
+	overlay = document.querySelector('.overlay'),
+	body = document.body;
 
 // BACKGROUND EFFECT WHEN OPENING SIDE MENU
 menuToggle.addEventListener('click', function () {
@@ -47,7 +47,6 @@ const project = document.querySelectorAll('.project');
 
 ////////////////////////////
 // PORTFOLIO
-
 // FILTERING THE PROJECTS BY CATEGORY
 category.addEventListener('click', function (e) {
 	if (e.target.classList.contains('btn')) {
@@ -93,12 +92,10 @@ for (let [index, trigger] of triggerArr) {
 
 			function plusSlides(n) {
 				showSlides((slideIndex += n));
-				console.log(`arrow is clicked so plusSlides function is called so slideIndex=${slideIndex} and n=${n}`);
 			}
 
 			function currentSlide(n) {
 				showSlides((slideIndex = n));
-				console.log(`Dot was clicked so currentSlide function is called so slideIndex=${slideIndex} and n=${n}`);
 			}
 
 			for (let i = 0; i < dots.length; i++) {
@@ -121,10 +118,8 @@ for (let [index, trigger] of triggerArr) {
 				for (i = 0; i < dots.length; i++) {
 					dots[i].className = dots[i].className.replace(' active', '');
 				}
-				slides[slideIndex - 1].style.display = 'flex';
+				slides[slideIndex - 1].style.display = '';
 				dots[slideIndex - 1].className += ' active';
-
-				console.log(`showSlides function is called so slideIndex=${slideIndex} and n=${n}`);
 			}
 		};
 
