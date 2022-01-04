@@ -79,17 +79,14 @@ const triggers = document.getElementsByClassName('modal-trigger'),
 //  Loop with the index of each item in `triggerArr` for listening to a click event which toggles each modal to open and close
 for (let [index, trigger] of triggerArr) {
 	if (typeof modals[index] !== 'undefined') {
-		// console.log(modals[index].firstElementChild.children[1].firstElementChild.firstElementChild);
-
-		let slider = modals[index].firstElementChild.children[1].firstElementChild,
-			slides = slider.children,
-			dots = Array.from(document.querySelectorAll('.carousel__dot')),
-			dotsArr = Array.from(document.querySelectorAll('.carousel__dot')).entries(),
-			next = document.getElementById('next'),
-			prev = document.getElementById('prev');
-
 		const carouselSlider = function () {
-			let slideIndex = 1;
+			let carousel = modals[index].firstElementChild.children[1],
+				slider = carousel.firstElementChild,
+				slides = slider.children,
+				dots = carousel.children[1].children[1].children,
+				next = carousel.children[1].lastElementChild,
+				prev = carousel.children[1].firstElementChild,
+				slideIndex = 1;
 
 			showSlides(slideIndex);
 
@@ -133,12 +130,18 @@ for (let [index, trigger] of triggerArr) {
 			}
 		};
 
+		const toggleCarousel = () => {
+			modals[index].classList.toggle('modal--hidden');
+			body.classList.toggle('noScroll');
+			carouselSlider;
+		};
+
 		const toggleModal = () => {
 			modals[index].classList.toggle('modal--hidden');
 			body.classList.toggle('noScroll');
 		};
 
-		trigger.addEventListener('click', toggleModal);
+		trigger.addEventListener('click', toggleCarousel);
 		trigger.addEventListener('click', carouselSlider);
 		btnCloseModal[index].addEventListener('click', toggleModal);
 	}
