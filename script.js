@@ -48,7 +48,7 @@ const project = document.querySelectorAll('.project');
 ////////////////////////////
 // PORTFOLIO
 
-// FILTERING THE PORTFOLIO ITEMS BY CATEGORY
+// FILTERING THE PROJECTS BY CATEGORY
 category.addEventListener('click', function (e) {
 	if (e.target.classList.contains('btn')) {
 		category.querySelector('.btn--active').classList.remove('btn--active');
@@ -68,15 +68,13 @@ category.addEventListener('click', function (e) {
 	}
 });
 
-// CAROUSEL IN MODAL
-
-// OPEN MODAL
+// MODAL
 const triggers = document.getElementsByClassName('modal-trigger'),
 	triggerArr = Array.from(triggers).entries(),
 	modals = document.getElementsByClassName('modal'),
 	btnCloseModal = document.getElementsByClassName('modal__container-close');
 
-//  Loop with the index of each item in `triggerArr` for listening to a click event which toggles each modal to open and close
+//  Loop with the index of each item in `triggerArr` for listening to a click event which toggles each modal to open and close and also the carousel slider functionality.
 for (let [index, trigger] of triggerArr) {
 	if (typeof modals[index] !== 'undefined') {
 		const carouselSlider = function () {
