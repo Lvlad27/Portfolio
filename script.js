@@ -69,58 +69,77 @@ category.addEventListener('click', function (e) {
 });
 
 // CAROUSEL IN MODAL
-const slider = document.querySelector('.carousel__track'),
-	slides = Array.from(document.querySelectorAll('.carousel__slide')),
-	dots = Array.from(document.querySelectorAll('.carousel__dot')),
-	next = document.getElementById('next'),
-	prev = document.getElementById('prev');
 
-let slideIndex = 1;
-
-showSlides(slideIndex);
-
-next.addEventListener('click', () => plusSlides(1));
-prev.addEventListener('click', () => plusSlides(-1));
-
-function plusSlides(n) {
-	showSlides((slideIndex += n));
-}
-
-function currentSlide(n) {
-	showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-	let i;
-	if (n > slides.length) {
-		slideIndex = 1;
-	}
-	if (n < 1) {
-		slideIndex = slides.length;
-	}
-	for (i = 0; i < slides.length; i++) {
-		slides[i].style.display = 'none';
-	}
-	for (i = 0; i < dots.length; i++) {
-		dots[i].className = dots[i].className.replace(' active', '');
-	}
-	slides[slideIndex - 1].style.display = 'flex';
-	dots[slideIndex - 1].className += ' active';
-}
-
-// OPEN MODALS
+// OPEN MODAL
 const triggers = document.getElementsByClassName('modal-trigger'),
 	triggerArr = Array.from(triggers).entries(),
 	modals = document.getElementsByClassName('modal'),
 	btnCloseModal = document.getElementsByClassName('modal__container-close');
 
-//  Then use `for...of`-loop with the index of each item in `triggerArr` for listening to a click event which toggles each modal to open and close
+//  Loop with the index of each item in `triggerArr` for listening to a click event which toggles each modal to open and close
 for (let [index, trigger] of triggerArr) {
-	const toggleModal = () => {
-		modals[index].classList.toggle('modal--hidden');
-	};
-	trigger.addEventListener('click', toggleModal);
-	if (typeof btnCloseModal[index] !== 'undefined') {
+	if (typeof modals[index] !== 'undefined') {
+		// console.log(modals[index].firstElementChild.children[1].firstElementChild.firstElementChild);
+
+		let slider = modals[index].firstElementChild.children[1].firstElementChild,
+			slides = slider.children,
+			dots = Array.from(document.querySelectorAll('.carousel__dot')),
+			dotsArr = Array.from(document.querySelectorAll('.carousel__dot')).entries(),
+			next = document.getElementById('next'),
+			prev = document.getElementById('prev');
+
+		const carouselSlider = function () {
+			let slideIndex = 1;
+
+			showSlides(slideIndex);
+
+			next.addEventListener('click', () => plusSlides(1));
+			prev.addEventListener('click', () => plusSlides(-1));
+
+			function plusSlides(n) {
+				showSlides((slideIndex += n));
+				console.log(`arrow is clicked so plusSlides function is called so slideIndex=${slideIndex} and n=${n}`);
+			}
+
+			function currentSlide(n) {
+				showSlides((slideIndex = n));
+				console.log(`Dot was clicked so currentSlide function is called so slideIndex=${slideIndex} and n=${n}`);
+			}
+
+			for (let i = 0; i < dots.length; i++) {
+				dots[i].addEventListener('click', function () {
+					currentSlide(i + 1);
+				});
+			}
+
+			function showSlides(n) {
+				let i;
+				if (n > slides.length) {
+					slideIndex = 1;
+				}
+				if (n < 1) {
+					slideIndex = slides.length;
+				}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = 'none';
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(' active', '');
+				}
+				slides[slideIndex - 1].style.display = 'flex';
+				dots[slideIndex - 1].className += ' active';
+
+				console.log(`showSlides function is called so slideIndex=${slideIndex} and n=${n}`);
+			}
+		};
+
+		const toggleModal = () => {
+			modals[index].classList.toggle('modal--hidden');
+			body.classList.toggle('noScroll');
+		};
+
+		trigger.addEventListener('click', toggleModal);
+		trigger.addEventListener('click', carouselSlider);
 		btnCloseModal[index].addEventListener('click', toggleModal);
 	}
 }
