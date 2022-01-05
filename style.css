@@ -81,6 +81,7 @@ body {
   text-transform: uppercase;
   font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
   font-size: clamp(4rem, 4vw, 4rem);
+  color: #feda4e;
 }
 
 .btn {
@@ -825,7 +826,105 @@ body {
   color: #feda4e;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-  -webkit-transition: ease-in-out 0.1s;
-  transition: ease-in-out 0.1s;
+  -webkit-transition: ease 0.1s;
+  transition: ease 0.1s;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #272727;
+}
+
+.contact .container {
+  margin: 4rem 2rem;
+}
+
+.contact .container__contact-link {
+  margin: 6rem 0 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+}
+
+.contact .container__contact-link .btn {
+  font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
+  font-size: 2rem;
+  padding: 1rem 1rem;
+  border: 2px solid #feda4e;
+  color: #feda4e;
+  background-color: #272727;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 3px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+          box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+}
+
+.contact .container__contact-link .btn:hover {
+  background-color: #272727;
+  color: #feda4e;
+}
+
+.contact .container__contact-link--mail {
+  margin-right: 1rem;
+  font-size: 3rem;
+}
+
+.footer {
+  background-color: #202020;
+  font-size: 1.2rem;
+}
+
+.footer .container {
+  margin: 2rem 2rem;
+}
+
+.footer .container__socialMedia-list {
+  margin: 0 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 3rem;
+  list-style-type: none;
+}
+
+.footer .container__socialMedia-list-icons {
+  color: #f4f4f4;
+}
+
+.footer .container__socialMedia-list-icons .fab:hover {
+  color: #feda4e;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: ease 0.1s;
+  transition: ease 0.1s;
+}
+
+.footer .container__socialMedia-list-icons .fas:hover {
+  color: #feda4e;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: ease 0.1s;
+  transition: ease 0.1s;
+}
+
+.footer .container__text {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

@@ -88,6 +88,7 @@ body {
 	text-transform: uppercase;
 	font-family: $font-secondary;
 	font-size: clamp($large-font-size, 4vw, 4rem);
+	color: $color-2;
 }
 
 .btn {
@@ -753,11 +754,94 @@ body {
 						&:hover {
 							color: $color-2;
 							transform: scale(1.2);
-							transition: ease-in-out 0.1s;
+							transition: ease 0.1s;
 						}
 					}
 				}
 			}
+		}
+	}
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+
+	background-color: $color-1;
+
+	.container {
+		margin: 4rem 2rem;
+
+		&__contact-link {
+			margin: 6rem 0 10rem;
+			display: flex;
+			justify-content: center;
+			text-decoration: none;
+
+			.btn {
+				font-family: $font-secondary;
+				font-size: $medium-font-size;
+				padding: 1rem 1rem;
+				border: 2px solid $color-2;
+
+				color: $color-2;
+				background-color: $color-1;
+				transition: all 0.2s;
+				border-radius: 3px;
+				box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+
+				&:hover {
+					background-color: $color-1;
+					color: $color-2;
+				}
+			}
+
+			&--mail {
+				margin-right: 1rem;
+				font-size: 3rem;
+			}
+		}
+	}
+}
+
+.footer {
+	background-color: $color-1-dark;
+	font-size: 1.2rem;
+
+	.container {
+		margin: 2rem 2rem;
+
+		&__socialMedia {
+			&-list {
+				margin: 0 0 2rem;
+
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+
+				font-size: 3rem;
+				list-style-type: none;
+
+				&-icons {
+					color: $color-light;
+
+					.fab:hover {
+						color: $color-2;
+						transform: scale(1.2);
+						transition: ease 0.1s;
+					}
+
+					.fas:hover {
+						color: $color-2;
+						transform: scale(1.2);
+						transition: ease 0.1s;
+					}
+				}
+			}
+		}
+
+		&__text {
+			text-align: center;
 		}
 	}
 }
