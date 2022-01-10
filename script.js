@@ -55,7 +55,7 @@ window.addEventListener('scroll', () => {
 });
 
 const category = document.querySelector('.portfolio__category');
-const project = document.querySelectorAll('.project');
+const project = document.querySelectorAll('.modal-trigger');
 
 ////////////////////////////
 // PORTFOLIO

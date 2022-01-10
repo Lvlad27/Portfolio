@@ -582,20 +582,22 @@ body {
 		gap: 6vw;
 		// gap: 2vw;
 		align-items: stretch;
+		animation: fadeIn 0.5s ease-in-out;
+		transition: ease-in-out 1s;
 
-		.project {
-			img {
-				max-width: 100%;
-				height: auto;
-				object-fit: cover;
-			}
-
+		.modal-trigger.project {
 			&--hide {
 				display: none;
 			}
-
 			&--show {
 				animation: fadeIn 0.5s ease-in-out;
+			}
+			.project {
+				img {
+					max-width: 100%;
+					height: auto;
+					object-fit: cover;
+				}
 			}
 		}
 	}
