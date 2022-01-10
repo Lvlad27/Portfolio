@@ -9,20 +9,32 @@ const navbar = document.querySelector('.header__container__navbar'),
 	body = document.body;
 
 // BACKGROUND EFFECT WHEN OPENING SIDE MENU
-menuToggle.addEventListener('click', function () {
+// when hamburger button is clicked
+
+const toggle = function () {
 	navbar.classList.toggle('header__container__navbar--open');
+	// toggle classes to every anchor element
 	navLinks.forEach(element => {
 		element.classList.toggle('header__container__navbar-links--open');
 	});
-	this.classList.toggle('header__container-menuToggle--open');
+	// toggle class to hamburger button
+	menuToggle.classList.toggle('header__container-menuToggle--open');
+	// add blurred effect background by removing class to div
 	overlay.classList.toggle('overlay--hidden');
+	// remove scroll function from body element
 	body.classList.toggle('noScroll');
-});
+};
 
+menuToggle.addEventListener('click', toggle);
+
+for (let i = 0; i < navLinks.length; i++) {
+	navLinks[i].addEventListener('click', toggle);
+}
+
+// NAVBAR EFFECT WHEN SCROLLING
 let lastScroll = 0;
 const header = document.querySelector('header');
 
-// NAVBAR EFFECT WHEN SCROLLING
 window.addEventListener('scroll', () => {
 	const currentScroll = window.pageYOffset;
 	if (currentScroll <= 0) {
