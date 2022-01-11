@@ -85,6 +85,12 @@ body {
   color: #feda4e;
 }
 
+@media (min-height: 736px) {
+  .section-title {
+    margin-bottom: 5rem;
+  }
+}
+
 .btn {
   font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
   font-size: 2rem;
@@ -301,7 +307,6 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100%;
   height: 100%;
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: 0 blur(3px);
@@ -344,10 +349,22 @@ body {
   margin: 3rem 2rem 0;
 }
 
+@media (min-height: 736px) {
+  .intro {
+    margin: 8rem 2rem 0;
+  }
+}
+
 .intro-message {
   margin-bottom: 1.5rem;
   font-size: 1.6rem;
   font-weight: 400;
+}
+
+@media (min-height: 667px) {
+  .intro-message {
+    margin-bottom: 3rem;
+  }
 }
 
 .intro-title {
@@ -362,6 +379,12 @@ body {
   color: #feda4e;
   font-size: clamp(4rem, 8vw, 8rem);
   line-height: 1;
+}
+
+@media (min-height: 667px) {
+  .intro-title {
+    margin-bottom: 3rem;
+  }
 }
 
 .intro-title .fa-cog {
@@ -400,6 +423,12 @@ body {
   font-weight: 400;
 }
 
+@media (min-height: 736px) {
+  .intro-description {
+    margin-top: 3rem;
+  }
+}
+
 .intro .btn {
   margin: 6rem 2rem 8rem;
   color: #feda4e;
@@ -410,6 +439,18 @@ body {
 .intro .btn:hover {
   background-color: #feda4e;
   color: #202020;
+}
+
+@media (min-height: 667px) {
+  .intro .btn {
+    margin: 8rem 2rem 17rem;
+  }
+}
+
+@media (min-height: 736px) {
+  .intro .btn {
+    margin: 8rem 2rem 27rem;
+  }
 }
 
 .about {
@@ -425,6 +466,12 @@ body {
 
 .about .container {
   margin: 5rem 2rem 0;
+}
+
+@media (min-height: 736px) {
+  .about .container {
+    margin: 7rem 2rem 0;
+  }
 }
 
 .about .container__image {
@@ -473,6 +520,12 @@ body {
   -webkit-column-gap: 4rem;
           column-gap: 4rem;
   row-gap: 2rem;
+}
+
+@media (min-height: 736px) {
+  .about .container__skills {
+    margin-bottom: 8rem;
+  }
 }
 
 .about .container__skills-item {
@@ -560,9 +613,21 @@ body {
   width: 10rem;
 }
 
+@media (min-height: 736px) {
+  .hire__icon {
+    margin-top: 7rem;
+  }
+}
+
 .hire .section-title {
   margin-top: 2rem;
   color: #241f0b;
+}
+
+@media (min-height: 736px) {
+  .hire .section-title {
+    margin-top: 4rem;
+  }
 }
 
 .hire .paragraph--1 {
@@ -575,8 +640,20 @@ body {
   margin-bottom: 7rem;
 }
 
+@media (min-height: 736px) {
+  .hire .btn {
+    margin-bottom: 9rem;
+  }
+}
+
 .portfolio .container {
-  margin: 4rem 2rem 4rem;
+  margin: 4rem 2rem;
+}
+
+@media (min-height: 736px) {
+  .portfolio .container {
+    margin: 8rem 2rem 8rem;
+  }
 }
 
 .portfolio__category {
@@ -628,6 +705,14 @@ body {
           animation: fadeIn 0.5s ease-in-out;
   -webkit-transition: ease-in-out 1s;
   transition: ease-in-out 1s;
+}
+
+@media (min-width: 414px) {
+  .portfolio .projects-list {
+    -ms-grid-columns: (minmax(15rem, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 6vw;
+  }
 }
 
 .portfolio .projects-list .modal-trigger.project--hide {
@@ -856,6 +941,12 @@ body {
 
 .contact .container {
   margin: 4rem 2rem;
+}
+
+@media (min-height: 736px) {
+  .contact .container {
+    margin: 8rem 2rem 8rem;
+  }
 }
 
 .contact .container__contact-link {

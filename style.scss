@@ -15,12 +15,6 @@ $default-font-size: 1.6rem;
 $large-font-size: 4rem;
 $medium-font-size: 2rem;
 
-// RESPONSIVE BREAKPOINTS
-$bp-largest: 75em; // 1200px
-$bp-large: 62.5em; // 1000px
-$bp-medium: 50em; // 800px;
-$bp-small: 37.5em; // 600px;
-
 // ANIMATIONS
 $bezier: cubic-bezier(0.3, -0.01, 0.49, 1);
 
@@ -90,6 +84,10 @@ body {
 	font-family: $font-secondary;
 	font-size: clamp($large-font-size, 4vw, 4rem);
 	color: $color-2;
+
+	@media (min-height: 736px) {
+		margin-bottom: 5rem;
+	}
 }
 
 .btn {
@@ -297,7 +295,7 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	width: 100%;
+	// width: 100%;
 	height: 100%;
 	backdrop-filter: blur(3px);
 	-webkit-backdrop-filter: 0 blur(3px);
@@ -340,11 +338,19 @@ body {
 	flex-direction: column;
 	margin: 3rem 2rem 0;
 
+	@media (min-height: 736px) {
+		margin: 8rem 2rem 0;
+	}
+
 	&-message {
 		margin-bottom: 1.5rem;
 
 		font-size: $default-font-size;
 		font-weight: 400;
+
+		@media (min-height: 667px) {
+			margin-bottom: 3rem;
+		}
 	}
 
 	&-title {
@@ -355,6 +361,10 @@ body {
 		color: $color-2;
 		font-size: clamp($large-font-size, 8vw, 8rem);
 		line-height: 1;
+
+		@media (min-height: 667px) {
+			margin-bottom: 3rem;
+		}
 
 		.fa-cog {
 			font-size: clamp(3rem, 6vw, 6rem);
@@ -379,6 +389,10 @@ body {
 
 		font-size: $default-font-size;
 		font-weight: 400;
+
+		@media (min-height: 736px) {
+			margin-top: 3rem;
+		}
 	}
 
 	.btn {
@@ -391,6 +405,14 @@ body {
 			background-color: $color-2;
 			color: $color-1-dark;
 		}
+
+		@media (min-height: 667px) {
+			margin: 8rem 2rem 17rem;
+		}
+
+		@media (min-height: 736px) {
+			margin: 8rem 2rem 27rem;
+		}
 	}
 }
 
@@ -399,11 +421,14 @@ body {
 .about {
 	display: flex;
 	flex-direction: column;
-
 	background-color: $color-1;
 
 	.container {
 		margin: 5rem 2rem 0;
+
+		@media (min-height: 736px) {
+			margin: 7rem 2rem 0;
+		}
 
 		&__image {
 			margin: 3rem 0 3rem;
@@ -438,13 +463,16 @@ body {
 		&__skills {
 			margin-top: 3rem;
 			margin-bottom: 5rem;
-
 			display: grid;
 			grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
 			grid-gap: 1rem;
 			justify-items: center;
 			column-gap: 4rem;
 			row-gap: 2rem;
+
+			@media (min-height: 736px) {
+				margin-bottom: 8rem;
+			}
 
 			&-item {
 				width: 7rem;
@@ -517,13 +545,19 @@ body {
 	&__icon {
 		margin-top: 5rem;
 		width: 10rem;
-		// text-align: center;
+
+		@media (min-height: 736px) {
+			margin-top: 7rem;
+		}
 	}
 
 	.section-title {
 		margin-top: 2rem;
-
 		color: $color-dark;
+
+		@media (min-height: 736px) {
+			margin-top: 4rem;
+		}
 	}
 
 	.paragraph--1 {
@@ -534,6 +568,10 @@ body {
 	.btn {
 		margin-top: 6rem;
 		margin-bottom: 7rem;
+
+		@media (min-height: 736px) {
+			margin-bottom: 9rem;
+		}
 	}
 }
 
@@ -542,7 +580,11 @@ body {
 
 .portfolio {
 	.container {
-		margin: 4rem 2rem 4rem;
+		margin: 4rem 2rem;
+
+		@media (min-height: 736px) {
+			margin: 8rem 2rem 8rem;
+		}
 	}
 
 	&__category {
@@ -580,10 +622,14 @@ body {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
 		gap: 6vw;
-		// gap: 2vw;
 		align-items: stretch;
 		animation: fadeIn 0.5s ease-in-out;
 		transition: ease-in-out 1s;
+
+		@media (min-width: 414px) {
+			grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+			gap: 6vw;
+		}
 
 		.modal-trigger.project {
 			&--hide {
@@ -782,6 +828,10 @@ body {
 
 	.container {
 		margin: 4rem 2rem;
+
+		@media (min-height: 736px) {
+			margin: 8rem 2rem 8rem;
+		}
 
 		&__contact-link {
 			margin: 6rem 0 8rem;
