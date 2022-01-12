@@ -91,27 +91,6 @@ body {
   }
 }
 
-.btn {
-  font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
-  font-size: 2rem;
-  padding: 1rem 1rem;
-  border: 2px solid #202020;
-  text-decoration: none;
-  color: #241f0b;
-  background-color: #feda4e;
-  text-align: center;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
-          box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
-}
-
-.btn:hover {
-  background-color: #202020;
-  color: #feda4e;
-}
-
 .paragraph--1 {
   color: #a6a6a6;
 }
@@ -167,6 +146,12 @@ body {
   margin-left: 2rem;
 }
 
+@media (min-width: 750px) {
+  .header__container-logo {
+    margin-left: 5rem;
+  }
+}
+
 .header__container-logo:link, .header__container-logo:visited {
   font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
   font-size: 2rem;
@@ -219,6 +204,18 @@ body {
   transition: clip-path ease-out 0.3s, -webkit-clip-path ease-out 0.3s;
 }
 
+@media (min-width: 750px) {
+  .header__container__navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .header__container__navbar--open {
   overflow: hidden;
   -webkit-clip-path: circle(250% at top right);
@@ -234,6 +231,26 @@ body {
   text-decoration: none;
 }
 
+@media (min-height: 844px) {
+  .header__container__navbar-links:link, .header__container__navbar-links:visited {
+    margin: 0 auto 7rem;
+  }
+}
+
+@media (min-height: 896px) {
+  .header__container__navbar-links:link .fa-file, .header__container__navbar-links:visited .fa-file {
+    position: relative;
+    top: 4px;
+  }
+}
+
+@media (min-width: 450px) {
+  .header__container__navbar-links:link .fa-file, .header__container__navbar-links:visited .fa-file {
+    position: relative;
+    top: 4px;
+  }
+}
+
 .header__container__navbar-links--open {
   -webkit-animation: fadeIn cubic-bezier(0.3, -0.01, 0.49, 1) 0.3s forwards;
           animation: fadeIn cubic-bezier(0.3, -0.01, 0.49, 1) 0.3s forwards;
@@ -242,6 +259,20 @@ body {
 .header__container__navbar-icons, .header__container__navbar-icons--btn {
   font-size: 2rem;
   color: #feda4e;
+}
+
+@media (min-height: 896px) {
+  .header__container__navbar-icons, .header__container__navbar-icons--btn {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 450px) {
+  .header__container__navbar-icons, .header__container__navbar-icons--btn {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .header__container__navbar-icons--btn {
@@ -261,6 +292,12 @@ body {
   right: 2rem;
   top: 2rem;
   cursor: pointer;
+}
+
+@media (min-width: 750px) {
+  .header__container-menuToggle {
+    display: none;
+  }
 }
 
 .header__container-menuToggle .hamburger,
@@ -355,6 +392,24 @@ body {
   }
 }
 
+@media (min-height: 844px) {
+  .intro {
+    margin: 10rem 2rem 0;
+  }
+}
+
+@media (min-width: 450px) {
+  .intro {
+    margin: 15rem 5rem 0;
+  }
+}
+
+@media (min-width: 750px) {
+  .intro {
+    margin: 15rem 10rem 0;
+  }
+}
+
 .intro-message {
   margin-bottom: 1.5rem;
   font-size: 1.6rem;
@@ -429,28 +484,63 @@ body {
   }
 }
 
-.intro .btn {
-  margin: 6rem 2rem 8rem;
-  color: #feda4e;
-  background-color: #202020;
-  border: 2px solid #feda4e;
+.intro .btn-link {
+  margin: 6rem 0 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
 }
 
-.intro .btn:hover {
-  background-color: #feda4e;
-  color: #202020;
-}
-
-@media (min-height: 667px) {
-  .intro .btn {
-    margin: 8rem 2rem 17rem;
+@media (min-height: 600px) {
+  .intro .btn-link {
+    margin: 6rem 2rem 20rem;
   }
 }
 
 @media (min-height: 736px) {
-  .intro .btn {
-    margin: 8rem 2rem 27rem;
+  .intro .btn-link {
+    margin: 8rem 2rem 35rem;
   }
+}
+
+@media (min-height: 800px) {
+  .intro .btn-link {
+    margin: 8rem 2rem 33rem;
+  }
+}
+
+@media (min-width: 450px) {
+  .intro .btn-link {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    margin-left: 0;
+  }
+}
+
+.intro .btn-link .btn--intro {
+  font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
+  font-size: 2rem;
+  padding: 1rem 1rem;
+  border: 2px solid #202020;
+  text-decoration: none;
+  color: #241f0b;
+  background-color: #feda4e;
+  text-align: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+          box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+}
+
+.intro .btn-link .btn--intro:hover {
+  background-color: #202020;
+  color: #feda4e;
 }
 
 .about {
@@ -474,13 +564,25 @@ body {
   }
 }
 
+@media (min-width: 450px) {
+  .about .container {
+    margin: 7rem 5rem 0;
+  }
+}
+
+@media (min-width: 750px) {
+  .about .container {
+    margin: 7rem 10rem 0;
+  }
+}
+
 .about .container__image {
   margin: 3rem 0 3rem;
   text-align: center;
 }
 
 .about .container__image .profile-image {
-  border-radius: 5px;
+  border-radius: 1rem;
 }
 
 .about .container__socialMedia-list {
@@ -508,6 +610,40 @@ body {
   color: #feda4e;
 }
 
+.about .container__text .btn-link {
+  margin: 2rem 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  text-decoration: none;
+}
+
+.about .container__text .btn-link .btn--about {
+  text-transform: uppercase;
+  font-family: "IBM Plex Mono", cursive, calib, monospace, sans-serif;
+  font-size: 1.6rem;
+  padding: 1rem 1rem;
+  border: 2px solid #202020;
+  text-decoration: none;
+  color: #feda4e;
+  background-color: #272727;
+  text-align: left;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 2px 8px 4px -6px;
+          box-shadow: rgba(0, 0, 0, 0.5) 2px 8px 4px -6px;
+}
+
+.about .container__text .btn-link .fa-medal {
+  position: relative;
+  margin-right: 1rem;
+  font-size: 3.2rem;
+}
+
 .about .container__skills {
   margin-top: 3rem;
   margin-bottom: 5rem;
@@ -528,6 +664,30 @@ body {
   }
 }
 
+@media (min-width: 500px) {
+  .about .container__skills {
+    margin: 5rem 0;
+    -ms-grid-columns: (minmax(5rem, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+  }
+}
+
+@media (min-width: 600px) {
+  .about .container__skills {
+    margin: 5rem 0;
+    -ms-grid-columns: (minmax(6rem, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+  }
+}
+
+@media (min-width: 660px) {
+  .about .container__skills {
+    margin: 5rem 0;
+    -ms-grid-columns: (minmax(7rem, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+  }
+}
+
 .about .container__skills-item {
   width: 7rem;
   text-align: center;
@@ -538,9 +698,27 @@ body {
   font-size: 1.3rem;
 }
 
+@media (min-height: 736px) {
+  .about .container__skills .caption {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 414px) {
+  .about .container__skills .caption {
+    font-size: 1.4rem;
+  }
+}
+
 .about .container__skills .skills__logo {
   width: 5rem;
   height: auto;
+}
+
+@media (min-width: 414px) {
+  .about .container__skills .skills__logo {
+    width: 6rem;
+  }
 }
 
 .about .container__skills .skills__logo--p1 {
@@ -608,42 +786,84 @@ body {
   text-align: center;
 }
 
-.hire__icon {
-  margin-top: 5rem;
-  width: 10rem;
+.hire .container {
+  margin: 5rem 2rem 8rem;
 }
 
 @media (min-height: 736px) {
-  .hire__icon {
-    margin-top: 7rem;
+  .hire .container {
+    margin: 7rem 2rem 9rem;
   }
 }
 
-.hire .section-title {
+@media (min-height: 736px) {
+  .hire .container {
+    margin: 5rem 2rem 9rem;
+  }
+}
+
+@media (min-width: 450px) {
+  .hire .container {
+    margin: 5rem 5rem 9rem;
+  }
+}
+
+@media (min-width: 750px) {
+  .hire .container {
+    margin: 5rem 10rem 9rem;
+  }
+}
+
+.hire .container__icon {
+  width: 10rem;
+}
+
+.hire .container .section-title {
   margin-top: 2rem;
   color: #241f0b;
 }
 
 @media (min-height: 736px) {
-  .hire .section-title {
+  .hire .container .section-title {
     margin-top: 4rem;
   }
 }
 
-.hire .paragraph--1 {
+.hire .container .paragraph--1 {
   color: #241f0b;
   font-weight: 600;
 }
 
-.hire .btn {
-  margin-top: 6rem;
-  margin-bottom: 7rem;
+.hire .container .btn-link {
+  margin: 6rem 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
 }
 
-@media (min-height: 736px) {
-  .hire .btn {
-    margin-bottom: 9rem;
-  }
+.hire .container .btn-link .btn--hire {
+  font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
+  font-size: 2rem;
+  padding: 1rem 1rem;
+  border: 2px solid #202020;
+  text-decoration: none;
+  color: #241f0b;
+  background-color: #feda4e;
+  text-align: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border-radius: 6px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+          box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+}
+
+.hire .container .btn-link .btn--hire:hover {
+  background-color: #202020;
+  color: #feda4e;
 }
 
 .portfolio .container {
@@ -653,6 +873,12 @@ body {
 @media (min-height: 736px) {
   .portfolio .container {
     margin: 8rem 2rem 8rem;
+  }
+}
+
+@media (min-width: 750px) {
+  .portfolio .container {
+    margin: 8rem 10rem 8rem;
   }
 }
 
@@ -707,11 +933,35 @@ body {
   transition: ease-in-out 1s;
 }
 
-@media (min-width: 414px) {
+@media (min-width: 380px) {
   .portfolio .projects-list {
     -ms-grid-columns: (minmax(15rem, 1fr))[auto-fill];
         grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     gap: 6vw;
+  }
+}
+
+@media (min-width: 556px) {
+  .portfolio .projects-list {
+    -ms-grid-columns: (minmax(24rem, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+    gap: 4vw;
+  }
+}
+
+@media (min-width: 990px) {
+  .portfolio .projects-list {
+    -ms-grid-columns: (minmax(28rem, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+    gap: 2vw;
+  }
+}
+
+@media (min-width: 1235px) {
+  .portfolio .projects-list {
+    -ms-grid-columns: (minmax(35rem, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+    gap: 2vw;
   }
 }
 
@@ -729,6 +979,7 @@ body {
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 6px;
 }
 
 .portfolio .modal {
@@ -943,9 +1194,21 @@ body {
   margin: 4rem 2rem;
 }
 
+@media (min-width: 450px) {
+  .contact .container {
+    margin: 8rem 5rem 8rem;
+  }
+}
+
 @media (min-height: 736px) {
   .contact .container {
-    margin: 8rem 2rem 8rem;
+    margin: 4rem 5rem;
+  }
+}
+
+@media (min-width: 750px) {
+  .contact .container {
+    margin: 4rem 10rem;
   }
 }
 
@@ -960,6 +1223,14 @@ body {
   text-decoration: none;
 }
 
+@media (min-width: 450px) {
+  .contact .container__contact-link {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
+
 .contact .container__contact-link .btn {
   font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
   font-size: 2rem;
@@ -969,7 +1240,7 @@ body {
   background-color: #272727;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  border-radius: 3px;
+  border-radius: 6px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
           box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 }
@@ -1015,6 +1286,12 @@ body {
   margin: 2rem 2rem;
 }
 
+@media (min-width: 750px) {
+  .footer .container {
+    margin: 2rem 10rem;
+  }
+}
+
 .footer .container__socialMedia-list {
   margin: 0 0 2rem;
   display: -webkit-box;
@@ -1028,6 +1305,15 @@ body {
       justify-content: space-around;
   font-size: 3rem;
   list-style-type: none;
+}
+
+@media (min-width: 750px) {
+  .footer .container__socialMedia-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 4rem;
+  }
 }
 
 .footer .container__socialMedia-list-icons {

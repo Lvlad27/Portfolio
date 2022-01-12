@@ -90,25 +90,6 @@ body {
 	}
 }
 
-.btn {
-	font-family: $font-secondary;
-	font-size: $medium-font-size;
-	padding: 1rem 1rem;
-	border: 2px solid $color-1-dark;
-	text-decoration: none;
-	color: $color-dark;
-	background-color: $color-2;
-	text-align: center;
-	transition: all 0.2s;
-	border-radius: 3px;
-	box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
-
-	&:hover {
-		background-color: $color-1-dark;
-		color: $color-2;
-	}
-}
-
 .paragraph--1 {
 	color: $color-3;
 }
@@ -163,6 +144,10 @@ body {
 			float: left;
 			margin-left: 2rem;
 
+			@media (min-width: 750px) {
+				margin-left: 5rem;
+			}
+
 			&:link,
 			&:visited {
 				font-family: $font-secondary;
@@ -203,6 +188,11 @@ body {
 			clip-path: circle(0px at top right);
 			transition: clip-path ease-out 0.3s;
 
+			@media (min-width: 750px) {
+				display: flex;
+				flex-direction: row;
+			}
+
 			&--open {
 				overflow: hidden;
 				clip-path: circle(250% at top right);
@@ -217,6 +207,24 @@ body {
 				color: $color-light;
 				font-weight: 600;
 				text-decoration: none;
+
+				@media (min-height: 844px) {
+					margin: 0 auto 7rem;
+				}
+
+				@media (min-height: 896px) {
+					.fa-file {
+						position: relative;
+						top: 4px;
+					}
+				}
+
+				@media (min-width: 450px) {
+					.fa-file {
+						position: relative;
+						top: 4px;
+					}
+				}
 			}
 
 			&-links--open {
@@ -227,6 +235,16 @@ body {
 			&-icons--btn {
 				font-size: 2rem;
 				color: $color-2;
+
+				@media (min-height: 896px) {
+					font-size: 3rem;
+					margin-bottom: 1rem;
+				}
+
+				@media (min-width: 450px) {
+					font-size: 3rem;
+					margin-bottom: 1rem;
+				}
 			}
 
 			&-icons--btn {
@@ -250,6 +268,10 @@ body {
 			top: 2rem;
 
 			cursor: pointer;
+
+			@media (min-width: 750px) {
+				display: none;
+			}
 
 			.hamburger,
 			.hamburger::before,
@@ -342,6 +364,18 @@ body {
 		margin: 8rem 2rem 0;
 	}
 
+	@media (min-height: 844px) {
+		margin: 10rem 2rem 0;
+	}
+
+	@media (min-width: 450px) {
+		margin: 15rem 5rem 0;
+	}
+
+	@media (min-width: 750px) {
+		margin: 15rem 10rem 0;
+	}
+
 	&-message {
 		margin-bottom: 1.5rem;
 
@@ -395,23 +429,46 @@ body {
 		}
 	}
 
-	.btn {
-		margin: 6rem 2rem 8rem;
-		color: $color-2;
-		background-color: $color-1-dark;
-		border: 2px solid $color-2;
+	.btn-link {
+		margin: 6rem 0 8rem;
+		display: flex;
+		justify-content: center;
+		text-decoration: none;
 
-		&:hover {
-			background-color: $color-2;
-			color: $color-1-dark;
-		}
-
-		@media (min-height: 667px) {
-			margin: 8rem 2rem 17rem;
+		@media (min-height: 600px) {
+			margin: 6rem 2rem 20rem;
 		}
 
 		@media (min-height: 736px) {
-			margin: 8rem 2rem 27rem;
+			margin: 8rem 2rem 35rem;
+		}
+
+		@media (min-height: 800px) {
+			margin: 8rem 2rem 33rem;
+		}
+
+		@media (min-width: 450px) {
+			justify-content: left;
+			margin-left: 0;
+		}
+
+		.btn--intro {
+			font-family: $font-secondary;
+			font-size: $medium-font-size;
+			padding: 1rem 1rem;
+			border: 2px solid $color-1-dark;
+			text-decoration: none;
+			color: $color-dark;
+			background-color: $color-2;
+			text-align: center;
+			transition: all 0.2s;
+			border-radius: 6px;
+			box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+
+			&:hover {
+				background-color: $color-1-dark;
+				color: $color-2;
+			}
 		}
 	}
 }
@@ -430,12 +487,20 @@ body {
 			margin: 7rem 2rem 0;
 		}
 
+		@media (min-width: 450px) {
+			margin: 7rem 5rem 0;
+		}
+
+		@media (min-width: 750px) {
+			margin: 7rem 10rem 0;
+		}
+
 		&__image {
 			margin: 3rem 0 3rem;
 			text-align: center;
 
 			.profile-image {
-				border-radius: 5px;
+				border-radius: 1rem;
 			}
 		}
 
@@ -460,6 +525,37 @@ body {
 			}
 		}
 
+		&__text {
+			.btn-link {
+				margin: 2rem 0 2rem;
+				display: flex;
+				justify-content: left;
+				text-decoration: none;
+
+				.btn--about {
+					text-transform: uppercase;
+					font-family: $font-primary;
+					font-size: $default-font-size;
+					padding: 1rem 1rem;
+					border: 2px solid $color-1-dark;
+					text-decoration: none;
+					color: $color-2;
+					background-color: $color-1;
+					text-align: left;
+					transition: all 0.2s;
+					border-radius: 6px;
+					box-shadow: rgba(0, 0, 0, 0.5) 2px 8px 4px -6px;
+				}
+
+				.fa-medal {
+					position: relative;
+					margin-right: 1rem;
+					font-size: 3.2rem;
+					// top: 4px;
+				}
+			}
+		}
+
 		&__skills {
 			margin-top: 3rem;
 			margin-bottom: 5rem;
@@ -474,6 +570,21 @@ body {
 				margin-bottom: 8rem;
 			}
 
+			@media (min-width: 500px) {
+				margin: 5rem 0;
+				grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+			}
+
+			@media (min-width: 600px) {
+				margin: 5rem 0;
+				grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+			}
+
+			@media (min-width: 660px) {
+				margin: 5rem 0;
+				grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+			}
+
 			&-item {
 				width: 7rem;
 				text-align: center;
@@ -482,11 +593,23 @@ body {
 			.caption {
 				display: block;
 				font-size: 1.3rem;
+
+				@media (min-height: 736px) {
+					font-size: 1.4rem;
+				}
+
+				@media (min-width: 414px) {
+					font-size: 1.4rem;
+				}
 			}
 
 			.skills__logo {
 				width: 5rem;
 				height: auto;
+
+				@media (min-width: 414px) {
+					width: 6rem;
+				}
 
 				&--p1 {
 					filter: invert(37%) sepia(89%) saturate(2459%) hue-rotate(349deg) brightness(94%) contrast(88%);
@@ -542,35 +665,66 @@ body {
 	align-items: center;
 	text-align: center;
 
-	&__icon {
-		margin-top: 5rem;
-		width: 10rem;
+	.container {
+		margin: 5rem 2rem 8rem;
 
 		@media (min-height: 736px) {
-			margin-top: 7rem;
+			margin: 7rem 2rem 9rem;
 		}
-	}
-
-	.section-title {
-		margin-top: 2rem;
-		color: $color-dark;
 
 		@media (min-height: 736px) {
-			margin-top: 4rem;
+			margin: 5rem 2rem 9rem;
 		}
-	}
 
-	.paragraph--1 {
-		color: $color-dark;
-		font-weight: 600;
-	}
+		@media (min-width: 450px) {
+			margin: 5rem 5rem 9rem;
+		}
 
-	.btn {
-		margin-top: 6rem;
-		margin-bottom: 7rem;
+		@media (min-width: 750px) {
+			margin: 5rem 10rem 9rem;
+		}
 
-		@media (min-height: 736px) {
-			margin-bottom: 9rem;
+		&__icon {
+			width: 10rem;
+		}
+
+		.section-title {
+			margin-top: 2rem;
+			color: $color-dark;
+
+			@media (min-height: 736px) {
+				margin-top: 4rem;
+			}
+		}
+		.paragraph--1 {
+			color: $color-dark;
+			font-weight: 600;
+		}
+
+		.btn-link {
+			margin: 6rem 0 0;
+			display: flex;
+			justify-content: center;
+			text-decoration: none;
+
+			.btn--hire {
+				font-family: $font-secondary;
+				font-size: $medium-font-size;
+				padding: 1rem 1rem;
+				border: 2px solid $color-1-dark;
+				text-decoration: none;
+				color: $color-dark;
+				background-color: $color-2;
+				text-align: center;
+				transition: all 0.2s;
+				border-radius: 6px;
+				box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+
+				&:hover {
+					background-color: $color-1-dark;
+					color: $color-2;
+				}
+			}
 		}
 	}
 }
@@ -584,6 +738,10 @@ body {
 
 		@media (min-height: 736px) {
 			margin: 8rem 2rem 8rem;
+		}
+
+		@media (min-width: 750px) {
+			margin: 8rem 10rem 8rem;
 		}
 	}
 
@@ -626,9 +784,24 @@ body {
 		animation: fadeIn 0.5s ease-in-out;
 		transition: ease-in-out 1s;
 
-		@media (min-width: 414px) {
+		@media (min-width: 380px) {
 			grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 			gap: 6vw;
+		}
+
+		@media (min-width: 556px) {
+			grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+			gap: 4vw;
+		}
+
+		@media (min-width: 990px) {
+			grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+			gap: 2vw;
+		}
+
+		@media (min-width: 1235px) {
+			grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+			gap: 2vw;
 		}
 
 		.modal-trigger.project {
@@ -643,6 +816,7 @@ body {
 					max-width: 100%;
 					height: auto;
 					object-fit: cover;
+					border-radius: 6px;
 				}
 			}
 		}
@@ -829,8 +1003,16 @@ body {
 	.container {
 		margin: 4rem 2rem;
 
+		@media (min-width: 450px) {
+			margin: 8rem 5rem 8rem;
+		}
+
 		@media (min-height: 736px) {
-			margin: 8rem 2rem 8rem;
+			margin: 4rem 5rem;
+		}
+
+		@media (min-width: 750px) {
+			margin: 4rem 10rem;
 		}
 
 		&__contact-link {
@@ -838,6 +1020,10 @@ body {
 			display: flex;
 			justify-content: center;
 			text-decoration: none;
+
+			@media (min-width: 450px) {
+				justify-content: left;
+			}
 
 			.btn {
 				font-family: $font-secondary;
@@ -848,14 +1034,14 @@ body {
 				color: $color-2;
 				background-color: $color-1;
 				transition: all 0.2s;
-				border-radius: 3px;
+				border-radius: 6px;
 				box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 
 				&:hover {
 					background-color: $color-1;
 					color: $color-2;
 				}
-
+				/////////
 				.fas {
 					position: relative;
 					top: 4px;
@@ -890,6 +1076,10 @@ body {
 	.container {
 		margin: 2rem 2rem;
 
+		@media (min-width: 750px) {
+			margin: 2rem 10rem;
+		}
+
 		&__socialMedia {
 			&-list {
 				margin: 0 0 2rem;
@@ -900,6 +1090,11 @@ body {
 
 				font-size: 3rem;
 				list-style-type: none;
+
+				@media (min-width: 750px) {
+					justify-content: center;
+					gap: 4rem;
+				}
 
 				&-icons {
 					color: $color-light;
