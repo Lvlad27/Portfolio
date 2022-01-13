@@ -398,6 +398,12 @@ body {
   }
 }
 
+@media (min-height: 1000px) {
+  .intro {
+    margin: 30rem 40rem 0;
+  }
+}
+
 @media (min-width: 450px) {
   .intro {
     margin: 15rem 5rem 0;
@@ -416,9 +422,9 @@ body {
   }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1920px) {
   .intro {
-    margin: 20rem 40rem 0;
+    margin: 40rem 80rem 0;
   }
 }
 
@@ -460,6 +466,13 @@ body {
           animation: spin 2s infinite linear;
   position: relative;
   top: 1px;
+  left: 2px;
+}
+
+@supports (-moz-appearance: none) {
+  .intro-title .fa-cog {
+    left: 0;
+  }
 }
 
 .intro-title .lastName {
@@ -528,6 +541,18 @@ body {
 @media (min-height: 800px) {
   .intro .btn-link {
     margin: 8rem 2rem 33rem;
+  }
+}
+
+@media (min-height: 800px) {
+  .intro .btn-link {
+    margin: 8rem 2rem 33rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .intro .btn-link {
+    margin: 8rem 2rem 50rem;
   }
 }
 
@@ -608,7 +633,13 @@ body {
 
 @media (min-width: 1300px) {
   .about .container {
-    margin: 7rem 40rem 6rem;
+    margin: 7rem 40rem 7rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .about .container {
+    margin: 7rem 80rem 7rem;
   }
 }
 
@@ -867,15 +898,12 @@ body {
   text-align: center;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1300px) {
   .hire {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: left;
-        -ms-flex-align: left;
-            align-items: left;
     text-align: left;
   }
 }
@@ -918,6 +946,34 @@ body {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+    gap: 11rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .hire .container {
+    margin: 5rem 80rem 5rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .hire .container .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
@@ -927,8 +983,9 @@ body {
 
 @media (min-width: 1300px) {
   .hire .container__icon {
-    -ms-flex-line-pack: end;
-        align-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
@@ -969,6 +1026,7 @@ body {
 
 @media (min-width: 1300px) {
   .hire .container .btn-link {
+    margin: 3rem 0 0;
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
@@ -1009,6 +1067,18 @@ body {
 @media (min-width: 750px) {
   .portfolio .container {
     margin: 8rem 10rem 8rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .portfolio .container {
+    margin: 8rem 40rem 8rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .portfolio .container {
+    margin: 8rem 80rem 8rem;
   }
 }
 
@@ -1089,9 +1159,15 @@ body {
 
 @media (min-width: 1235px) {
   .portfolio .projects-list {
-    -ms-grid-columns: (minmax(35rem, 1fr))[auto-fill];
-        grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+    -ms-grid-columns: (minmax(28rem, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
     gap: 2vw;
+  }
+}
+
+@media (min-width: 1920px) {
+  .portfolio .projects-list {
+    gap: 1vw;
   }
 }
 
@@ -1133,6 +1209,12 @@ body {
 
 .portfolio .modal__container {
   margin: 2rem 2rem 4rem;
+}
+
+@media (min-width: 450px) {
+  .portfolio .modal__container {
+    margin: 2rem 3rem 4rem;
+  }
 }
 
 .portfolio .modal__container-close {
@@ -1240,6 +1322,7 @@ body {
 
 .portfolio .modal__container .modal__content .section-title {
   color: #feda4e;
+  margin-bottom: 2rem;
 }
 
 .portfolio .modal__container .modal__content .paragraph--2 {
@@ -1342,6 +1425,18 @@ body {
   }
 }
 
+@media (min-width: 1300px) {
+  .contact .container {
+    margin: 4rem 40rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .contact .container {
+    margin: 4rem 80rem;
+  }
+}
+
 .contact .container__contact-link {
   margin: 6rem 0 8rem;
   display: -webkit-box;
@@ -1398,6 +1493,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@supports (-moz-appearance: none) {
+  .contact .container__contact-info {
+    gap: 1rem;
+  }
 }
 
 .contact .container__contact-info .fas {
