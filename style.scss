@@ -380,12 +380,20 @@ body {
 		margin: 15rem 10rem 0;
 	}
 
-	@media (min-width: 1050px) {
+	@media (min-width: 1024px) {
 		margin: 15rem 15rem 0;
 	}
 
+	@media (min-width: 1300px) {
+		margin: 15rem 20rem 0;
+	}
+
+	@media (min-width: 1700px) {
+		margin: 15rem 30rem 0;
+	}
+
 	@media (min-width: 1920px) {
-		margin: 40rem 80rem 0;
+		margin: 40rem 40rem 0;
 	}
 
 	&-message {
@@ -449,7 +457,7 @@ body {
 		}
 
 		@media (min-width: 450px) {
-			max-width: 50rem;
+			max-width: 55rem;
 		}
 	}
 
@@ -472,7 +480,7 @@ body {
 		}
 
 		@media (min-height: 800px) {
-			margin: 8rem 2rem 33rem;
+			margin: 8rem 2rem 35rem;
 		}
 
 		@media (min-width: 1920px) {
@@ -536,11 +544,15 @@ body {
 		}
 
 		@media (min-width: 1300px) {
-			margin: 7rem 40rem 7rem;
+			margin: 7rem 20rem 7rem;
+		}
+
+		@media (min-width: 1700px) {
+			margin: 7rem 30rem 0;
 		}
 
 		@media (min-width: 1920px) {
-			margin: 7rem 80rem 7rem;
+			margin: 7rem 40rem 7rem;
 		}
 
 		.wrapper {
@@ -774,7 +786,7 @@ body {
 		}
 
 		@media (min-width: 1300px) {
-			margin: 5rem 40rem 5rem;
+			margin: 5rem 20rem 5rem;
 			display: flex;
 			flex-direction: row-reverse;
 			justify-content: space-between;
@@ -782,8 +794,12 @@ body {
 			gap: 11rem;
 		}
 
+		@media (min-width: 1700px) {
+			margin: 5rem 30rem 5rem;
+		}
+
 		@media (min-width: 1920px) {
-			margin: 5rem 80rem 5rem;
+			margin: 5rem 40rem 5rem;
 		}
 
 		.wrapper {
@@ -871,11 +887,15 @@ body {
 		}
 
 		@media (min-width: 1300px) {
-			margin: 8rem 40rem 8rem;
+			margin: 8rem 20rem 8rem;
+		}
+
+		@media (min-width: 1700px) {
+			margin: 8rem 30rem 8rem;
 		}
 
 		@media (min-width: 1920px) {
-			margin: 8rem 80rem 8rem;
+			margin: 8rem 40rem 8rem;
 		}
 	}
 
@@ -902,7 +922,7 @@ body {
 		border-radius: 3px;
 		box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 
-		&-active,
+		&--active,
 		&:hover {
 			background-color: $color-2;
 			color: $color-1-dark;
@@ -987,6 +1007,10 @@ body {
 				margin: 2rem 3rem 4rem;
 			}
 
+			@media (min-width: 1024px) {
+				margin: 8rem 8rem 4rem;
+			}
+
 			&-close {
 				position: fixed;
 				top: 1.2rem;
@@ -1002,21 +1026,26 @@ body {
 				margin: 8rem auto 0;
 				overflow: hidden;
 
+				@media (min-width: 1024px) {
+					margin: 8rem auto 0;
+					float: right;
+					width: 40%;
+				}
+
 				&__track {
 					display: inline-flex;
 					overflow: hidden;
 					scrollbar-width: none;
 
 					.carousel__slide {
-						max-height: 100vh;
-						width: 100vw;
 						display: flex;
 						align-items: center;
 						justify-content: center;
 
 						.carousel__image {
 							max-width: 100%;
-							// border-radius: 10px;
+
+							border-radius: 10px;
 							// height: auto;
 							// user-select: none;
 							// object-fit: cover;
@@ -1068,6 +1097,11 @@ body {
 				margin-top: 4rem;
 				display: flex;
 				flex-direction: column;
+
+				@media (min-width: 1024px) {
+					max-width: 60%;
+					padding-right: 4rem;
+				}
 
 				.section-title {
 					color: $color-2;
@@ -1159,11 +1193,15 @@ body {
 		}
 
 		@media (min-width: 1300px) {
-			margin: 4rem 40rem;
+			margin: 4rem 20rem;
+		}
+
+		@media (min-width: 1700px) {
+			margin: 4rem 30rem;
 		}
 
 		@media (min-width: 1920px) {
-			margin: 4rem 80rem;
+			margin: 4rem 40rem;
 		}
 
 		&__contact-link {
