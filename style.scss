@@ -368,8 +368,8 @@ body {
 		margin: 10rem 2rem 0;
 	}
 
-	@media (min-height: 1000px) {
-		margin: 30rem 40rem 0;
+	@media (min-height: 915px) {
+		margin: 12rem 2rem 0;
 	}
 
 	@media (min-width: 450px) {
@@ -394,6 +394,10 @@ body {
 
 	@media (min-width: 1920px) {
 		margin: 40rem 40rem 0;
+	}
+
+	@media (min-width: 2560px) {
+		margin: 40rem 70rem 0;
 	}
 
 	&-message {
@@ -483,6 +487,18 @@ body {
 			margin: 8rem 2rem 35rem;
 		}
 
+		@media (min-height: 1024px) {
+			margin: 8rem 2rem 45rem;
+		}
+
+		@media (min-height: 1180px) {
+			margin: 8rem 2rem 60rem;
+		}
+
+		@media (min-height: 1280px) {
+			margin: 16rem 2rem 60rem;
+		}
+
 		@media (min-width: 1920px) {
 			margin: 8rem 2rem 50rem;
 		}
@@ -553,6 +569,10 @@ body {
 
 		@media (min-width: 1920px) {
 			margin: 7rem 40rem 7rem;
+		}
+
+		@media (min-width: 2560px) {
+			margin: 7rem 70rem 7rem;
 		}
 
 		.wrapper {
@@ -802,6 +822,10 @@ body {
 			margin: 5rem 40rem 5rem;
 		}
 
+		@media (min-width: 2560px) {
+			margin: 5rem 70rem 5rem;
+		}
+
 		.wrapper {
 			@media (min-width: 1300px) {
 				display: flex;
@@ -897,6 +921,10 @@ body {
 		@media (min-width: 1920px) {
 			margin: 8rem 40rem 8rem;
 		}
+
+		@media (min-width: 2560px) {
+			margin: 8rem 70rem 8rem;
+		}
 	}
 
 	&__category {
@@ -979,6 +1007,8 @@ body {
 		}
 	}
 
+	// MODAL
+
 	.modal {
 		position: fixed;
 		width: 100%;
@@ -991,6 +1021,10 @@ body {
 		z-index: 9999;
 		opacity: 1;
 		overflow-y: scroll;
+
+		@media (min-width: 1024px) {
+			display: flex;
+		}
 
 		&--hidden {
 			opacity: 0;
@@ -1011,6 +1045,34 @@ body {
 				margin: 8rem 8rem 4rem;
 			}
 
+			@media (min-width: 1300px) {
+				margin: 8rem 15rem 4rem;
+			}
+
+			@media (min-width: 1920px) {
+				margin: 8rem 12rem 4rem;
+			}
+
+			@media (min-width: 2000px) {
+				margin: 8rem 40rem 4rem;
+			}
+
+			@media (min-width: 2560px) {
+				margin: 8rem 60rem 4rem;
+			}
+
+			@media (min-width: 1024px) {
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: row-reverse;
+			}
+
+			.wrapper {
+				@media (min-width: 1024px) {
+					flex-basis: 100%;
+				}
+			}
+
 			&-close {
 				position: fixed;
 				top: 1.2rem;
@@ -1020,6 +1082,16 @@ body {
 				cursor: pointer;
 				border: none;
 				background: none;
+
+				@media (min-width: 1024px) {
+					top: 30rem;
+					right: 4rem;
+				}
+
+				@media (min-width: 1920px) {
+					top: 30rem;
+					right: 4rem;
+				}
 			}
 
 			.carousel {
@@ -1044,6 +1116,10 @@ body {
 
 						.carousel__image {
 							max-width: 100%;
+
+							@media (min-width: 600px) {
+								max-width: 80%;
+							}
 
 							border-radius: 10px;
 							// height: auto;
@@ -1202,6 +1278,10 @@ body {
 
 		@media (min-width: 1920px) {
 			margin: 4rem 40rem;
+		}
+
+		@media (min-width: 2560px) {
+			margin: 4rem 70rem;
 		}
 
 		&__contact-link {
