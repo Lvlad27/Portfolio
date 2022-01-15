@@ -1373,6 +1373,13 @@ body {
   }
 }
 
+@media (min-width: 2560px) {
+  .portfolio .modal__container-close {
+    top: 20rem;
+    right: 50rem;
+  }
+}
+
 .portfolio .modal__container .carousel {
   margin: 8rem auto 0;
   overflow: hidden;
@@ -1409,12 +1416,6 @@ body {
 .portfolio .modal__container .carousel__track .carousel__slide .carousel__image {
   max-width: 100%;
   border-radius: 10px;
-}
-
-@media (min-width: 600px) {
-  .portfolio .modal__container .carousel__track .carousel__slide .carousel__image {
-    max-width: 80%;
-  }
 }
 
 .portfolio .modal__container .carousel__nav {
