@@ -128,6 +128,13 @@ body {
 		padding: 2.7rem 0 1rem;
 		z-index: 10;
 
+		@media (min-width: 750px) {
+			width: 95%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
 		@supports (-moz-appearance: none) {
 			& {
 				background-color: rgba($color-1-dark, 0.9);
@@ -138,6 +145,10 @@ body {
 			content: '';
 			clear: both;
 			display: block;
+
+			@media (min-width: 750px) {
+				display: none;
+			}
 		}
 
 		&-logo {
@@ -145,7 +156,7 @@ body {
 			margin-left: 2rem;
 
 			@media (min-width: 750px) {
-				margin-left: 5rem;
+				margin: 0;
 			}
 
 			&:link,
@@ -183,14 +194,20 @@ body {
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-
 			background-color: $color-1-dark;
 			clip-path: circle(0px at top right);
 			transition: clip-path ease-out 0.3s;
 
 			@media (min-width: 750px) {
-				display: flex;
+				position: relative;
 				flex-direction: row;
+				gap: 5rem;
+				margin: 0;
+				height: auto;
+				width: auto;
+				background: none;
+				clip-path: none;
+				transition: none;
 			}
 
 			&--open {
@@ -202,13 +219,25 @@ body {
 			&-links:visited {
 				margin: 0 auto 4rem;
 				text-align: center;
-
-				font-size: $default-font-size;
+				font-size: $medium-font-size;
 				color: $color-light;
 				font-weight: 600;
 				text-decoration: none;
 
-				@media (min-height: 844px) {
+				@media (min-width: 750px) {
+					font-family: $font-secondary;
+					display: flex;
+					flex-direction: row;
+					gap: 1rem;
+					margin: 0;
+					color: $color-2;
+
+					.fas {
+						display: none;
+					}
+				}
+
+				@media (min-height: 844px) and (max-width: 750px) {
 					margin: 0 auto 7rem;
 				}
 
@@ -229,6 +258,10 @@ body {
 
 			&-links--open {
 				animation: fadeIn $bezier 0.3s forwards;
+
+				@media (min-width: 750px) {
+					animation: none;
+				}
 			}
 
 			&-icons,
@@ -266,7 +299,6 @@ body {
 			padding: 2rem 7px;
 			right: 2rem;
 			top: 2rem;
-
 			cursor: pointer;
 
 			@media (min-width: 750px) {
@@ -296,6 +328,10 @@ body {
 			&--open {
 				transform: rotate(45deg);
 
+				@media (min-width: 750px) {
+					display: none;
+				}
+
 				.hamburger::before {
 					opacity: 0;
 				}
@@ -323,6 +359,10 @@ body {
 	-webkit-backdrop-filter: 0 blur(3px);
 	z-index: 5;
 
+	@media (min-width: 750px) {
+		display: none;
+	}
+
 	@supports (-moz-appearance: none) {
 		& {
 			background-color: rgba($color-1-dark, 0.9);
@@ -339,6 +379,11 @@ body {
 // NAVBAR EFFECT WHEN SCROLLING
 .noScroll {
 	overflow: hidden;
+
+	@media (min-width: 750px) {
+		display: inherit;
+		overflow: inherit;
+	}
 }
 
 .scroll-down {
@@ -360,10 +405,6 @@ body {
 	flex-direction: column;
 	margin: 3rem 2rem 0;
 
-	@media (min-height: 736px) {
-		margin: 8rem 2rem 0;
-	}
-
 	@media (min-height: 844px) {
 		margin: 10rem 2rem 0;
 	}
@@ -376,12 +417,24 @@ body {
 		margin: 15rem 5rem 0;
 	}
 
+	@media (min-width: 540px) {
+		margin: 12rem 5rem 0;
+	}
+
+	@media (min-height: 736px) {
+		margin: 10rem 2rem 0;
+	}
+
 	@media (min-width: 750px) {
 		margin: 15rem 10rem 0;
 	}
 
 	@media (min-width: 1024px) {
 		margin: 15rem 15rem 0;
+	}
+
+	@media (min-height: 1100px) {
+		margin: 25rem 15rem 0;
 	}
 
 	@media (min-width: 1300px) {
@@ -485,6 +538,10 @@ body {
 
 		@media (min-height: 800px) {
 			margin: 8rem 2rem 35rem;
+		}
+
+		@media (min-height: 915px) {
+			margin: 15rem 2rem 35rem;
 		}
 
 		@media (min-height: 1024px) {

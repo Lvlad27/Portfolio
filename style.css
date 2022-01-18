@@ -129,6 +129,21 @@ body {
   z-index: 10;
 }
 
+@media (min-width: 750px) {
+  .header__container {
+    width: 95%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 @supports (-moz-appearance: none) {
   .header__container {
     background-color: rgba(32, 32, 32, 0.9);
@@ -141,6 +156,12 @@ body {
   display: block;
 }
 
+@media (min-width: 750px) {
+  .header__container::after {
+    display: none;
+  }
+}
+
 .header__container-logo {
   float: left;
   margin-left: 2rem;
@@ -148,7 +169,7 @@ body {
 
 @media (min-width: 750px) {
   .header__container-logo {
-    margin-left: 5rem;
+    margin: 0;
   }
 }
 
@@ -206,13 +227,20 @@ body {
 
 @media (min-width: 750px) {
   .header__container__navbar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    position: relative;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    gap: 5rem;
+    margin: 0;
+    height: auto;
+    width: auto;
+    background: none;
+    -webkit-clip-path: none;
+            clip-path: none;
+    -webkit-transition: none;
+    transition: none;
   }
 }
 
@@ -225,13 +253,32 @@ body {
 .header__container__navbar-links:link, .header__container__navbar-links:visited {
   margin: 0 auto 4rem;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #f4f4f4;
   font-weight: 600;
   text-decoration: none;
 }
 
-@media (min-height: 844px) {
+@media (min-width: 750px) {
+  .header__container__navbar-links:link, .header__container__navbar-links:visited {
+    font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 1rem;
+    margin: 0;
+    color: #feda4e;
+  }
+  .header__container__navbar-links:link .fas, .header__container__navbar-links:visited .fas {
+    display: none;
+  }
+}
+
+@media (min-height: 844px) and (max-width: 750px) {
   .header__container__navbar-links:link, .header__container__navbar-links:visited {
     margin: 0 auto 7rem;
   }
@@ -254,6 +301,13 @@ body {
 .header__container__navbar-links--open {
   -webkit-animation: fadeIn cubic-bezier(0.3, -0.01, 0.49, 1) 0.3s forwards;
           animation: fadeIn cubic-bezier(0.3, -0.01, 0.49, 1) 0.3s forwards;
+}
+
+@media (min-width: 750px) {
+  .header__container__navbar-links--open {
+    -webkit-animation: none;
+            animation: none;
+  }
 }
 
 .header__container__navbar-icons, .header__container__navbar-icons--btn {
@@ -328,6 +382,12 @@ body {
           transform: rotate(45deg);
 }
 
+@media (min-width: 750px) {
+  .header__container-menuToggle--open {
+    display: none;
+  }
+}
+
 .header__container-menuToggle--open .hamburger::before {
   opacity: 0;
 }
@@ -350,6 +410,12 @@ body {
   z-index: 5;
 }
 
+@media (min-width: 750px) {
+  .overlay {
+    display: none;
+  }
+}
+
 @supports (-moz-appearance: none) {
   .overlay {
     background-color: rgba(32, 32, 32, 0.9);
@@ -363,6 +429,13 @@ body {
 
 .noScroll {
   overflow: hidden;
+}
+
+@media (min-width: 750px) {
+  .noScroll {
+    display: inherit;
+    overflow: inherit;
+  }
 }
 
 .scroll-down header {
@@ -386,12 +459,6 @@ body {
   margin: 3rem 2rem 0;
 }
 
-@media (min-height: 736px) {
-  .intro {
-    margin: 8rem 2rem 0;
-  }
-}
-
 @media (min-height: 844px) {
   .intro {
     margin: 10rem 2rem 0;
@@ -410,6 +477,18 @@ body {
   }
 }
 
+@media (min-width: 540px) {
+  .intro {
+    margin: 12rem 5rem 0;
+  }
+}
+
+@media (min-height: 736px) {
+  .intro {
+    margin: 10rem 2rem 0;
+  }
+}
+
 @media (min-width: 750px) {
   .intro {
     margin: 15rem 10rem 0;
@@ -419,6 +498,12 @@ body {
 @media (min-width: 1024px) {
   .intro {
     margin: 15rem 15rem 0;
+  }
+}
+
+@media (min-height: 1100px) {
+  .intro {
+    margin: 25rem 15rem 0;
   }
 }
 
@@ -565,6 +650,12 @@ body {
 @media (min-height: 800px) {
   .intro .btn-link {
     margin: 8rem 2rem 35rem;
+  }
+}
+
+@media (min-height: 915px) {
+  .intro .btn-link {
+    margin: 15rem 2rem 35rem;
   }
 }
 
