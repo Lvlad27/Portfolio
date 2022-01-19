@@ -760,6 +760,17 @@ body {
 					width: 20rem;
 					height: auto;
 
+					@media (min-width: 750px) {
+						transition: 0.5s ease;
+
+						&:hover {
+							box-shadow: 1px 1px $color-3, 2px 2px $color-3, 3px 3px $color-3, 4px 4px $color-3, 5px 5px $color-3, 6px 6px $color-3;
+							-webkit-transform: translateX(-3px);
+							transform: translateX(-3px);
+							transition: 0.5s ease;
+						}
+					}
+
 					@media (min-width: 820px) {
 						width: 30rem;
 						height: auto;
@@ -820,6 +831,13 @@ body {
 					transition: all 0.2s;
 					border-radius: 6px;
 					box-shadow: rgba(0, 0, 0, 0.5) 2px 8px 4px -6px;
+				}
+
+				@media (min-width: 750px) {
+					.btn--about:hover {
+						background-color: $color-3;
+						color: $color-1;
+					}
 				}
 
 				.fa-medal {

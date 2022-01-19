@@ -998,6 +998,21 @@ body {
   height: auto;
 }
 
+@media (min-width: 750px) {
+  .about .container .wrapper__image .profile-image {
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  .about .container .wrapper__image .profile-image:hover {
+    -webkit-box-shadow: 1px 1px #a6a6a6, 2px 2px #a6a6a6, 3px 3px #a6a6a6, 4px 4px #a6a6a6, 5px 5px #a6a6a6, 6px 6px #a6a6a6;
+            box-shadow: 1px 1px #a6a6a6, 2px 2px #a6a6a6, 3px 3px #a6a6a6, 4px 4px #a6a6a6, 5px 5px #a6a6a6, 6px 6px #a6a6a6;
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+}
+
 @media (min-width: 820px) {
   .about .container .wrapper__image .profile-image {
     width: 30rem;
@@ -1074,6 +1089,13 @@ body {
   border-radius: 6px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 2px 8px 4px -6px;
           box-shadow: rgba(0, 0, 0, 0.5) 2px 8px 4px -6px;
+}
+
+@media (min-width: 750px) {
+  .about .container__text .btn-link .btn--about:hover {
+    background-color: #a6a6a6;
+    color: #272727;
+  }
 }
 
 .about .container__text .btn-link .fa-medal {
