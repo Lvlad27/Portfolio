@@ -5,9 +5,6 @@
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
   }
-  75% {
-    opacity: 0.2;
-  }
   100% {
     opacity: 1;
     -webkit-transform: translateX(0%);
@@ -19,9 +16,6 @@
     opacity: 0;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
-  }
-  75% {
-    opacity: 0.2;
   }
   100% {
     opacity: 1;
@@ -49,6 +43,136 @@
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -99,13 +223,24 @@ body {
   color: #f4f4f4;
 }
 
-.paragraph--2 {
-  color: #f4f4f4;
-}
-
 .highlight--2 {
   font-weight: bold;
   color: #f4f4f4;
+}
+
+.js-scroll {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.js-scroll.scrolled {
+  opacity: 1;
+}
+
+.scrolled.slide-in-fwd-center {
+  -webkit-animation: slide-in-fwd-center 0.4s ease-out 0.15s both;
+          animation: slide-in-fwd-center 0.4s ease-out 0.15s both;
 }
 
 .header__scroll {
@@ -410,6 +545,12 @@ body {
   z-index: 5;
 }
 
+@media (min-width: 750px) {
+  .overlay {
+    display: none;
+  }
+}
+
 @supports (-moz-appearance: none) {
   .overlay {
     background-color: rgba(32, 32, 32, 0.9);
@@ -428,7 +569,7 @@ body {
 @media (min-width: 750px) {
   .noScroll {
     display: inherit;
-    overflow: inherit;
+    overflow: hidden;
   }
 }
 
@@ -486,6 +627,8 @@ body {
 @media (min-width: 750px) {
   .intro {
     margin: 15rem 10rem 0;
+    -webkit-transition: margin 0.2s ease-in;
+    transition: margin 0.2s ease-in;
   }
 }
 
@@ -529,6 +672,8 @@ body {
   margin-bottom: 1.5rem;
   font-size: 1.6rem;
   font-weight: 400;
+  -webkit-animation: slide-in-left 0.6s ease-out both;
+          animation: slide-in-left 0.6s ease-out both;
 }
 
 @media (min-height: 667px) {
@@ -549,6 +694,8 @@ body {
   color: #feda4e;
   font-size: clamp(4rem, 8vw, 8rem);
   line-height: 1;
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 1s both;
+          animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 1s both;
 }
 
 @media (min-height: 667px) {
@@ -562,13 +709,25 @@ body {
   -webkit-animation: spin 2s infinite linear;
           animation: spin 2s infinite linear;
   position: relative;
-  top: 1px;
+  top: 2px;
   left: 2px;
 }
 
 @supports (-moz-appearance: none) {
   .intro-title .fa-cog {
     left: 0;
+  }
+}
+
+@media (min-width: 750px) {
+  .intro-title .fa-cog {
+    top: 3px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .intro-title .fa-cog {
+    top: 5px;
   }
 }
 
@@ -598,6 +757,8 @@ body {
   margin-top: 1.5rem;
   font-size: 1.6rem;
   font-weight: 400;
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
+          animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
 }
 
 @media (min-height: 736px) {
@@ -621,6 +782,8 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-decoration: none;
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
+          animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
 }
 
 @media (min-height: 600px) {
@@ -1452,21 +1615,21 @@ body {
 
 @media (min-width: 1024px) {
   .portfolio .modal__container-close {
-    top: 30rem;
+    top: 10rem;
     right: 4rem;
   }
 }
 
 @media (min-width: 1920px) {
   .portfolio .modal__container-close {
-    top: 30rem;
+    top: 10rem;
     right: 4rem;
   }
 }
 
 @media (min-width: 2560px) {
   .portfolio .modal__container-close {
-    top: 20rem;
+    top: 10rem;
     right: 50rem;
   }
 }
@@ -1624,6 +1787,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 2rem;
+  margin-bottom: 4rem;
   text-decoration: none;
 }
 

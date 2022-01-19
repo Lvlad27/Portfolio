@@ -86,52 +86,57 @@ const triggers = document.getElementsByClassName('modal-trigger'),
 	btnCloseModal = document.getElementsByClassName('modal__container-close');
 
 //  Loop with the index of each item in `triggerArr` for listening to a click event which toggles each modal to open and close and also the carousel slider functionality.
+
 for (let [index, trigger] of triggerArr) {
 	if (typeof modals[index] !== 'undefined') {
 		const carouselSlider = function () {
-			let carousel = modals[index].firstElementChild.children[1],
-				slider = carousel.firstElementChild,
-				slides = slider.children,
-				dots = carousel.children[1].children[1].children,
-				next = carousel.children[1].lastElementChild,
-				prev = carousel.children[1].firstElementChild,
-				slideIndex = 1;
+			let carousel = modals[index].firstElementChild.children[1];
 
-			showSlides(slideIndex);
+			if (carousel.children[1]) {
+				let slider = carousel.firstElementChild,
+					slides = slider.children,
+					dots = carousel.children[1].children[1].children,
+					next = carousel.children[1].lastElementChild,
+					prev = carousel.children[1].firstElementChild;
 
-			next.addEventListener('click', () => plusSlides(1));
-			prev.addEventListener('click', () => plusSlides(-1));
+				let slideIndex = 1;
 
-			function plusSlides(n) {
-				showSlides((slideIndex += n));
-			}
+				showSlides(slideIndex);
 
-			function currentSlide(n) {
-				showSlides((slideIndex = n));
-			}
+				next.addEventListener('click', () => plusSlides(1));
+				prev.addEventListener('click', () => plusSlides(-1));
 
-			for (let i = 0; i < dots.length; i++) {
-				dots[i].addEventListener('click', function () {
-					currentSlide(i + 1);
-				});
-			}
-
-			function showSlides(n) {
-				let i;
-				if (n > slides.length) {
-					slideIndex = 1;
+				function plusSlides(n) {
+					showSlides((slideIndex += n));
 				}
-				if (n < 1) {
-					slideIndex = slides.length;
+
+				function currentSlide(n) {
+					showSlides((slideIndex = n));
 				}
-				for (i = 0; i < slides.length; i++) {
-					slides[i].style.display = 'none';
+
+				for (let i = 0; i < dots.length; i++) {
+					dots[i].addEventListener('click', function () {
+						currentSlide(i + 1);
+					});
 				}
-				for (i = 0; i < dots.length; i++) {
-					dots[i].className = dots[i].className.replace(' active', '');
+
+				function showSlides(n) {
+					let i;
+					if (n > slides.length) {
+						slideIndex = 1;
+					}
+					if (n < 1) {
+						slideIndex = slides.length;
+					}
+					for (i = 0; i < slides.length; i++) {
+						slides[i].style.display = 'none';
+					}
+					for (i = 0; i < dots.length; i++) {
+						dots[i].className = dots[i].className.replace(' active', '');
+					}
+					slides[slideIndex - 1].style.display = '';
+					dots[slideIndex - 1].className += ' active';
 				}
-				slides[slideIndex - 1].style.display = '';
-				dots[slideIndex - 1].className += ' active';
 			}
 		};
 
@@ -151,3 +156,69 @@ for (let [index, trigger] of triggerArr) {
 		btnCloseModal[index].addEventListener('click', toggleModal);
 	}
 }
+
+// ANIMATE PAGE SECTIONS ON SCROLL
+
+/*
+1. Get all js-scroll elements on the page
+2. Fade out elements
+3. Detect when the element is within the viewport
+4. Assign the scrolled class name to the element if it is in view.
+*/
+
+const scrollElements = document.querySelectorAll('.js-scroll');
+
+const elementInView = (el, dividend = 1) => {
+	const elementTop = el.getBoundingClientRect().top;
+
+	return elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend;
+};
+
+const elementOutofView = el => {
+	const elementTop = el.getBoundingClientRect().top;
+
+	return elementTop > (window.innerHeight || document.documentElement.clientHeight);
+};
+
+const displayScrollElement = element => {
+	element.classList.add('scrolled');
+};
+
+const hideScrollElement = element => {
+	element.classList.remove('scrolled');
+};
+
+const handleScrollAnimation = () => {
+	scrollElements.forEach(el => {
+		if (elementInView(el, 1.25)) {
+			displayScrollElement(el);
+		} else if (elementOutofView(el)) {
+			hideScrollElement(el);
+		}
+	});
+};
+
+window.addEventListener('scroll', () => {
+	handleScrollAnimation();
+});
+
+//initialize throttleTimer as false
+let throttleTimer = false;
+
+const throttle = (callback, time) => {
+	//don't run the function while throttle timer is true
+	if (throttleTimer) return;
+
+	//first set throttle timer to true so the function doesn't run
+	throttleTimer = true;
+
+	setTimeout(() => {
+		//call the callback function in the setTimeout and set the throttle timer to false after the indicated time has passed
+		callback();
+		throttleTimer = false;
+	}, time);
+};
+
+window.addEventListener('scroll', () => {
+	throttle(handleScrollAnimation, 500);
+});
