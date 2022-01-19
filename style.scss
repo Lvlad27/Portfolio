@@ -196,13 +196,16 @@ body {
 		@media (min-width: 750px) {
 			width: 95%;
 			display: flex;
+
 			justify-content: space-between;
 			align-items: center;
 		}
 
 		@supports (-moz-appearance: none) {
 			& {
+				width: 100%;
 				background-color: rgba($color-1-dark, 0.9);
+				padding: 2.7rem 2rem 1rem;
 			}
 		}
 

@@ -281,7 +281,9 @@ body {
 
 @supports (-moz-appearance: none) {
   .header__container {
+    width: 100%;
     background-color: rgba(32, 32, 32, 0.9);
+    padding: 2.7rem 2rem 1rem;
   }
 }
 
