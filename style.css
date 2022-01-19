@@ -521,7 +521,7 @@ body {
 
 @media (min-width: 2560px) {
   .intro {
-    margin: 40rem 70rem 0;
+    margin: 30rem 70rem 0;
   }
 }
 
@@ -674,6 +674,12 @@ body {
 @media (min-width: 1920px) {
   .intro .btn-link {
     margin: 8rem 2rem 50rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .intro .btn-link {
+    margin: 8rem 2rem 60rem;
   }
 }
 
@@ -1734,8 +1740,8 @@ body {
 }
 
 .contact .container__contact-link .btn:hover {
-  background-color: #272727;
-  color: #feda4e;
+  background-color: #feda4e;
+  color: #272727;
 }
 
 .contact .container__contact-link .btn .fas {

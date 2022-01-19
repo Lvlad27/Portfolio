@@ -450,7 +450,7 @@ body {
 	}
 
 	@media (min-width: 2560px) {
-		margin: 40rem 70rem 0;
+		margin: 30rem 70rem 0;
 	}
 
 	&-message {
@@ -558,6 +558,10 @@ body {
 
 		@media (min-width: 1920px) {
 			margin: 8rem 2rem 50rem;
+		}
+
+		@media (min-width: 2560px) {
+			margin: 8rem 2rem 60rem;
 		}
 
 		@media (min-width: 450px) {
@@ -1364,10 +1368,10 @@ body {
 				box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 
 				&:hover {
-					background-color: $color-1;
-					color: $color-2;
+					background-color: $color-2;
+					color: $color-1;
 				}
-				/////////
+
 				.fas {
 					position: relative;
 					top: 4px;
