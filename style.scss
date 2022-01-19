@@ -276,6 +276,18 @@ body {
 				background: none;
 				clip-path: none;
 				transition: none;
+
+				&-links:hover {
+					background-color: $color-2;
+					border-radius: 3px;
+					padding: 3px;
+					transition: all 0.3s ease;
+				}
+
+				p:hover {
+					color: $color-1-dark;
+					transition: all 0.3s ease;
+				}
 			}
 
 			&--open {
@@ -291,6 +303,7 @@ body {
 				color: $color-light;
 				font-weight: 600;
 				text-decoration: none;
+				padding: 3px;
 
 				@media (min-width: 750px) {
 					font-family: $font-secondary;
@@ -357,6 +370,11 @@ body {
 				border: 1px solid $color-2;
 				padding: 1rem 2rem;
 				border-radius: 3px;
+			}
+
+			.btn:hover {
+				color: $color-1-dark;
+				transition: all 0.3s ease;
 			}
 		}
 
@@ -450,7 +468,7 @@ body {
 
 	@media (min-width: 750px) {
 		display: inherit;
-		overflow: hidden;
+		overflow: auto;
 	}
 }
 
@@ -598,75 +616,78 @@ body {
 		}
 	}
 
-	.btn-link {
-		margin: 6rem 0 8rem;
-		display: flex;
-		justify-content: center;
-		text-decoration: none;
-
-		animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
-
-		@media (min-height: 600px) {
-			margin: 6rem 2rem 20rem;
-		}
-
-		@media (min-height: 736px) {
-			margin: 8rem 2rem 35rem;
-		}
-
-		@media (min-height: 800px) {
-			margin: 8rem 2rem 33rem;
-		}
-
-		@media (min-height: 800px) {
-			margin: 8rem 2rem 35rem;
-		}
-
-		@media (min-height: 915px) {
-			margin: 15rem 2rem 35rem;
-		}
-
-		@media (min-height: 1024px) {
-			margin: 8rem 2rem 45rem;
-		}
-
-		@media (min-height: 1180px) {
-			margin: 8rem 2rem 60rem;
-		}
-
-		@media (min-height: 1280px) {
-			margin: 16rem 2rem 60rem;
-		}
-
-		@media (min-width: 1920px) {
-			margin: 8rem 2rem 50rem;
-		}
-
-		@media (min-width: 2560px) {
-			margin: 8rem 2rem 60rem;
-		}
-
-		@media (min-width: 450px) {
-			justify-content: left;
-			margin-left: 0;
-		}
-
-		.btn--intro {
-			font-family: $font-secondary;
-			font-size: $medium-font-size;
-			padding: 1rem 1rem;
-			border: 2px solid $color-1-dark;
+	.wrapper {
+		width: fit-content;
+		.btn-link {
+			margin: 6rem 0 8rem;
+			display: flex;
+			justify-content: center;
 			text-decoration: none;
-			color: $color-dark;
-			background-color: $color-2;
-			text-align: center;
-			transition: all 0.2s;
-			border-radius: 6px;
-			box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 
-			&:hover {
-				background-color: $color-1-dark;
-				color: $color-2;
+			animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
+
+			@media (min-height: 600px) {
+				margin: 6rem 2rem 20rem;
+			}
+
+			@media (min-height: 736px) {
+				margin: 8rem 2rem 35rem;
+			}
+
+			@media (min-height: 800px) {
+				margin: 8rem 2rem 33rem;
+			}
+
+			@media (min-height: 800px) {
+				margin: 8rem 2rem 35rem;
+			}
+
+			@media (min-height: 915px) {
+				margin: 15rem 2rem 35rem;
+			}
+
+			@media (min-height: 1024px) {
+				margin: 8rem 2rem 45rem;
+			}
+
+			@media (min-height: 1180px) {
+				margin: 8rem 2rem 60rem;
+			}
+
+			@media (min-height: 1280px) {
+				margin: 16rem 2rem 60rem;
+			}
+
+			@media (min-width: 1920px) {
+				margin: 8rem 2rem 50rem;
+			}
+
+			@media (min-width: 2560px) {
+				margin: 8rem 2rem 60rem;
+			}
+
+			@media (min-width: 450px) {
+				justify-content: left;
+				margin-left: 0;
+			}
+
+			.btn--intro {
+				font-family: $font-secondary;
+				font-size: $medium-font-size;
+				padding: 1rem 1rem;
+				border: 2px solid $color-1-dark;
+				text-decoration: none;
+				color: $color-dark;
+				background-color: $color-2;
+				text-align: center;
+				transition: all 0.2s;
+				border-radius: 6px;
+				box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+
+				&:hover {
+					background-color: $color-1-dark;
+					color: $color-2;
+				}
 			}
 		}
 	}

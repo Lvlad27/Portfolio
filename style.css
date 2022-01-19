@@ -379,6 +379,18 @@ body {
     -webkit-transition: none;
     transition: none;
   }
+  .header__container__navbar-links:hover {
+    background-color: #feda4e;
+    border-radius: 3px;
+    padding: 3px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .header__container__navbar p:hover {
+    color: #202020;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
 }
 
 .header__container__navbar--open {
@@ -394,6 +406,7 @@ body {
   color: #f4f4f4;
   font-weight: 600;
   text-decoration: none;
+  padding: 3px;
 }
 
 @media (min-width: 750px) {
@@ -475,6 +488,12 @@ body {
   border: 1px solid #feda4e;
   padding: 1rem 2rem;
   border-radius: 3px;
+}
+
+.header__container__navbar .btn:hover {
+  color: #202020;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .header__container-menuToggle {
@@ -571,7 +590,7 @@ body {
 @media (min-width: 750px) {
   .noScroll {
     display: inherit;
-    overflow: hidden;
+    overflow: auto;
   }
 }
 
@@ -775,7 +794,13 @@ body {
   }
 }
 
-.intro .btn-link {
+.intro .wrapper {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.intro .wrapper .btn-link {
   margin: 6rem 0 8rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -789,67 +814,67 @@ body {
 }
 
 @media (min-height: 600px) {
-  .intro .btn-link {
+  .intro .wrapper .btn-link {
     margin: 6rem 2rem 20rem;
   }
 }
 
 @media (min-height: 736px) {
-  .intro .btn-link {
+  .intro .wrapper .btn-link {
     margin: 8rem 2rem 35rem;
   }
 }
 
 @media (min-height: 800px) {
-  .intro .btn-link {
+  .intro .wrapper .btn-link {
     margin: 8rem 2rem 33rem;
   }
 }
 
 @media (min-height: 800px) {
-  .intro .btn-link {
+  .intro .wrapper .btn-link {
     margin: 8rem 2rem 35rem;
   }
 }
 
 @media (min-height: 915px) {
-  .intro .btn-link {
+  .intro .wrapper .btn-link {
     margin: 15rem 2rem 35rem;
   }
 }
 
 @media (min-height: 1024px) {
-  .intro .btn-link {
+  .intro .wrapper .btn-link {
     margin: 8rem 2rem 45rem;
   }
 }
 
 @media (min-height: 1180px) {
-  .intro .btn-link {
+  .intro .wrapper .btn-link {
     margin: 8rem 2rem 60rem;
   }
 }
 
 @media (min-height: 1280px) {
-  .intro .btn-link {
+  .intro .wrapper .btn-link {
     margin: 16rem 2rem 60rem;
   }
 }
 
 @media (min-width: 1920px) {
-  .intro .btn-link {
+  .intro .wrapper .btn-link {
     margin: 8rem 2rem 50rem;
   }
 }
 
 @media (min-width: 2560px) {
-  .intro .btn-link {
+  .intro .wrapper .btn-link {
     margin: 8rem 2rem 60rem;
   }
 }
 
 @media (min-width: 450px) {
-  .intro .btn-link {
+  .intro .wrapper .btn-link {
     -webkit-box-pack: left;
         -ms-flex-pack: left;
             justify-content: left;
@@ -857,7 +882,7 @@ body {
   }
 }
 
-.intro .btn-link .btn--intro {
+.intro .wrapper .btn-link .btn--intro {
   font-family: "Saira Stencil One", cursive, calib, monospace, sans-serif;
   font-size: 2rem;
   padding: 1rem 1rem;
@@ -873,7 +898,7 @@ body {
           box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 }
 
-.intro .btn-link .btn--intro:hover {
+.intro .wrapper .btn-link .btn--intro:hover {
   background-color: #202020;
   color: #feda4e;
 }
