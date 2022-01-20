@@ -1161,6 +1161,9 @@ body {
 			gap: 2vw;
 		}
 
+		@media (min-width: 1024px) {
+		}
+
 		@media (min-width: 1235px) {
 			grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
 			gap: 2vw;
