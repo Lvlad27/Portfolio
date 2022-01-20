@@ -194,6 +194,14 @@ body {
 		z-index: 10;
 
 		@media (min-width: 750px) {
+			width: 90%;
+			display: flex;
+
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		@media (min-width: 800px) {
 			width: 95%;
 			display: flex;
 
@@ -269,7 +277,7 @@ body {
 			@media (min-width: 750px) {
 				position: relative;
 				flex-direction: row;
-				gap: 5rem;
+				gap: 3rem;
 				margin: 0;
 				height: auto;
 				width: auto;
@@ -288,6 +296,18 @@ body {
 					color: $color-1-dark;
 					transition: all 0.3s ease;
 				}
+			}
+
+			@media (min-width: 900px) {
+				position: relative;
+				flex-direction: row;
+				gap: 5rem;
+				margin: 0;
+				height: auto;
+				width: auto;
+				background: none;
+				clip-path: none;
+				transition: none;
 			}
 
 			&--open {
@@ -468,7 +488,7 @@ body {
 
 	@media (min-width: 750px) {
 		display: inherit;
-		overflow: auto;
+		overflow: hidden;
 	}
 }
 
@@ -509,6 +529,10 @@ body {
 
 	@media (min-height: 736px) {
 		margin: 10rem 2rem 0;
+	}
+
+	@media (min-width: 450px) {
+		margin: 10rem 5rem 0;
 	}
 
 	@media (min-width: 750px) {
@@ -1186,6 +1210,10 @@ body {
 					object-fit: cover;
 					border-radius: 6px;
 				}
+
+				figcaption {
+					display: none;
+				}
 			}
 
 			@media (min-width: 1024px) {
@@ -1214,6 +1242,7 @@ body {
 					}
 
 					& figcaption {
+						display: inherit;
 						top: 50%;
 						left: 20px;
 						right: 20px;
@@ -1282,7 +1311,6 @@ body {
 	}
 
 	// MODAL
-
 	.modal {
 		position: fixed;
 		width: 100%;
