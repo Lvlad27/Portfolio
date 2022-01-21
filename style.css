@@ -1944,6 +1944,35 @@ body {
   color: #feda4e;
 }
 
+.portfolio .modal__container .modal__content-singleLink {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  text-decoration: none;
+  margin-bottom: 4rem;
+  color: #0074d9;
+}
+
+@media (min-width: 1024px) {
+  .portfolio .modal__container .modal__content-singleLink::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0074d9;
+    -webkit-transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  .portfolio .modal__container .modal__content-singleLink:hover::before {
+    left: auto;
+    right: auto;
+    width: 100%;
+  }
+}
+
 .portfolio .modal__container .modal__content-links {
   display: -webkit-box;
   display: -ms-flexbox;

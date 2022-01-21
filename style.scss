@@ -1514,6 +1514,33 @@ body {
 					}
 				}
 
+				&-singleLink {
+					width: fit-content;
+					position: relative;
+					text-decoration: none;
+					margin-bottom: 4rem;
+					color: #0074d9;
+
+					@media (min-width: 1024px) {
+						&::before {
+							content: '';
+							position: absolute;
+							bottom: 0;
+							right: 0;
+							width: 0;
+							height: 2px;
+							background-color: #0074d9;
+							transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+						}
+
+						&:hover::before {
+							left: auto;
+							right: auto;
+							width: 100%;
+						}
+					}
+				}
+
 				&-links {
 					display: flex;
 					flex-direction: row;
