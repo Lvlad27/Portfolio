@@ -355,16 +355,17 @@ body {
   right: 0;
   height: 100vh;
   width: Min(75vw, 40rem);
+  padding-bottom: 6rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -388,6 +389,7 @@ body {
     margin: 0;
     height: auto;
     width: auto;
+    padding: 0;
     background: none;
     -webkit-clip-path: none;
             clip-path: none;
@@ -434,7 +436,10 @@ body {
 }
 
 .header__container__navbar-links:link, .header__container__navbar-links:visited {
-  margin: 0 auto 4rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0 auto 2rem;
   text-align: center;
   font-size: 2rem;
   color: #f4f4f4;
@@ -459,6 +464,12 @@ body {
   }
   .header__container__navbar-links:link .fas, .header__container__navbar-links:visited .fas {
     display: none;
+  }
+}
+
+@media (min-height: 650px) and (max-width: 750px) {
+  .header__container__navbar-links:link, .header__container__navbar-links:visited {
+    margin: 0 auto 4rem;
   }
 }
 
@@ -517,14 +528,14 @@ body {
   padding-right: 1rem;
 }
 
-.header__container__navbar .btn {
+.header__container__navbar .btn-nav {
   display: inline-block;
   border: 1px solid #feda4e;
   padding: 1rem 2rem;
   border-radius: 3px;
 }
 
-.header__container__navbar .btn:hover {
+.header__container__navbar .btn-nav:hover {
   color: #202020;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -1618,7 +1629,7 @@ body {
     color: #feda4e;
     text-align: center;
     -webkit-perspective: 50em;
-    perspective: 50em;
+            perspective: 50em;
   }
   .portfolio .projects-list .modal-trigger.project .project * {
     -webkit-box-sizing: padding-box;
@@ -1810,6 +1821,7 @@ body {
 .portfolio .modal__container .carousel {
   margin: 8rem auto 0;
   overflow: hidden;
+  text-align: center;
 }
 
 @media (min-width: 1024px) {
@@ -1843,6 +1855,12 @@ body {
 .portfolio .modal__container .carousel__track .carousel__slide .carousel__image {
   max-width: 100%;
   border-radius: 10px;
+}
+
+@media (min-width: 600px) {
+  .portfolio .modal__container .carousel__track .carousel__slide .carousel__image {
+    max-height: 55rem;
+  }
 }
 
 .portfolio .modal__container .carousel__nav {
@@ -1989,8 +2007,13 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 2rem;
-  margin-bottom: 4rem;
   text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+  .portfolio .modal__container .modal__content-links {
+    margin-bottom: 4rem;
+  }
 }
 
 .portfolio .modal__container .modal__content-links.btn {

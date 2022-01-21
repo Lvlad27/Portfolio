@@ -266,9 +266,10 @@ body {
 			right: 0;
 			height: 100vh;
 			width: Min(75vw, 40rem);
+			padding-bottom: 6rem;
 			display: flex;
-			flex-direction: column;
 			align-items: center;
+			flex-direction: column;
 			justify-content: center;
 			background-color: $color-1-dark;
 			clip-path: circle(0px at top right);
@@ -281,6 +282,7 @@ body {
 				margin: 0;
 				height: auto;
 				width: auto;
+				padding: 0;
 				background: none;
 				clip-path: none;
 				transition: none;
@@ -317,7 +319,8 @@ body {
 
 			&-links:link,
 			&-links:visited {
-				margin: 0 auto 4rem;
+				align-items: flex-start;
+				margin: 0 auto 2rem;
 				text-align: center;
 				font-size: $medium-font-size;
 				color: $color-light;
@@ -336,6 +339,10 @@ body {
 					.fas {
 						display: none;
 					}
+				}
+
+				@media (min-height: 650px) and (max-width: 750px) {
+					margin: 0 auto 4rem;
 				}
 
 				@media (min-height: 844px) and (max-width: 750px) {
@@ -385,14 +392,14 @@ body {
 				padding-right: 1rem;
 			}
 
-			.btn {
+			.btn-nav {
 				display: inline-block;
 				border: 1px solid $color-2;
 				padding: 1rem 2rem;
 				border-radius: 3px;
 			}
 
-			.btn:hover {
+			.btn-nav:hover {
 				color: $color-1-dark;
 				transition: all 0.3s ease;
 			}
@@ -1226,7 +1233,6 @@ body {
 					width: 100%;
 					color: $color-2;
 					text-align: center;
-					-webkit-perspective: 50em;
 					perspective: 50em;
 
 					& * {
@@ -1404,6 +1410,7 @@ body {
 			.carousel {
 				margin: 8rem auto 0;
 				overflow: hidden;
+				text-align: center;
 
 				@media (min-width: 1024px) {
 					margin: 8rem auto 0;
@@ -1424,9 +1431,10 @@ body {
 						.carousel__image {
 							max-width: 100%;
 							border-radius: 10px;
-							// height: auto;
-							// user-select: none;
-							// object-fit: cover;
+
+							@media (min-width: 600px) {
+								max-height: 55rem;
+							}
 						}
 					}
 				}
@@ -1548,9 +1556,12 @@ body {
 					justify-content: left;
 					align-items: center;
 					margin-top: 2rem;
-					margin-bottom: 4rem;
 
 					text-decoration: none;
+
+					@media (min-width: 1024px) {
+						margin-bottom: 4rem;
+					}
 
 					&.btn {
 						background-color: $color-1;

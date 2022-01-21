@@ -42,7 +42,7 @@
 		<meta name="msapplication-TileColor" content="#ffffff" />
 	</head>
 
-	<body>
+	<body itemscope="" itemtype="https://schema.org/ProfilePage">
 		<div class="overlay overlay--hidden"></div>
 
 		<!-- +++++ Navbar +++++ -->
@@ -70,7 +70,7 @@
 						<p>CONTACT</p>
 					</a>
 					<a class="header__container__navbar-links" href="TODO" title="TODO">
-						<span class="btn"><i class="header__container__navbar-icons--btn fas fa-file"></i>RESUME</span>
+						<span class="btn-nav"><i class="header__container__navbar-icons--btn fas fa-file"></i>RESUME</span>
 					</a>
 				</nav>
 
@@ -83,7 +83,7 @@
 		<!-- +++++ INTRO +++++ -->
 		<section class="intro" id="intro">
 			<h3 class="intro-message">Hi, my name is</h3>
-			<h1 class="intro-title">
+			<h1 class="intro-title" itemprop="name">
 				Vlad&nbsp;<span class="lastName">Le<i class="fas fa-cog"></i>ntescu.</span>
 			</h1>
 			<h1></h1>
@@ -98,101 +98,103 @@
 		</section>
 
 		<!-- +++++ ABOUT +++++ -->
-		<section class="about js-scroll slide-in-fwd-center" id="about">
-			<div class="container">
-				<h2 class="section-title">about me</h2>
-				<div class="wrapper">
-					<figure class="wrapper__image">
-						<img src="img/cvphoto.jpeg" alt="Profile Photo" class="profile-image profile-image--1" width="300px" height="300px" />
-					</figure>
-					<div class="wrapper__socialMedia">
-						<ul class="wrapper__socialMedia-list">
-							<li>
-								<a href="https://github.com/Lvlad27" class="wrapper__socialMedia-list-icons" target="_blank"><i class="fab fa-github"></i></a>
-							</li>
-							<li>
-								<a href="https://www.freecodecamp.org/lvlad" class="wrapper__socialMedia-list-icons" id="profile-link" target="_blank"
-									><i class="fab fa-free-code-camp"></i
-								></a>
-							</li>
-							<li>
-								<a href="https://www.linkedin.com/in/vlad-leontescu-588948210/" class="wrapper__socialMedia-list-icons" target="_blank"
-									><i class="fab fa-linkedin"></i
-								></a>
-							</li>
-						</ul>
+		<div <div itemscope="" itemtype="https://schema.org/Person">
+			<section class="about js-scroll slide-in-fwd-center" id="about">
+				<div class="container">
+					<h2 class="section-title">about me</h2>
+					<div class="wrapper">
+						<figure class="wrapper__image">
+							<img src="img/cvphoto.jpeg" itemprop="image" alt="Photo of Vlad Leontescu" class="profile-image profile-image--1" width="300px" height="300px" />
+						</figure>
+						<div class="wrapper__socialMedia">
+							<ul class="wrapper__socialMedia-list">
+								<li>
+									<a href="https://github.com/Lvlad27" class="wrapper__socialMedia-list-icons" target="_blank"><i class="fab fa-github"></i></a>
+								</li>
+								<li>
+									<a href="https://www.freecodecamp.org/lvlad" class="wrapper__socialMedia-list-icons" id="profile-link" target="_blank"
+										><i class="fab fa-free-code-camp"></i
+									></a>
+								</li>
+								<li>
+									<a href="https://www.linkedin.com/in/vlad-leontescu-588948210/" class="wrapper__socialMedia-list-icons" target="_blank"
+										><i class="fab fa-linkedin"></i
+									></a>
+								</li>
+							</ul>
+						</div>
 					</div>
-				</div>
-				<div class="container__text">
-					<p class="paragraph--1">
-						After working for several years as a structural engineer,
-						<span class="highlight--1"
-							>I developed a strong desire to learn and grow in the tech industry, with a growing passion for software development and would like to take any
-							opportunity that can help me pursue this.</span
-						>
-					</p>
-					<br />
-					<p class="paragraph--1">
-						Currently I am studying <span class="highlight--1">Web Development</span> through the freeCodeCamp curriculum, doing personal or freelance projects and
-						taking online courses.
-					</p>
-					<br />
+					<div class="container__text">
+						<p class="paragraph--1">
+							After working for several years as a <span itemprop="jobTitle">structural engineer</span>,
+							<span class="highlight--1"
+								>I developed a strong desire to learn and grow in the tech industry, with a growing passion for software development and would like to take any
+								opportunity that can help me pursue this.</span
+							>
+						</p>
+						<br />
+						<p class="paragraph--1">
+							Currently I'm pursuing a <span class="highlight--1" itemprop="jobTitle">Web Developer</span> role, working through the
+							<span class="highlight--1">freeCodeCamp curriculum</span>, doing <span class="highlight--1">personal or freelance projects</span> and taking
+							<span class="highlight--1">online courses</span>.
+						</p>
 
-					<a class="btn-link" href="https://www.freecodecamp.org/lvlad" title="TODO" target="_blank">
-						<span class="btn--about">🏅 My certifications</span>
-					</a>
+						<a class="btn-link" href="https://www.freecodecamp.org/lvlad" itemprop="url" title="See my freeCodeCamp account!" target="_blank">
+							<span class="btn--about">🏅 My certifications</span>
+						</a>
 
-					<p class="paragraph--1">
-						I'm a <span class="highlight--1">fast learner with a strong technical and engineering background</span>, self-learning enthusiast, used to follow
-						deadlines and to work under pressure.
-					</p>
-					<br />
-					<p class="paragraph--1">Here are some of the <span class="highlight--1">technologies</span> I've worked with so far:</p>
+						<p class="paragraph--1">
+							I'm a <span class="highlight--1">fast learner with a strong technical and engineering background</span>, self-learning enthusiast, used to follow
+							deadlines and to work under pressure.
+						</p>
+						<br />
+						<p class="paragraph--1">Here are some of the <span class="highlight--1">technologies</span> I've worked with so far:</p>
+					</div>
+					<div class="container__skills">
+						<div class="container__skills-item">
+							<img src="img/html5.svg" alt="HTML 5" class="skills__logo skills__logo--p1" />
+							<span class="caption">HTML5</span>
+						</div>
+						<div class="container__skills-item">
+							<img src="img/css3.svg" alt="CSS 3" class="skills__logo skills__logo--p2" />
+							<span class="caption">CSS3</span>
+						</div>
+						<div class="container__skills-item">
+							<img src="img/javascript.svg" alt="JAVASCRIPT" class="skills__logo skills__logo--p3" />
+							<span class="caption">JavaScript (ES6)</span>
+						</div>
+						<div class="container__skills-item">
+							<img src="img/sass.svg" alt="SASS" class="skills__logo skills__logo--p4" />
+							<span class="caption">SCSS</span>
+						</div>
+						<div class="container__skills-item">
+							<img src="img/npm.svg" alt="NPM" class="skills__logo skills__logo--p5" />
+							<span class="caption">NPM</span>
+						</div>
+						<div class="container__skills-item">
+							<img src="img/git.svg" alt="GIT" class="skills__logo skills__logo--p6" />
+							<span class="caption">Git</span>
+						</div>
+						<div class="container__skills-item">
+							<img src="img/github.svg" alt="GitHub" class="skills__logo skills__logo--p10" />
+							<span class="caption">GitHub</span>
+						</div>
+						<div class="container__skills-item">
+							<img src="img/visualstudiocode.svg" alt="VISUAL STUDIO CODE" class="skills__logo skills__logo--p7" />
+							<span class="caption">VS Code</span>
+						</div>
+						<div class="container__skills-item">
+							<img src="img/wordpress.svg" alt="Wordpress" class="skills__logo skills__logo--p8" />
+							<span class="caption">Wordpress</span>
+						</div>
+						<div class="container__skills-item">
+							<img src="img/ubuntu.svg" alt="Ubuntu Linux" class="skills__logo skills__logo--p9" />
+							<span class="caption">Ubuntu Linux</span>
+						</div>
+					</div>
 				</div>
-				<div class="container__skills">
-					<div class="container__skills-item">
-						<img src="img/html5.svg" alt="HTML 5" class="skills__logo skills__logo--p1" />
-						<span class="caption">HTML5</span>
-					</div>
-					<div class="container__skills-item">
-						<img src="img/css3.svg" alt="CSS 3" class="skills__logo skills__logo--p2" />
-						<span class="caption">CSS3</span>
-					</div>
-					<div class="container__skills-item">
-						<img src="img/javascript.svg" alt="JAVASCRIPT" class="skills__logo skills__logo--p3" />
-						<span class="caption">JavaScript (ES6)</span>
-					</div>
-					<div class="container__skills-item">
-						<img src="img/sass.svg" alt="SASS" class="skills__logo skills__logo--p4" />
-						<span class="caption">SCSS</span>
-					</div>
-					<div class="container__skills-item">
-						<img src="img/npm.svg" alt="NPM" class="skills__logo skills__logo--p5" />
-						<span class="caption">NPM</span>
-					</div>
-					<div class="container__skills-item">
-						<img src="img/git.svg" alt="GIT" class="skills__logo skills__logo--p6" />
-						<span class="caption">Git</span>
-					</div>
-					<div class="container__skills-item">
-						<img src="img/github.svg" alt="GitHub" class="skills__logo skills__logo--p10" />
-						<span class="caption">GitHub</span>
-					</div>
-					<div class="container__skills-item">
-						<img src="img/visualstudiocode.svg" alt="VISUAL STUDIO CODE" class="skills__logo skills__logo--p7" />
-						<span class="caption">VS Code</span>
-					</div>
-					<div class="container__skills-item">
-						<img src="img/wordpress.svg" alt="Wordpress" class="skills__logo skills__logo--p8" />
-						<span class="caption">Wordpress</span>
-					</div>
-					<div class="container__skills-item">
-						<img src="img/ubuntu.svg" alt="Ubuntu Linux" class="skills__logo skills__logo--p9" />
-						<span class="caption">Ubuntu Linux</span>
-					</div>
-				</div>
-			</div>
-		</section>
+			</section>
+		</div>
 
 		<!-- +++++ HIRE SECTION +++++ -->
 		<section class="hire js-scroll slide-in-fwd-center">
@@ -286,7 +288,7 @@
 							/>
 							<figcaption>
 								<i class="fab fa-wordpress"></i>
-								<h2>Guess number</h2>
+								<h2>Martial Arts School Website</h2>
 								<h4>More info</h4>
 							</figcaption>
 						</figure></a
@@ -443,7 +445,7 @@
 								</li>
 							</ul>
 							<div class="modal__content-links">
-								<a class="modal__content-links btn" href="#" title="TODO" target="_blank">View Live Demo</a>
+								<a class="modal__content-links btn" href="#" itemprop="url" title="See my website!" target="_blank">View Live Demo</a>
 								<a href="https://github.com/Lvlad27/Natours" class="modal__content-links icon" target="_blank"><i class="fab fa-github"></i></a>
 							</div>
 						</article>
@@ -557,8 +559,10 @@
 								</li>
 							</ul>
 							<div class="modal__content-links">
-								<a class="modal__content-links btn" href="TODO" title="TODO" target="_blank">View Live Demo</a>
-								<a href="https://github.com/Lvlad27/Natours" class="modal__content-links icon" target="_blank"><i class="fab fa-github"></i></a>
+								<a class="modal__content-links btn" href="TODO" title="See the Natours project!" target="_blank" itemprop="url">View Live Demo</a>
+								<a href="https://github.com/Lvlad27/Natours" class="modal__content-links icon" title="See the GitHub code!" target="_blank" itemprop="url"
+									><i class="fab fa-github"></i
+								></a>
 							</div>
 						</article>
 					</div>
@@ -641,7 +645,7 @@
 								</li>
 							</ul>
 							<div class="modal__content-links">
-								<a class="modal__content-links btn" href="TODO" title="TODO" target="_blank">View Live Demo</a>
+								<a class="modal__content-links btn" href="TODO" title="TODO" target="_blank" itemprop="url">View Live Demo</a>
 								<a href="https://github.com/Lvlad27/codingChallenges/tree/main/006.%20Zaruri" class="modal__content-links icon" target="_blank"
 									><i class="fab fa-github"></i
 								></a>
@@ -1216,10 +1220,13 @@
 						<article class="modal__content">
 							<h2 class="section-title">Algorithms and Data Structures</h2>
 							<p class="paragraph--2">
-								This are the Algorithms and Data Structures exercises I've worked on until now. They also include the freeCodeCamp JavaScript Algorithms and
+								These are the Algorithms and Data Structures exercises I've worked on until now. They also include the freeCodeCamp JavaScript Algorithms and
 								Data Structures Projects which you can also see at the link below:
 							</p>
-							<a href="https://www.freecodecamp.org/certification/lvlad/javascript-algorithms-and-data-structures" class="modal__content-singleLink"
+							<a
+								href="https://www.freecodecamp.org/certification/lvlad/javascript-algorithms-and-data-structures"
+								class="modal__content-singleLink"
+								target="_blank"
 								>JavaScript Algorithms and Data Structures Projects</a
 							>
 							<ul class="modal__content-info">
@@ -1252,15 +1259,9 @@
 				</div>
 
 				<div>
-					<a class="container__contact-link" href="mailto:Lvlad27@gmail.com" title="TODO">
-						<span class="btn"><i class="container__contact-link--mail fas fa-paper-plane"></i>Say Hello!</span>
+					<a class="container__contact-link" href="mailto:Lvlad27@gmail.com" title="Thank you for your time!">
+						<span class="btn" itemprop="email"><i class="container__contact-link--mail fas fa-paper-plane"></i>Say Hello!</span>
 					</a>
-				</div>
-
-				<div class="container__contact-info">
-					<span class=""><i class="fas fa-phone"></i> +40 0758 076 445</span>
-					<br />
-					<span class=""><i class="fas fa-envelope"></i> Lvlad27@gmail.com</span>
 				</div>
 			</div>
 		</section>
