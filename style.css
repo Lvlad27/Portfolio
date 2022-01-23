@@ -635,7 +635,7 @@ body {
 @media (min-width: 750px) {
   .noScroll {
     display: inherit;
-    overflow: hidden;
+    overflow: auto;
   }
 }
 
