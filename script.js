@@ -41,15 +41,7 @@ window.addEventListener('scroll', () => {
 		header.classList.add('header__scroll');
 	} else if (currentScroll < lastScroll && body.classList.contains('scroll-down')) {
 		body.classList.remove('scroll-down');
-		body.classList.add('scroll-up');
-	}
-	lastScroll = currentScroll;
-});
-
-const category = document.querySelector('.portfolio__category');
-const project = document.querySelectorAll('.modal-trigger');
-
-category.addEventListener('click', function (e) {
+		body.classList.add('scroll-up');// MODALe) {
 	if (e.target.classList.contains('btn')) {
 		category.querySelector('.btn--active').classList.remove('btn--active');
 		e.target.classList.add('btn--active');
@@ -68,7 +60,6 @@ category.addEventListener('click', function (e) {
 	}
 });
 
-// MODAL
 const triggers = document.getElementsByClassName('modal-trigger'),
 	triggerArr = Array.from(triggers).entries(),
 	modals = document.getElementsByClassName('modal'),
