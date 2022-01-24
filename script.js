@@ -1,20 +1,27 @@
 'use strict';
 
+////////////////////////////
+// MOBILE NAVBAR
 const navbar = document.querySelector('.header__container__navbar'),
 	menuToggle = document.querySelector('.header__container-menuToggle'),
 	navLinks = document.querySelectorAll('.header__container__navbar-links'),
 	overlay = document.querySelector('.overlay'),
 	body = document.body;
 
+// BACKGROUND EFFECT WHEN OPENING SIDE MENU
+// when hamburger button is clicked
+
 const toggle = function () {
 	navbar.classList.toggle('header__container__navbar--open');
-
+	// toggle classes to every anchor element
 	navLinks.forEach(element => {
 		element.classList.toggle('header__container__navbar-links--open');
 	});
-
+	// toggle class to hamburger button
 	menuToggle.classList.toggle('header__container-menuToggle--open');
+	// add blurred effect background by removing class to div
 	overlay.classList.toggle('overlay--hidden');
+	// remove scroll function from body element
 	body.classList.toggle('noScroll');
 };
 
@@ -24,6 +31,7 @@ for (let i = 0; i < navLinks.length; i++) {
 	navLinks[i].addEventListener('click', toggle);
 }
 
+// NAVBAR EFFECT WHEN SCROLLING
 let lastScroll = 0;
 const header = document.querySelector('header');
 
@@ -41,7 +49,18 @@ window.addEventListener('scroll', () => {
 		header.classList.add('header__scroll');
 	} else if (currentScroll < lastScroll && body.classList.contains('scroll-down')) {
 		body.classList.remove('scroll-down');
-		body.classList.add('scroll-up');// MODALe) {
+		body.classList.add('scroll-up');
+	}
+	lastScroll = currentScroll;
+});
+
+const category = document.querySelector('.portfolio__category');
+const project = document.querySelectorAll('.modal-trigger');
+
+////////////////////////////
+// PORTFOLIO
+// FILTERING THE PROJECTS BY CATEGORY
+category.addEventListener('click', function (e) {
 	if (e.target.classList.contains('btn')) {
 		category.querySelector('.btn--active').classList.remove('btn--active');
 		e.target.classList.add('btn--active');
@@ -60,10 +79,13 @@ window.addEventListener('scroll', () => {
 	}
 });
 
+// MODAL
 const triggers = document.getElementsByClassName('modal-trigger'),
 	triggerArr = Array.from(triggers).entries(),
 	modals = document.getElementsByClassName('modal'),
 	btnCloseModal = document.getElementsByClassName('modal__container-close');
+
+//  Loop with the index of each item in `triggerArr` for listening to a click event which toggles each modal to open and close and also the carousel slider functionality.
 
 for (let [index, trigger] of triggerArr) {
 	if (typeof modals[index] !== 'undefined') {
@@ -135,6 +157,15 @@ for (let [index, trigger] of triggerArr) {
 	}
 }
 
+// ANIMATE PAGE SECTIONS ON SCROLL
+
+/*
+1. Get all js-scroll elements on the page
+2. Fade out elements
+3. Detect when the element is within the viewport
+4. Assign the scrolled class name to the element if it is in view.
+*/
+
 const scrollElements = document.querySelectorAll('.js-scroll');
 
 const elementInView = (el, dividend = 1) => {
@@ -171,13 +202,18 @@ window.addEventListener('scroll', () => {
 	handleScrollAnimation();
 });
 
+//initialize throttleTimer as false
 let throttleTimer = false;
 
 const throttle = (callback, time) => {
+	//don't run the function while throttle timer is true
 	if (throttleTimer) return;
+
+	//first set throttle timer to true so the function doesn't run
 	throttleTimer = true;
 
 	setTimeout(() => {
+		//call the callback function in the setTimeout and set the throttle timer to false after the indicated time has passed
 		callback();
 		throttleTimer = false;
 	}, time);
