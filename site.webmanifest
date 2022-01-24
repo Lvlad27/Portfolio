@@ -1,0 +1,19 @@
+{
+	"name": "Vlad Leontescu | Portfolio",
+	"short_name": "Vlad Leontescu | Portfolio",
+	"icons": [
+		{
+			"src": ".img/favicon_io/android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": ".img/favicon_io/android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"theme_color": "#feda4e",
+	"background_color": "#241f0b",
+	"display": "standalone"
+}

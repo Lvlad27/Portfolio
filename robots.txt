@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /login
+
+Sitemap: https://https://lvlad27.github.io/myPortfolio-v1//sitemap.xml
