@@ -478,11 +478,6 @@ body {
 // NAVBAR EFFECT WHEN SCROLLING
 .noScroll {
 	overflow: hidden;
-
-	@media (min-width: 750px) {
-		display: inherit;
-		overflow: auto;
-	}
 }
 
 .scroll-down {

@@ -10,7 +10,6 @@ const navbar = document.querySelector('.header__container__navbar'),
 
 // BACKGROUND EFFECT WHEN OPENING SIDE MENU
 // when hamburger button is clicked
-
 const toggle = function () {
 	navbar.classList.toggle('header__container__navbar--open');
 	// toggle classes to every anchor element
@@ -25,10 +24,25 @@ const toggle = function () {
 	body.classList.toggle('noScroll');
 };
 
+// Function for large screen menu nav link click event
+const toggleNav = function () {
+	navbar.classList.toggle('header__container__navbar--open');
+	// toggle classes to every anchor element
+	navLinks.forEach(element => {
+		element.classList.toggle('header__container__navbar-links--open');
+	});
+	// toggle class to hamburger button
+	menuToggle.classList.toggle('header__container-menuToggle--open');
+	// add blurred effect background by removing class to div
+	overlay.classList.toggle('overlay--hidden');
+	// remove scroll function from body element
+	body.classList.remove('noScroll');
+};
+
 menuToggle.addEventListener('click', toggle);
 
 for (let i = 0; i < navLinks.length; i++) {
-	navLinks[i].addEventListener('click', toggle);
+	navLinks[i].addEventListener('click', toggleNav);
 }
 
 // NAVBAR EFFECT WHEN SCROLLING
