@@ -193,7 +193,7 @@ html {
 }
 
 body {
-	font-family: 'IBM Plex Mono', cursive, calib, monospace, sans-serif;
+	font-family: 'IBM Plex Mono', arial, calib, monospace, sans-serif;
 	font-size: 1.6rem;
 	color: #f4f4f4;
 	line-height: 1.5;
@@ -204,7 +204,7 @@ body {
 .section-title {
 	margin-bottom: 2rem;
 	text-transform: uppercase;
-	font-family: 'Saira Stencil One', cursive, calib, monospace, sans-serif;
+	font-family: 'Saira Stencil One', arial, calib, monospace, sans-serif;
 	font-size: clamp(4rem, 4vw, 4rem);
 	color: #feda4e;
 }
@@ -327,7 +327,7 @@ body {
 
 .header__container-logo:link,
 .header__container-logo:visited {
-	font-family: 'Saira Stencil One', cursive, calib, monospace, sans-serif;
+	font-family: 'Saira Stencil One', arial, calib, monospace, sans-serif;
 	font-size: 2rem;
 	color: #feda4e;
 	display: inline-block;
@@ -345,7 +345,7 @@ body {
 }
 
 .header__container-logo--span {
-	font-family: 'Saira Stencil One', cursive, calib, monospace, sans-serif;
+	font-family: 'Saira Stencil One', arial, calib, monospace, sans-serif;
 	font-weight: 600;
 	color: #f4f4f4;
 }
@@ -453,7 +453,7 @@ body {
 @media (min-width: 750px) {
 	.header__container__navbar-links:link,
 	.header__container__navbar-links:visited {
-		font-family: 'Saira Stencil One', cursive, calib, monospace, sans-serif;
+		font-family: 'Saira Stencil One', arial, calib, monospace, sans-serif;
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
@@ -766,7 +766,7 @@ body {
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
-	font-family: 'Saira Stencil One', cursive, calib, monospace, sans-serif;
+	font-family: 'Saira Stencil One', arial, calib, monospace, sans-serif;
 	color: #feda4e;
 	font-size: clamp(4rem, 8vw, 8rem);
 	line-height: 1;
@@ -938,7 +938,7 @@ body {
 }
 
 .intro .wrapper .btn-link .btn--intro {
-	font-family: 'Saira Stencil One', cursive, calib, monospace, sans-serif;
+	font-family: 'Saira Stencil One', arial, calib, monospace, sans-serif;
 	font-size: 2rem;
 	padding: 1rem 1rem;
 	border: 2px solid #202020;
@@ -1134,7 +1134,7 @@ body {
 
 .about .container__text .btn-link .btn--about {
 	text-transform: uppercase;
-	font-family: 'IBM Plex Mono', cursive, calib, monospace, sans-serif;
+	font-family: 'IBM Plex Mono', arial, calib, monospace, sans-serif;
 	font-size: 1.6rem;
 	padding: 1rem 1rem;
 	border: 2px solid #202020;
@@ -1455,7 +1455,7 @@ body {
 }
 
 .hire .container .btn-link .btn--hire {
-	font-family: 'Saira Stencil One', cursive, calib, monospace, sans-serif;
+	font-family: 'Saira Stencil One', arial, calib, monospace, sans-serif;
 	font-size: 2rem;
 	padding: 1rem 1rem;
 	border: 2px solid #202020;
@@ -1530,7 +1530,7 @@ body {
 }
 
 .portfolio .btn {
-	font-family: 'IBM Plex Mono', cursive, calib, monospace, sans-serif;
+	font-family: 'IBM Plex Mono', arial, calib, monospace, sans-serif;
 	font-size: 1.6rem;
 	padding: 1rem 1rem;
 	border: 2px solid #feda4e;
@@ -1660,7 +1660,7 @@ body {
 	}
 	.portfolio .projects-list .modal-trigger.project .project h2,
 	.portfolio .projects-list .modal-trigger.project .project h4 {
-		font-family: 'Saira Stencil One', cursive, calib, monospace, sans-serif;
+		font-family: 'Saira Stencil One', arial, calib, monospace, sans-serif;
 		margin: 0;
 	}
 	.portfolio .projects-list .modal-trigger.project .project h2 {
@@ -2126,7 +2126,7 @@ body {
 }
 
 .contact .container__contact-link .btn {
-	font-family: 'Saira Stencil One', cursive, calib, monospace, sans-serif;
+	font-family: 'Saira Stencil One', arial, calib, monospace, sans-serif;
 	font-size: 2rem;
 	padding: 1rem 1rem;
 	border: 2px solid #feda4e;
