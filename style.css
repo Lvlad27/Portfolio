@@ -1102,13 +1102,16 @@ body {
 	color: #f4f4f4;
 }
 
-.about .container .wrapper__socialMedia-list-icons-icons:hover {
-	color: #feda4e;
-}
-
 @media (min-width: 820px) {
 	.about .container .wrapper {
 		float: right;
+	}
+	.about .container .wrapper i:hover {
+		color: #feda4e;
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2);
+		-webkit-transition: ease 0.1s;
+		transition: ease 0.1s;
 	}
 }
 

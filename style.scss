@@ -806,16 +806,18 @@ body {
 
 					&-icons {
 						color: $color-light;
-
-						&-icons:hover {
-							color: $color-2;
-						}
 					}
 				}
 			}
 
 			@media (min-width: 820px) {
 				float: right;
+
+				i:hover {
+					color: $color-2;
+					transform: scale(1.2);
+					transition: ease 0.1s;
+				}
 			}
 		}
 
