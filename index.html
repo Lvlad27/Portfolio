@@ -242,12 +242,31 @@
 
 				<div class="portfolio__category">
 					<button class="btn btn--active" data-filter="all" title="Show all projects">All</button>
-					<button class="btn" data-filter="projects" title="Filter the complex projects">Projects</button>
-					<button class="btn" data-filter="codingChallenges" title="Filter the more simpler projects">codingChallenges</button>
+					<button class="btn" data-filter="JS" title="Filter the complex projects">Vanilla JavaScript</button>
+					<button class="btn" data-filter="HTML-CSS" title="Filter the more simpler projects">HTML|CSS</button>
+					<button class="btn" data-filter="CMS" title="Filter the more simpler projects">CMS</button>
 				</div>
 
 				<div class="projects-list">
-					<a href="#thisWebsite" class="modal-trigger project projects">
+					<a href="#budgetter" class="modal-trigger project JS">
+						<figure class="project">
+							<img
+								src="img/project--12/img-1(320x320).png"
+								height="320"
+								width="320"
+								loading="lazy"
+								srcset="img/project--12/img-1(320x320).webp 320w, img/project--12/img-1(1200x1200).webp 1200w"
+								sizes="(max-width: 750px) 80vw, 100vw"
+								alt="Budget app"
+							/>
+							<figcaption>
+								<i class="fab fa-js-square"></i>
+								<h2>Budgetter</h2>
+								<h4>More info</h4>
+							</figcaption>
+						</figure>
+					</a>
+					<a href="#thisWebsite" class="modal-trigger project JS">
 						<figure class="project">
 							<img
 								src="img/project--1/img-1(320x320).png"
@@ -265,7 +284,7 @@
 							</figcaption>
 						</figure>
 					</a>
-					<a href="#natours" class="modal-trigger project projects"
+					<a href="#natours" class="modal-trigger project HTML-CSS"
 						><figure class="project">
 							<img
 								src="img/project--2/img1/img-1(320x320).png"
@@ -283,7 +302,7 @@
 							</figcaption>
 						</figure></a
 					>
-					<a href="#diceGame" class="modal-trigger project projects"
+					<a href="#diceGame" class="modal-trigger project JS"
 						><figure class="project">
 							<img
 								src="img/project--3/img1/img-1(320x320).png"
@@ -301,7 +320,7 @@
 							</figcaption>
 						</figure></a
 					>
-					<a href="#guessTheNumber" class="modal-trigger project projects"
+					<a href="#guessTheNumber" class="modal-trigger project JS"
 						><figure class="project">
 							<img
 								src="img/project--4/img1/img-1(320x320).png"
@@ -319,7 +338,7 @@
 							</figcaption>
 						</figure></a
 					>
-					<a href="#martialArts" class="modal-trigger project projects"
+					<a href="#martialArts" class="modal-trigger project CMS"
 						><figure class="project">
 							<img
 								src="img/project--5/img1/img-1(320xhttps://lvlad27.github.io/Guess-the-number/320).png"
@@ -337,7 +356,7 @@
 							</figcaption>
 						</figure></a
 					>
-					<a href="#tributePage" class="modal-trigger project codingChallenges"
+					<a href="#tributePage" class="modal-trigger project HTML-CSS"
 						><figure class="project">
 							<img
 								src="img/project--7/img-1(320x320).png"
@@ -353,7 +372,7 @@
 							</figcaption>
 						</figure></a
 					>
-					<a href="#surveyForm" class="modal-trigger project codingChallenges"
+					<a href="#surveyForm" class="modal-trigger project HTML-CSS"
 						><figure class="project">
 							<img
 								src="img/project--6/img-1(320x320).png"
@@ -369,7 +388,7 @@
 							</figcaption>
 						</figure></a
 					>
-					<a href="#technicalDocumentation" class="modal-trigger project codingChallenges"
+					<a href="#technicalDocumentation" class="modal-trigger project HTML-CSS"
 						><figure class="project">
 							<img
 								src="img/project--8/img-1(320x320).png"
@@ -385,7 +404,7 @@
 							</figcaption>
 						</figure></a
 					>
-					<a href="#productLandingPage" class="modal-trigger project codingChallenges"
+					<a href="#productLandingPage" class="modal-trigger project HTML-CSS"
 						><figure class="project">
 							<img
 								src="img/project--9/img-1(320x320).png"
@@ -401,7 +420,7 @@
 							</figcaption>
 						</figure></a
 					>
-					<a href="#personalPortfolio" class="modal-trigger project codingChallenges"
+					<a href="#personalPortfolio" class="modal-trigger project HTML-CSS"
 						><figure class="project">
 							<img
 								src="img/project--10/img-1(320x320).png"
@@ -417,7 +436,7 @@
 							</figcaption>
 						</figure></a
 					>
-					<a href="#algo" class="modal-trigger project codingChallenges"
+					<a href="#algo" class="modal-trigger project JS"
 						><figure class="project">
 							<img
 								src="img/project--11/img-1(320x320).png"
@@ -433,6 +452,65 @@
 							</figcaption>
 						</figure></a
 					>
+				</div>
+
+				<div class="modal modal--hidden" id="budgetter">
+					<div class="modal__container">
+						<div class="wrapper">
+							<button class="modal__container-close" title="Close window">&times;</button>
+						</div>
+						<div class="carousel">
+							<div class="carousel__track">
+								<span class="carousel__slide">
+									<img
+										src="img/project--12/img-1(1200x1200).png"
+										class="carousel__image"
+										srcset="img/project--12/img-1(320x320).webp 320w, img/project--12/img-1(1200x1200).webp 1200w"
+										sizes="(max-width: 750px) 100vw, 70vw"
+										loading="lazy"
+										alt="Picture of the website"
+									/>
+								</span>
+							</div>
+						</div>
+
+						<article class="modal__content">
+							<h2 class="section-title">This Website</h2>
+							<p class="paragraph--2">
+								This is a desktop only budget management app written in vanilla JS. It will be part of an entire website which is now work in progress. The project aims to
+								simulate a banking app which takes in accound data such as name, value of transactions, type of currency, date of transactions.
+							</p>
+							<p class="paragraph--2">
+								It has a login feature with username and pin, showing specific user information. Added functionality consists of loan requests and also sending
+								and receiving transactions to or from other users, with date, time and currency automatic update.
+							</p>
+							<p class="paragraph--2">This project was part of "The.Complete JavaScript Course From.Zero to Expert!" Udemy online course by Jonathan Schmedtmann.</p>
+							</ul>
+
+							<ul class="modal__content-info">
+								<li class="modal__content-info__single">
+									<p class="paragraph--2"><span class="highlight--2">Category:&nbsp;</span>Projects</p>
+								</li>
+								<li class="modal__content-info__single">
+									<p class="paragraph--2"><span class="highlight--2">Date:&nbsp;</span>February, 2022</p>
+								</li>
+								<li class="modal__content-info__single">
+									<p class="paragraph--2"><span class="highlight--2">Technologies:&nbsp;</span>HTML5|SCSS|JS</p>
+								</li>
+							</ul>
+							<div class="modal__content-links">
+								<a class="modal__content-links btn" href="https://lvlad27.github.io/Budgetter/" itemprop="url" title="See my website!" target="_blank">View Live Demo</a>
+								<a
+									href="https://github.com/Lvlad27/Budgetter"
+									class="modal__content-links icon"
+									itemprop="url"
+									title="See the GitHub repository!"
+									target="_blank"
+									><i class="fab fa-github"></i
+								></a>
+							</div>
+						</article>
+					</div>
 				</div>
 
 				<div class="modal modal--hidden" id="thisWebsite">
@@ -458,14 +536,11 @@
 						<article class="modal__content">
 							<h2 class="section-title">This Website</h2>
 							<p class="paragraph--2">
-								This is my portfolio website. The purpose of this website was to showcase the work I've done since I started heavy into web development. I used
-								a mobile first design approach as I consider this to be more practical in the present context by way of the Progressive Advancement concept. It
-								was my biggest challenge yet.
+								This is my portfolio website. The purpose of this website was to showcase the work I'm currenlty doing or already have done. I used
+								a mobile first design approach as I consider this to be more practical in the present context by way of the Progressive Advancement concept.
 							</p>
 							<p class="paragraph--2">
-								For this website I gained even more familiary using SCSS, which I now consider to be an indispensable tool. As for JavaScript, I decided that
-								the best way to go for now was vanilla, so that I can develop a deeper understanding before taking on a framework like React. Every component
-								is custom made, which includes:
+								For this website I used vanilla JS for the functionalities listed below and also gained even more familiary using SCSS, which I now consider to be an indispensable tool.
 							</p>
 							<ul class="modal__content-list">
 								<li>
@@ -577,12 +652,9 @@
 									<p>CSS techniques to create advanced designs and effects</p>
 								</li>
 								<li>
-									<p>Advanced CSS animations with @keyframes, animation and transition</p>
-								</li>
-								<li>
-									<p>CSS architecture: component-based design, BEM, writing reusable code</p>
-								</li>
-								<li>
+									<p>Advanced CSS animations with @keyframes, animation and transitAs for JavaScript, I decided that
+										the best way to go for now was vanilla, so that I can develop a deeper understanding before taking on a framework like React. Every component
+										is custom made, which includes:
 									<p>Float layouts. Although not a modern approach, the purpose was to better understand the way older sites have been made</p>
 								</li>
 								<li>
