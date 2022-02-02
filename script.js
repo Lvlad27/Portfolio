@@ -10,6 +10,7 @@ const navbar = document.querySelector('.header__container__navbar'),
 
 // BACKGROUND EFFECT WHEN OPENING SIDE MENU
 // when hamburger button is clicked
+
 const toggle = function () {
 	navbar.classList.toggle('header__container__navbar--open');
 	// toggle classes to every anchor element
