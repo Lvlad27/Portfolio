@@ -582,7 +582,7 @@ body {
 			animation: spin 2s infinite linear;
 			position: relative;
 			top: 2px;
-			left: 2px;
+			left: 1px;
 
 			@supports (-moz-appearance: none) {
 				& {
@@ -596,6 +596,7 @@ body {
 
 			@media (min-width: 1000px) {
 				top: 5px;
+				left: 2px;
 			}
 		}
 
