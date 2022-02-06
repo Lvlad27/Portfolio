@@ -177,59 +177,23 @@ for (let [index, trigger] of triggerArr) {
 4. Assign the scrolled class name to the element if it is in view.
 */
 
-const scrollElements = document.querySelectorAll('.js-scroll');
+const allSections = document.querySelectorAll('.section');
 
-const elementInView = (el, dividend = 1) => {
-	const elementTop = el.getBoundingClientRect().top;
+const revealSection = function (entries, observer) {
+	const [entry] = entries;
 
-	return elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend;
+	if (!entry.isIntersecting) return;
+
+	entry.target.classList.remove('section--hidden');
+	observer.unobserve(entry.target);
 };
 
-const elementOutofView = el => {
-	const elementTop = el.getBoundingClientRect().top;
-
-	return elementTop > (window.innerHeight || document.documentElement.clientHeight);
-};
-
-const displayScrollElement = element => {
-	element.classList.add('scrolled');
-};
-
-const hideScrollElement = element => {
-	element.classList.remove('scrolled');
-};
-
-const handleScrollAnimation = () => {
-	scrollElements.forEach(el => {
-		if (elementInView(el, 1.25)) {
-			displayScrollElement(el);
-		} else if (elementOutofView(el)) {
-			hideScrollElement(el);
-		}
-	});
-};
-
-window.addEventListener('scroll', () => {
-	handleScrollAnimation();
+const sectionObserver = new IntersectionObserver(revealSection, {
+	root: null,
+	threshold: 0.15,
 });
 
-//initialize throttleTimer as false
-let throttleTimer = false;
-
-const throttle = (callback, time) => {
-	//don't run the function while throttle timer is true
-	if (throttleTimer) return;
-
-	//first set throttle timer to true so the function doesn't run
-	throttleTimer = true;
-
-	setTimeout(() => {
-		//call the callback function in the setTimeout and set the throttle timer to false after the indicated time has passed
-		callback();
-		throttleTimer = false;
-	}, time);
-};
-
-window.addEventListener('scroll', () => {
-	throttle(handleScrollAnimation, 500);
+allSections.forEach(function (section) {
+	sectionObserver.observe(section);
+	section.classList.add('section--hidden');
 });
