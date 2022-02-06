@@ -1838,6 +1838,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .portfolio .modal__container .carousel__track .carousel__slide .carousel__image {

@@ -170,13 +170,6 @@ for (let [index, trigger] of triggerArr) {
 
 // ANIMATE PAGE SECTIONS ON SCROLL
 
-/*
-1. Get all js-scroll elements on the page
-2. Fade out elements
-3. Detect when the element is within the viewport
-4. Assign the scrolled class name to the element if it is in view.
-*/
-
 const allSections = document.querySelectorAll('.section');
 
 const revealSection = function (entries, observer) {
