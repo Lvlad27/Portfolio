@@ -543,6 +543,11 @@ body {
 	transition: all 0.3s ease;
 }
 
+.header__container__navbar .fas--resume {
+	vertical-align: sub;
+	margin-right: 1rem;
+}
+
 .header__container-menuToggle {
 	position: absolute;
 	padding: 2rem 7px;
