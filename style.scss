@@ -328,16 +328,16 @@ body {
 				}
 
 				@media (min-height: 896px) {
-					.fa-file {
-						position: relative;
-						top: 4px;
+					.fas--resume {
+						vertical-align: middle;
+						margin-right: 1rem;
 					}
 				}
 
 				@media (min-width: 450px) {
-					.fa-file {
-						position: relative;
-						top: 4px;
+					.fas--resume {
+						vertical-align: middle;
+						margin-right: 1rem;
 					}
 				}
 			}
