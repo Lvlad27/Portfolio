@@ -352,8 +352,7 @@ body {
 
 			&-icons,
 			&-icons--btn {
-				font-size: 2rem;
-				color: $color-2;
+				filter: invert(81%) sepia(85%) saturate(437%) hue-rotate(331deg) brightness(103%) contrast(99%);
 
 				@media (min-height: 896px) {
 					font-size: 3rem;
@@ -569,12 +568,12 @@ body {
 			margin-bottom: 3rem;
 		}
 
-		.fa-cog {
-			font-size: clamp(3rem, 6vw, 6rem);
+		.icon--cog {
+			height: clamp(3rem, 6vw, 6rem);
 			animation: spin 2s infinite linear;
 			position: relative;
-			top: 2px;
 			left: 1px;
+			filter: invert(81%) sepia(85%) saturate(437%) hue-rotate(331deg) brightness(103%) contrast(99%);
 
 			@supports (-moz-appearance: none) {
 				& {
@@ -789,28 +788,29 @@ body {
 					flex-direction: row;
 					gap: 3rem;
 					justify-content: center;
-					font-size: $large-font-size;
 					list-style-type: none;
 					margin-bottom: 2rem;
 
-					@media (min-width: 820px) {
-						font-size: $large-font-size;
+					&-icons {
+						img:hover {
+							transform: scale(1.2);
+							transition: ease 0.1s;
+						}
+
+						.logo--github,
+						.logo--fcc {
+							filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+						}
 					}
 
-					&-icons {
-						color: $color-light;
+					@media (min-width: 820px) {
+						font-size: $large-font-size;
 					}
 				}
 			}
 
 			@media (min-width: 820px) {
 				float: right;
-
-				i:hover {
-					color: $color-2;
-					transform: scale(1.2);
-					transition: ease 0.1s;
-				}
 			}
 		}
 
@@ -1566,6 +1566,9 @@ body {
 	}
 }
 
+////////////////////////////////////////
+// CONTACT SECTION
+
 .contact {
 	display: flex;
 	flex-direction: column;
@@ -1607,6 +1610,7 @@ body {
 			margin: 6rem 0 8rem;
 			display: flex;
 			justify-content: center;
+			align-items: center;
 			text-decoration: none;
 
 			@media (min-width: 450px) {
@@ -1628,17 +1632,17 @@ body {
 				&:hover {
 					background-color: $color-2;
 					color: $color-1;
-				}
 
-				.fas {
-					position: relative;
-					top: 4px;
+					.logo--plane {
+						filter: invert(0%) sepia(6%) saturate(7500%) hue-rotate(276deg) brightness(103%) contrast(107%);
+					}
 				}
 			}
 
-			&--mail {
+			.logo--plane {
+				vertical-align: middle;
 				margin-right: 1rem;
-				font-size: 3rem;
+				filter: invert(75%) sepia(43%) saturate(588%) hue-rotate(1deg) brightness(107%) contrast(99%);
 			}
 		}
 
@@ -1651,17 +1655,12 @@ body {
 					gap: 1rem;
 				}
 			}
-
-			.fas {
-				position: relative;
-				top: 2px;
-
-				font-size: $medium-font-size;
-				color: $color-2;
-			}
 		}
 	}
 }
+
+////////////////////////////////////////
+// FOOTER
 
 .footer {
 	background-color: $color-1-dark;
@@ -1682,7 +1681,7 @@ body {
 				flex-direction: row;
 				justify-content: space-around;
 
-				font-size: 3rem;
+				// font-size: 3rem;
 				list-style-type: none;
 
 				@media (min-width: 750px) {
@@ -1693,16 +1692,14 @@ body {
 				&-icons {
 					color: $color-light;
 
-					.fab:hover {
-						color: $color-2;
+					img:hover {
 						transform: scale(1.2);
 						transition: ease 0.1s;
 					}
 
-					.fas:hover {
-						color: $color-2;
-						transform: scale(1.2);
-						transition: ease 0.1s;
+					.logo--github,
+					.logo--fcc {
+						filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 					}
 				}
 			}
