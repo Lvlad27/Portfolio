@@ -796,12 +796,23 @@ body {
 	.intro-title .icon--cog {
 		top: 3px;
 	}
+	@supports (-moz-appearance: none) {
+		.intro-title .icon--cog {
+			top: 0;
+		}
+	}
 }
 
 @media (min-width: 1000px) {
 	.intro-title .icon--cog {
 		top: 5px;
 		left: 2px;
+	}
+	@supports (-moz-appearance: none) {
+		.intro-title .icon--cog {
+			top: 0;
+			left: 0;
+		}
 	}
 }
 
