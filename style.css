@@ -798,7 +798,7 @@ body {
 	}
 	@supports (-moz-appearance: none) {
 		.intro-title .icon--cog {
-			top: 0;
+			top: 4px;
 		}
 	}
 }
