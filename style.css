@@ -1668,6 +1668,26 @@ body {
 		opacity: 0;
 		z-index: 1;
 	}
+	.portfolio .projects-list .modal-trigger.project .project figcaption .tech__logo--html {
+		-webkit-filter: invert(37%) sepia(89%) saturate(2459%) hue-rotate(349deg) brightness(94%) contrast(88%);
+		filter: invert(37%) sepia(89%) saturate(2459%) hue-rotate(349deg) brightness(94%) contrast(88%);
+	}
+	.portfolio .projects-list .modal-trigger.project .project figcaption .tech__logo--css {
+		-webkit-filter: invert(35%) sepia(85%) saturate(862%) hue-rotate(173deg) brightness(89%) contrast(93%);
+		filter: invert(35%) sepia(85%) saturate(862%) hue-rotate(173deg) brightness(89%) contrast(93%);
+	}
+	.portfolio .projects-list .modal-trigger.project .project figcaption .tech__logo--scss {
+		-webkit-filter: invert(69%) sepia(6%) saturate(6600%) hue-rotate(291deg) brightness(83%) contrast(89%);
+		filter: invert(69%) sepia(6%) saturate(6600%) hue-rotate(291deg) brightness(83%) contrast(89%);
+	}
+	.portfolio .projects-list .modal-trigger.project .project figcaption .tech__logo--js {
+		-webkit-filter: invert(100%) sepia(79%) saturate(5425%) hue-rotate(335deg) brightness(97%) contrast(101%);
+		filter: invert(100%) sepia(79%) saturate(5425%) hue-rotate(335deg) brightness(97%) contrast(101%);
+	}
+	.portfolio .projects-list .modal-trigger.project .project figcaption .tech__logo--wp {
+		-webkit-filter: invert(40%) sepia(60%) saturate(567%) hue-rotate(154deg) brightness(86%) contrast(93%);
+		filter: invert(40%) sepia(60%) saturate(567%) hue-rotate(154deg) brightness(86%) contrast(93%);
+	}
 	.portfolio .projects-list .modal-trigger.project .project h2,
 	.portfolio .projects-list .modal-trigger.project .project h4 {
 		font-family: 'Saira Stencil One', arial, calib, monospace, sans-serif;
@@ -1679,9 +1699,6 @@ body {
 	.portfolio .projects-list .modal-trigger.project .project h4 {
 		font-weight: 400;
 		color: #f4f4f4;
-	}
-	.portfolio .projects-list .modal-trigger.project .project i {
-		font-size: 32px;
 	}
 	.portfolio .projects-list .modal-trigger.project .project:after {
 		background-color: #272727;
