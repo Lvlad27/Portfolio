@@ -1465,8 +1465,13 @@ body {
 						font-size: 4rem;
 						cursor: pointer;
 
-						&:active {
-							color: $color-3;
+						img {
+							filter: invert(84%) sepia(64%) saturate(523%) hue-rotate(336deg) brightness(101%) contrast(99%);
+
+							&:active {
+								transform: translate(0, 3px);
+								color: $color-2;
+							}
 						}
 					}
 
@@ -1588,8 +1593,11 @@ body {
 						color: $color-light;
 						font-size: $large-font-size;
 
+						.tech__logo--gh {
+							filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(131deg) brightness(101%) contrast(102%);
+						}
+
 						&:hover {
-							color: $color-2;
 							transform: scale(1.2);
 							transition: ease 0.1s;
 						}
